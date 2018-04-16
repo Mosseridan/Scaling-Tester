@@ -67,17 +67,21 @@ def create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_p
 def create_refined_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times):
     mesh_sizes = [1,8] if data_file_name == 'VDF' else [1, 4, 8]
     for mesh_size in mesh_sizes:
+
+        print '\n@@ Creating a dirctory for tests with x'+str(mesh_size)+' mesh size'                      
         mesh_sub_dir = os.path.join(dest_dir, 'x'+str(mesh_size)+'_mesh')
-        print '\n@@ Creating a dirctory for tests with x'+str(mesh_size)+' mesh size'              
         mkdir_if_none_exits(mesh_sub_dir)
-        print '\n@@ Creating a refined mesh with x'+str(mesh_size)+' elements'                                      
+
+        print '\n@@ Creating a refined mesh with x'+str(mesh_size)+' elements'                                                      
         refined_mesh_dir = os.path.join(mesh_sub_dir, 'refined_mesh')
         distutils.dir_util.copy_tree(
             data_file_dir, 
             refined_mesh_dir, 
             preserve_mode=0,verbose=1)
+
         refined_data_file = os.path.join(refined_mesh_dir,data_file_name+'.data')
         refine_mesh(refined_data_file, mesh_size)
+        
         create_sub_dirs_and_run_tests(refined_mesh_dir, mesh_sub_dir, data_file_name, max_procs, times)
 
 
