@@ -8,8 +8,11 @@ import os
 def refine_mesh(data_file, refinement_type):
     domains = []
     j = 0
+    #mesh refinement supports only x4 and x8 refinement
+    if(not refinement_type in [4,8]):
+        return
     #cannot refine anistrope for VDF file.
-    if "VDF" in data_file and "4" in refinement_type:
+    if "VDF" in data_file and refinement_type == 4:
         return
 
     f = open(data_file,"r")

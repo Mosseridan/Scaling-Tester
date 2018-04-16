@@ -22,19 +22,9 @@ def doubling_range(start, stop):
         start <<= 1
 
 
-def create_sub_dirs(data_file_dir, dest_dir, max_procs):
-    for n_procs in doubling_range(2, max_procs+1):
-        sub_dir = os.path.join(dest_dir, str(n_procs)+'_procs')
-        print '\n@@ Creating a dirctory for a test with '+str(n_procs)+' processes'
-        distutils.dir_util.copy_tree(
-            data_file_dir, 
-            sub_dir, 
-            preserve_mode=0,verbose=1)
-
-
 
 def make_batch_file(test_name, test_dir, n_procs):
-    print '@@ Making batch script for '+str(n_procs)+' processes'
+    print '\n@@ Making batch script for '+str(n_procs)+' processes'
     batch_file_path = os.path.join(test_dir, str(n_procs)+'_'+test_name+'_batch')
     batch_file = open(batch_file_path,'w')
     batch_file.write(
@@ -52,9 +42,9 @@ def make_batch_file(test_name, test_dir, n_procs):
 def run_test(test_name, test_dir, n_procs, times):
     batch_file = make_batch_file(test_name, test_dir, n_procs)
     
-    print '@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
+    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
     for i in range(0,times):
-        print '@@ ' + str(i)
+        print '@ ' + str(i)
         sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
         sub_proc.wait()
         sub_proc = subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
@@ -62,29 +52,56 @@ def run_test(test_name, test_dir, n_procs, times):
 
 
 
+def create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times):
+    for n_procs in doubling_range(2, max_procs+1):
+        sub_dir = os.path.join(dest_dir, str(n_procs)+'_procs')
+        print '\n@@ Creating a dirctory for a test with '+str(n_procs)+' processes'
+        distutils.dir_util.copy_tree(
+            data_file_dir, 
+            sub_dir, 
+            preserve_mode=0,verbose=1)
+        # run_test(data_file_name, sub_dir, n_procs, times)
+
+
+
+def create_refined_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times):
+    mesh_sizes = [1,8] if data_file_name == 'VDF' else [1, 4, 8]
+    for mesh_size in mesh_sizes:
+        mesh_sub_dir = os.path.join(dest_dir, 'x'+str(mesh_size)+'_mesh')
+        print '\n@@ Creating a dirctory for tests with x'+str(mesh_size)+' mesh size'              
+        mkdir_if_none_exits(mesh_sub_dir)
+        print '\n@@ Creating a refined mesh with x'+str(mesh_size)+' elements'                                      
+        refined_mesh_dir = os.path.join(mesh_sub_dir, 'refined_mesh')
+        distutils.dir_util.copy_tree(
+            data_file_dir, 
+            refined_mesh_dir, 
+            preserve_mode=0,verbose=1)
+        refined_data_file = os.path.join(refined_mesh_dir,data_file_name+'.data')
+        refine_mesh(refined_data_file, mesh_size)
+        create_sub_dirs_and_run_tests(refined_mesh_dir, mesh_sub_dir, data_file_name, max_procs, times)
+
+
+
 def main(data_file, max_procs, times, refine):
-    print '@@ Got max_procs: '+str(max_procs)    
-    print '@@ Got data_file: '+data_file
+    print '\n@@ Got max_procs: '+str(max_procs)    
+    print '\n@@ Got data_file: '+data_file
 
     data_file_name = os.path.splitext(os.path.basename(data_file))[0]
-    print '@@ Data file name: '+data_file_name
+    print '\n@@ Data file name: '+data_file_name
     
     data_file_dir = os.path.dirname(os.path.abspath(data_file))
-    print '@@ Data file directory: '+data_file_dir 
+    print '\n@@ Data file directory: '+data_file_dir 
     
     dest_dir = os.path.abspath(os.path.join('tests','scale_'+data_file_name))
-    print '@@ destination directory: '+dest_dir
+    print '\n@@ destination directory: '+dest_dir
 
     mkdir_if_none_exits(dest_dir)
 
     if(refine):
-        print 'TODO: ADD REFINEMENT PLEASE!'
-    
-    create_sub_dirs(data_file_dir, dest_dir, max_procs)
+        create_refined_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times)   
+    else:
+        create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times)
 
-    for n_procs in doubling_range(2, max_procs+1):
-        sub_dir = os.path.join(dest_dir, str(n_procs)+'_procs')      
-        run_test(data_file_name, sub_dir, n_procs, times)
 
        
 
