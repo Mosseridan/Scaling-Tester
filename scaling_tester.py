@@ -41,12 +41,13 @@ def make_batch_file(test_name, test_dir, n_procs):
 
 def run_test(test_name, test_dir, n_procs, times):
     batch_file = make_batch_file(test_name, test_dir, n_procs)
+
+    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'    
+    sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
+    sub_proc.wait()
     
-    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
     for i in range(0,times):
         print '@ ' + str(i)
-        sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
-        sub_proc.wait()
         sub_proc = subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
         sub_proc.wait()
 
