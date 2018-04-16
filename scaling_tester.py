@@ -55,7 +55,7 @@ def run_test(test_name, test_dir, n_procs, times):
     print '@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
     for i in range(0,times):
         print '@@ ' + str(i)
-        subprocess.Popen(['make_PAR.data', test_name, n_procs], cwd=test_dir)
+        subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
         subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
 
 
