@@ -1,0 +1,12 @@
+ . /home/pl254994/local/TRUST-1.7.6/env_TRUST.sh
+export project_directory=/home/pl254994/local/tests/IAEC
+export PATH=${project_directory}/build/xdata:$PATH
+export TRUST_TESTS=${project_directory}/build/tests/full/
+export Rapports_auto_root=${project_directory}/build/tests/share/full/ 
+export exec_opt=${project_directory}/IAEC_opt
+export exec=${project_directory}/IAEC_opt
+export exec_semi_opt=${project_directory}/IAEC_semi_opt
+export exec_pg=${project_directory}/IAEC_opt_pg
+export exec_gcov=${project_directory}/IAEC_opt_gcov
+export exec_avx=${project_directory}/IAEC_opt_avx
+export exec_debug=${project_directory}/IAEC

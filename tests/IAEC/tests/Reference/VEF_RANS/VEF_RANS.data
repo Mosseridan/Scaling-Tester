@@ -1,0 +1,116 @@
+# Hydraulique 3D turbulent K-Eps avec transport de constituant #
+# CUBE VEF #
+# PARALLEL OK #
+
+dimension 3
+Pb_Hydraulique_Turbulent pb
+export domaine  dom
+
+# BEGIN MESH #
+Read_file dom moyen.geom
+# END MESH #
+# BEGIN PARTITION
+Partition dom
+{
+	Partition_tool metis { nb_parts 2 }			
+   	larg_joint 2
+	zones_name dom													
+}
+End
+END PARTITION #
+
+# BEGIN SCATTER
+Scatter dom.Zones dom
+END SCATTER #
+
+VEFPreP1B dis
+
+schema_Euler_implicite sch
+Read sch
+{ 	tinit 0.
+	nb_pas_dt_max 5
+        tmax 2.6
+        dt_min 1.e-6
+        dt_max 1.0
+        dt_impr 1.e-3
+        dt_sauv 5.
+        seuil_statio 1.e-8
+	facsec 50
+        facsec_max 300
+	Solveur
+           Implicite
+           {
+                solveur gmres { diag seuil 1e-20 nb_it_max 5 impr }
+           }  
+}
+
+Fluide_Incompressible fluide
+Read fluide
+{
+	mu Champ_Uniforme 1 1.85e-5
+	rho Champ_Uniforme 1 1.
+}
+
+Champ_Uniforme gravite
+Read gravite 3  0. 0. -9.81
+
+Associate fluide gravite
+Associate pb dom
+Associate pb sch
+Associate pb fluide
+Discretize pb dis
+
+Read pb
+{
+	Navier_Stokes_turbulent
+	{
+		solveur_pression petsc gcp { precond ssor { omega 1.6 } seuil 1.e-9 impr }
+		convection { EF_stab { Volumes_etendus } }
+		diffusion { }
+		conditions_initiales {
+			vitesse Champ_Uniforme 3 0. 0. 0.
+			}
+		boundary_conditions {
+			 sol Paroi_Fixe
+			 plafond symetrie
+			 arriere symetrie
+			 avant symetrie
+			 sortie frontiere_ouverte_pression_imposee Champ_Front_Uniforme 1  0. 
+			 entree frontiere_ouverte_vitesse_imposee Champ_front_fonc_xyz 3 (0.2916/0.4)*ln(z/0.000394) 0. 0.
+		}
+		modele_turbulence K_Epsilon {
+       			Transport_K_Epsilon 
+			{
+			   	convection { amont }
+				diffusion { }
+				boundary_conditions {
+			 		sol Paroi
+					plafond symetrie
+			 		arriere symetrie
+			 		avant symetrie
+		       			entree frontiere_ouverte_K_eps_impose Champ_front_fonc_xyz 2 (0.2916^2)/sqrt(0.09) (0.2916)^3/(0.4*z)
+		       			sortie frontiere_ouverte K_EPS_EXT Champ_Front_Uniforme 2 0. 0.
+			   	}
+			   	conditions_initiales {
+			      		k_Eps Champ_Uniforme 2 0.2834352 0.4958
+			  	}
+			 }
+			 turbulence_paroi loi_standard_hydr dt_impr_ustar 1. 
+		} 
+	}
+Postraitement 
+{
+	Sondes 
+	{
+		sonde_vitesseh1  vitesse  periode 0.5 point 1 0.76 0.76 0.14
+
+	}
+	Champs dt_post 3.
+	{
+			vitesse elem
+			viscosite_turbulente elem
+	}
+}
+}
+Solve pb
+End
