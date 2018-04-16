@@ -42,7 +42,7 @@ def make_batch_file(test_name, test_dir, n_procs):
         + '#SBATCH -n '+str(n_procs)+'\n'
         + '#SBATCH --exclusive\n'
         + '#SBATCH --threads-per-core=1\n'
-        + 'mpirun -np '+str(n_procs)+' '+os.environ['exec']+' '+test_name+' '+str(n_procs)+'\n'
+        + 'mpirun -np '+str(n_procs)+' '+os.environ['exec']+' PAR_'+test_name+' '+str(n_procs)+'\n'
     ) 
     batch_file.close()
     return batch_file_path
@@ -55,8 +55,10 @@ def run_test(test_name, test_dir, n_procs, times):
     print '@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
     for i in range(0,times):
         print '@@ ' + str(i)
-        subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
-        subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
+        sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
+        sub_proc.wait()
+        sub_proc = subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
+        sub_proc.wait()
 
 
 
