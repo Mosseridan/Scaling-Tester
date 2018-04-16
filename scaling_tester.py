@@ -75,6 +75,8 @@ def main(data_file, max_procs, times):
 
     mkdir_if_none_exits(dest_dir)
 
+
+    
     create_sub_dirs(data_file_dir, dest_dir, max_procs)
 
     for n_procs in doubling_range(2, max_procs+1):
@@ -95,6 +97,11 @@ if __name__ == '__main__':
     parser.add_argument('-t',
         type=int,
         dest='times',
+        help='number of times each test will be executed.')
+    args = parser.parse_args()
+    parser.add_argument('-r',
+        action='store_true'
+        dest='refine',
         help='number of times each test will be executed.')
     args = parser.parse_args()
 
