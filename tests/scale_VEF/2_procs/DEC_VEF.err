@@ -1,0 +1,220 @@
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_Noparallel with 1 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = DEC_VEF
+feenableexcept enabled.
+Data file : DEC_VEF
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF/2_procs
+Nom du cas DEC_VEF
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+Debut de l'execution 
+MAIN: Reading and executing data file
+Dimension::interpreter : dimension = 3
+Reading of data for a Schema_euler_explicite time scheme
+Reading of the maximum number of time steps
+The next backup, by security, will take place after 23 hours of calculation.
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block Cavite1
+Step of 3D mesh in progress... 
+It was created 33% of coordxIt was created 66% of coordx
+It was created 10% of coordyIt was created 20% of coordyIt was created 30% of coordyIt was created 40% of coordyIt was created 50% of coordyIt was created 60% of coordyIt was created 70% of coordyIt was created 80% of coordyIt was created 90% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary paroi_a_20
+End of reading of the boundary : paroi_a_20
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary Paroi_echange1
+End of reading of the boundary : Paroi_echange1
+Reading of the boundary Devant1
+End of reading of the boundary : Devant1
+Reading of the boundary Derriere1
+End of reading of the boundary : Derriere1
+Reading of the block Cavite2
+Step of 3D mesh in progress... 
+It was created 14% of coordxIt was created 28% of coordxIt was created 42% of coordxIt was created 57% of coordxIt was created 71% of coordxIt was created 85% of coordx
+It was created 33% of coordyIt was created 66% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary Paroi_echange1
+End of reading of the boundary : Paroi_echange1
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary paroi_a_20
+End of reading of the boundary : paroi_a_20
+Reading of the boundary Devant2
+End of reading of the boundary : Devant2
+Reading of the boundary Derriere2
+End of reading of the boundary : Derriere2
+16 double nodes were found 
+Compressing objects of type Zone in progress... 
+agglomeration of Zones Cavite1 and Cavite2
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom_solide
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block Cavite3
+Step of 3D mesh in progress... 
+It was created 14% of coordxIt was created 28% of coordxIt was created 42% of coordxIt was created 57% of coordxIt was created 71% of coordxIt was created 85% of coordx
+It was created 14% of coordyIt was created 28% of coordyIt was created 42% of coordyIt was created 57% of coordyIt was created 71% of coordyIt was created 85% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary Paroi_echange2
+End of reading of the boundary : Paroi_echange2
+Reading of the boundary Entree
+End of reading of the boundary : Entree
+Reading of the boundary Paroi
+End of reading of the boundary : Paroi
+Reading of the boundary Paroi_echange2
+End of reading of the boundary : Paroi_echange2
+Reading of the boundary Sortie
+End of reading of the boundary : Sortie
+Reading of the boundary Paroi
+End of reading of the boundary : Paroi
+Reading of the boundary Devant3
+End of reading of the boundary : Devant3
+Reading of the boundary Derriere3
+End of reading of the boundary : Derriere3
+Compressing objects of type Zone in progress... 
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom_fluide
+Execution of the interpreter Tetraedriser_homogene_compact
+Association of the domain on which the interpreter applies Tetraedriser_homogene_compact
+ NB ELEM : 153 NB NODE : 288
+Construction of the OctreeRoot OK 
+We have split the cubes...
+Splitting of the boundaries
+Splitting of the connectors
+Splitting of the internal faces
+END of Tetraedriser_homogene_compact...
+  1 NbElem=3672  NbNod=1011
+Execution of the interpreter Tetraedriser_homogene_compact
+Association of the domain on which the interpreter applies Tetraedriser_homogene_compact
+ NB ELEM : 147 NB NODE : 256
+Construction of the OctreeRoot OK 
+We have split the cubes...
+Splitting of the boundaries
+Splitting of the connectors
+Splitting of the internal faces
+END of Tetraedriser_homogene_compact...
+  1 NbElem=3528  NbNod=935
+Decouper : Splitting of a domain
+ Domain name to split : dom_solide
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between 0 and 1
+y is between 0 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 0.51
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+domaine = dom_solide
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 50
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ No correction to be made
+The partitioner has generated 2 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 2 parts:
+ Construction of part number 0
+  Number of nodes    : 529
+  Number of elements : 1836
+  Number of joints   : 1
+  Joint 0 PeVoisin 1 NbSommets 34 NbFaces 50 NbElemDist 292
+               Total:    NbSommets 34 NbFaces 50 NbElemDist 292
+Writing part 0 into the binary file DOM1_0000.Zones
+Writing of 529 nodes.
+Writing of 1836 elements.
+ Construction of part number 1
+  Number of nodes    : 516
+  Number of elements : 1836
+  Number of joints   : 1
+  Joint 0 PeVoisin 0 NbSommets 34 NbFaces 50 NbElemDist 272
+               Total:    NbSommets 34 NbFaces 50 NbElemDist 272
+Writing part 1 into the binary file DOM1_0001.Zones
+Writing of 516 nodes.
+Writing of 1836 elements.
+End of the interpreter Decouper
+Decouper : Splitting of a domain
+ Domain name to split : dom_fluide
+==============================================
+The extreme coordinates of the domain dom_fluide are:
+x is between 0.3 and 1
+y is between 0.3 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_fluide are:
+sum(volume cells)= 0.49
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+domaine = dom_fluide
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 94
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 1
+The partitioner has generated 2 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 2 parts:
+ Construction of part number 0
+  Number of nodes    : 498
+  Number of elements : 1764
+  Number of joints   : 1
+  Joint 0 PeVoisin 1 NbSommets 59 NbFaces 94 NbElemDist 960
+               Total:    NbSommets 59 NbFaces 94 NbElemDist 960
+Writing part 0 into the binary file DOM2_0000.Zones
+Writing of 498 nodes.
+Writing of 1764 elements.
+ Construction of part number 1
+  Number of nodes    : 496
+  Number of elements : 1764
+  Number of joints   : 1
+  Joint 0 PeVoisin 0 NbSommets 59 NbFaces 94 NbElemDist 912
+               Total:    NbSommets 59 NbFaces 94 NbElemDist 912
+Writing part 1 into the binary file DOM2_0001.Zones
+Writing of 496 nodes.
+Writing of 1764 elements.
+End of the interpreter Decouper
+MAIN: End of data file
+Arret des processes.

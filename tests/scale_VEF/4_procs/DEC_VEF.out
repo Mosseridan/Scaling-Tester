@@ -1,0 +1,157 @@
+-------------------------------------------------------------------
+ 
+                          TRUST
+                      version : 1.7.6 
+                          CEA - DEN
+ 
+
+ 0 file(s) modified 
+
+
+ 405 file(s) created 
+
+ ------------------------------------------------------------------
+ 
+  Vous traitez le cas DEC_VEF
+ 
+Reading data file 
+
+14 MBytes of RAM taken by the calculation.
+14 MBytes of RAM taken by the calculation.
+14 MBytes of RAM taken by the calculation.
+14 MBytes of RAM taken by the calculation.
+ Runtime parameters:
+   Objective type: METIS_OBJTYPE_CUT
+   Coarsening type: METIS_CTYPE_SHEM
+   Initial partitioning type: METIS_IPTYPE_GROW
+   Refinement type: METIS_RTYPE_FM
+   Perform a 2-hop matching: No
+   Number of balancing constraints: 1
+   Number of refinement iterations: 10
+   Random number seed: -1
+   Number of partitions: 4
+   Number of cuts: 1
+   User-supplied ufactor: 1
+   Target partition weights: 
+        0=[2.50e-01]   1=[2.50e-01]   2=[2.50e-01]   3=[2.50e-01]
+   Allowed maximum load imbalance: 1.001 
+
+      3672      13800      13800 [20] [      275:    3672 ]
+      1836       7636      10128 [20] [      275:    3672 ]
+       918       4368       6456 [20] [      275:    3672 ]
+       497       2832       4114 [20] [      275:    3672 ]
+       267       1672       3180 [20] [      275:    3672 ]
+       145       1022       2482 [20] [      275:    3672 ]
+        76        596       1932 [20] [      275:    3672 ]
+        40        298       1574 [20] [      275:    3672 ]
+        21        136       1286 [20] [      275:    3672 ]
+        19        116       1244 [20] [      275:    3672 ]
+      1836       6826       6826 [20] [      137:    1836 ]
+       918       3704       4990 [20] [      137:    1836 ]
+       459       2134       3154 [20] [      137:    1836 ]
+       250       1382       1992 [20] [      137:    1836 ]
+       136        796       1548 [20] [      137:    1836 ]
+        74        484       1180 [20] [      137:    1836 ]
+        40        286        942 [20] [      137:    1836 ]
+        22        140        740 [20] [      137:    1836 ]
+        18        116        718 [20] [      137:    1836 ]
+      1836       6874       6874 [20] [      137:    1836 ]
+       918       3732       5038 [20] [      137:    1836 ]
+       459       2146       3202 [20] [      137:    1836 ]
+       243       1388       1966 [20] [      137:    1836 ]
+       133        786       1556 [20] [      137:    1836 ]
+        73        488       1202 [20] [      137:    1836 ]
+        39        282        936 [20] [      137:    1836 ]
+        20        134        738 [20] [      137:    1836 ]
+
+Timing Information -------------------------------------------------
+ Multilevel: 		   0.008
+     Coarsening: 		   0.005
+            Matching: 			   0.002
+            Contract: 			   0.003
+     Initial Partition: 	   0.001
+     Uncoarsening: 		   0.002
+          Refinement: 			   0.001
+          Projection: 			   0.000
+     Splitting: 		   0.001
+********************************************************************
+
+ gk_mcore statistics
+           coresize:        44376         nmops:         2048  cmop:      0
+        num_callocs:          274   num_hallocs:            0
+       size_callocs:       409544  size_hallocs:            0
+        cur_callocs:            0   cur_hallocs:            0
+        max_callocs:        44080   max_hallocs:            0
+ nbrpool statistics
+        nbrpoolsize:            0   nbrpoolcpos:            0
+    nbrpoolreallocs:            0
+
+ Runtime parameters:
+   Objective type: METIS_OBJTYPE_CUT
+   Coarsening type: METIS_CTYPE_SHEM
+   Initial partitioning type: METIS_IPTYPE_GROW
+   Refinement type: METIS_RTYPE_FM
+   Perform a 2-hop matching: No
+   Number of balancing constraints: 1
+   Number of refinement iterations: 10
+   Random number seed: -1
+   Number of partitions: 4
+   Number of cuts: 1
+   User-supplied ufactor: 1
+   Target partition weights: 
+        0=[2.50e-01]   1=[2.50e-01]   2=[2.50e-01]   3=[2.50e-01]
+   Allowed maximum load imbalance: 1.001 
+
+      3528      13384      13384 [20] [      264:    3528 ]
+      1764       7372       9856 [20] [      264:    3528 ]
+       882       4228       6328 [20] [      264:    3528 ]
+       469       2766       3966 [20] [      264:    3528 ]
+       252       1650       3112 [20] [      264:    3528 ]
+       137       1032       2426 [20] [      264:    3528 ]
+        74        622       1940 [20] [      264:    3528 ]
+        39        322       1582 [20] [      264:    3528 ]
+        21        150       1274 [20] [      264:    3528 ]
+        18        126       1244 [20] [      264:    3528 ]
+      1764       6598       6598 [20] [      132:    1764 ]
+       882       3600       4834 [20] [      132:    1764 ]
+       441       2038       3070 [20] [      132:    1764 ]
+       234       1308       1888 [20] [      132:    1764 ]
+       128        740       1498 [20] [      132:    1764 ]
+        69        464       1134 [20] [      132:    1764 ]
+        38        276        908 [20] [      132:    1764 ]
+        20        140        710 [20] [      132:    1764 ]
+      1764       6598       6598 [20] [      132:    1764 ]
+       882       3592       4834 [20] [      132:    1764 ]
+       441       2038       3070 [20] [      132:    1764 ]
+       235       1328       1872 [20] [      132:    1764 ]
+       127        778       1452 [20] [      132:    1764 ]
+        68        468       1108 [20] [      132:    1764 ]
+        36        270        860 [20] [      132:    1764 ]
+        19        132        670 [20] [      132:    1764 ]
+
+Timing Information -------------------------------------------------
+ Multilevel: 		   0.007
+     Coarsening: 		   0.004
+            Matching: 			   0.002
+            Contract: 			   0.001
+     Initial Partition: 	   0.000
+     Uncoarsening: 		   0.002
+          Refinement: 			   0.001
+          Projection: 			   0.001
+     Splitting: 		   0.001
+********************************************************************
+
+ gk_mcore statistics
+           coresize:        42648         nmops:         2048  cmop:      0
+        num_callocs:          275   num_hallocs:            0
+       size_callocs:       395360  size_hallocs:            0
+        cur_callocs:            0   cur_hallocs:            0
+        max_callocs:        42352   max_hallocs:            0
+ nbrpool statistics
+        nbrpoolsize:            0   nbrpoolcpos:            0
+    nbrpoolreallocs:            0
+
+15 MBytes of RAM taken by the calculation.
+
+--------------------------------------------
+clock: Total execution: 0.223563 s
