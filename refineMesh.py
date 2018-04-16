@@ -3,7 +3,7 @@
 # assuming we can refine this by the automatic line
 # works only for 3D ofcourse...
 def AddMeshRefine(filename, typeOfRefine):
-    domains = []
+    domains = [];
     j = 0;
     #cannot refine anistrope for VDF file.
     if "VDF" in filename and "4" in typeOfRefine:
