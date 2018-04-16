@@ -42,10 +42,17 @@ def make_batch_file(test_name, test_dir, n_procs):
 def run_test(test_name, test_dir, n_procs, times):
     batch_file = make_batch_file(test_name, test_dir, n_procs)
 
-    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'    
+    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
+
+    if os.path.isfile(os.path.join(test_dir,'prepare')):
+        sub_proc = subprocess.Popen(['chmod','+x','prepare'], cwd=test_dir)
+        sub_proc.wait()
+        sub_proc = subprocess.Popen(['./prepare'], cwd=test_dir)
+        sub_proc.wait()
+    
     sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
     sub_proc.wait()
-    
+
     for i in range(0,times):
         print '@ ' + str(i)
         sub_proc = subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
@@ -102,7 +109,7 @@ def main(data_file, max_procs, times, refine):
 
     mkdir_if_none_exits(dest_dir)
 
-    if(refine):
+    if refine:
         create_refined_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times)   
     else:
         create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times)
