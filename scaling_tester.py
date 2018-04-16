@@ -60,7 +60,7 @@ def create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_p
             data_file_dir, 
             sub_dir, 
             preserve_mode=0,verbose=1)
-        # run_test(data_file_name, sub_dir, n_procs, times)
+        run_test(data_file_name, sub_dir, n_procs, times)
 
 
 
