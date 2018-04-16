@@ -60,7 +60,7 @@ def run_test(test_name, test_dir, n_procs, times):
 
 
 
-def main(data_file, max_procs, times):
+def main(data_file, max_procs, times, refine):
     print '@@ Got max_procs: '+str(max_procs)    
     print '@@ Got data_file: '+data_file
 
@@ -75,7 +75,8 @@ def main(data_file, max_procs, times):
 
     mkdir_if_none_exits(dest_dir)
 
-
+    if(refine):
+        print 'TODO: ADD REFINEMENT PLEASE!'
     
     create_sub_dirs(data_file_dir, dest_dir, max_procs)
 
@@ -98,11 +99,10 @@ if __name__ == '__main__':
         type=int,
         dest='times',
         help='number of times each test will be executed.')
-    args = parser.parse_args()
     parser.add_argument('-r',
-        action='store_true'
+        action='store_true',
         dest='refine',
-        help='number of times each test will be executed.')
+        help='should the mesh be refined.')
     args = parser.parse_args()
 
     try:
@@ -111,4 +111,4 @@ if __name__ == '__main__':
         print '@@ No TRUST enviroment set. Please set TRUST enviroment and try again.'
         exit()
 
-    main(args.data_file, args.max_procs, args.times)
+    main(args.data_file, args.max_procs, args.times, args.refine)
