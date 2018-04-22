@@ -91,7 +91,7 @@ if __name__ == '__main__':
             'Number of mpi processes',
             'Total memory usage (MB)',            
             'Total execution time (sec)',
-            'Time steps sum (sec)',
+            'Total cpu time (sec)',
             'Number of time steps',            
             'Average time step (sec)',
             'Elements per process'
