@@ -1,0 +1,14 @@
+# Printing on the boundaries of the equation Convection_Diffusion_Temperature_FT_Disc of the problem pb
+# Conduction heat transfer rate=Integral(lambda*grad(T)*ndS) [W] if SI units used
+# Boundary:	paroi1		haut1		bas1		Total
+# Time						
+1.272e-01 	0.000e+00 	0.000e+00 	1.927e-03 	1.927e-03
+1.272e-01 	0.000e+00 	0.000e+00 	7.340e-03 	7.340e-03
+1.272e-01 	0.000e+00 	0.000e+00 	7.189e-03 	7.189e-03
+1.272e-01 	0.000e+00 	0.000e+00 	7.040e-03 	7.040e-03
+1.272e-01 	0.000e+00 	0.000e+00 	7.015e-03 	7.015e-03
+1.272e-01 	0.000e+00 	0.000e+00 	6.872e-03 	6.872e-03
+1.272e-01 	0.000e+00 	0.000e+00 	6.732e-03 	6.732e-03
+1.272e-01 	0.000e+00 	0.000e+00 	6.593e-03 	6.593e-03
+1.273e-01 	0.000e+00 	0.000e+00 	6.574e-03 	6.574e-03
+1.273e-01 	0.000e+00 	0.000e+00 	6.554e-03 	6.554e-03

@@ -1,0 +1,1049 @@
+Initialized MPI with MPI_COMM_WORLD (using all processors)
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_MPI with 2 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = PAR_VDF_FT
+Running in parallel with 2 processors
+feenableexcept enabled.
+Data file : PAR_VDF_FT
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VDF_FT_180422-141548/x1_mesh/2_procs
+Nom du cas PAR_VDF_FT
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+-------------------------------------------------------------------
+ 
+                          TRUST
+                      version : 1.7.6 
+                          CEA - DEN
+ 
+
+Debut de l'execution 
+MAIN: Reading and executing data file
+ 0 file(s) modified 
+
+
+ 405 file(s) created 
+
+ ------------------------------------------------------------------
+ 
+  Vous traitez le cas PAR_VDF_FT
+ 
+Reading data file 
+
+Dimension::interpreter : dimension = 3
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom
+ Number of nodes: 18522
+ Reading zone pave1
+  Number of elements: 16000
+  Boundary (Bord) : paroi1
+  Boundary (Bord) : haut1
+  Boundary (Raccord) : bas1
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 2
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+ Calculation of the thickness 2
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.046858
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom_solide
+ Number of nodes: 1395
+ Reading zone pave2
+  Number of elements: 800
+  Boundary (Bord) : paroi2
+  Boundary (Bord) : bas2
+  Boundary (Raccord) : haut2
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 2
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+ Calculation of the thickness 2
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.004081
+Construction of the subarea zone_destruction
+Construction of the subarea OK
+Construction of the subarea zone_tranche
+Construction of the subarea OK
+Reading of data for a Fluide_Incompressible medium
+Fluide_IncompressibleMilieu_base::creer_alpha
+Reading of data for a Fluide_Incompressible medium
+Fluide_IncompressibleMilieu_base::creer_alpha
+Reading of data for a Fluide_Diphasique medium
+Reading of data for a Solide medium
+SolideMilieu_base::creer_alpha
+Reading of data for a Schema_euler_explicite time scheme
+Reading of the maximum number of time steps
+The next backup, by security, will take place after 23 hours of calculation.
+The chosen discretization is of type VDF
+The chosen time scheme is of type Schema_euler_explicite
+We treat the problem pbc of type Probleme_Couple
+It corresponds to the coupling of the following problems: 
+ pb of type Probleme_FT_Disc_gen
+ pb2 of type Pb_Conduction
+Discretization of pbc in progress...
+The problem that we are starting to discretize is pb
+Discretization of the domain associated with the problem pb
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom :
+Not available for HEXAEDRE in dimension 3
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_boundaries_paroi1 for the boundary paroi1 of the domain dom
+Number of elements of the new domain : 1600
+Elimination of 8463 unnecessary nodes in the domain dom_boundaries_paroi1
+Creating a surface domain named dom_boundaries_haut1 for the boundary haut1 of the domain dom
+Number of elements of the new domain : 0
+Elimination of 10143 unnecessary nodes in the domain dom_boundaries_haut1
+Creating a surface domain named dom_boundaries_bas1 for the boundary bas1 of the domain dom
+Number of elements of the new domain : 400
+Elimination of 9702 unnecessary nodes in the domain dom_boundaries_bas1
+==============================================
+The extreme coordinates of the domain dom are:
+x is between -0.004 and 0.004
+y is between -0.004 and 0.004
+z is between 0 and 0.016
+==============================================
+==============================================
+The volume cells of the domain dom are:
+sum(volume cells)= 1.024e-06
+mean(volume cells)= 6.4e-11
+min(volume cells)= 6.4e-11
+max(volume cells)= 6.4e-11
+==============================================
+==============================================
+The boundary areas of the domain dom are:
+Area of bas1  	= 6.4e-05
+Area of paroi1  	= 0.000512
+Area of haut1  	= 6.4e-05
+==============================================
+Calculation of elements and nodes on dom :
+Total number of elements = 16000
+Total number of nodes = 18081
+Total number of faces = 50000
+400 of them on boundary bas1
+3200 of them on boundary paroi1
+400 of them on boundary haut1
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+On calcule les volumes entrelaces
+On genere les aretes
+Creation des aretes 
+L'objet de type Zone_VDF a ete rempli avec succes 
+Sous_zone_VF::discretiser : discretization of the subarea zone_destruction... OK
+Volume of subarea zone_destruction: 2.56e-08
+Sous_zone_VF::discretiser : discretization of the subarea zone_tranche... OK
+Volume of subarea zone_tranche: 2.56e-08
+Discretization of equations
+Hydraulic equation discretization (Navier_Stokes_std::discretiser)
+Velocity discretization
+Champs_compris::ajoute_champ vitesse
+Pressure discretization
+Champs_compris::ajoute_champ pression
+Pressure pa discretization
+Champs_compris::ajoute_champ pression_pa
+Velocity divergence discretization
+Pressure gradient discretization
+Construction of the divergence operator type : Op_Div_VDF_Face
+Construction of the gradient operator type : Op_Grad_VDF_Face
+Champs_compris::ajoute_champ gradient_pression
+Champs_compris::ajoute_champ divergence_U
+Discretisation des conditions limites
+Champs_compris::ajoute_champ diffusivite
+Champs_compris::ajoute_champ viscosite_dynamique
+Champs_compris::ajoute_champ masse_volumique
+Champs_compris::ajoute_champ masse_volumique_vnodes
+Champs_compris::ajoute_champ second_membre_projection
+gradient_pression is already in the list of names of field !!
+Champs_compris::ajoute_champ gradient_pression
+Champs_compris::ajoute_champ derivee_u_etoile
+Champs_compris::ajoute_champ terme_diffusion_vitesse
+Champs_compris::ajoute_champ terme_convection_vitesse
+Champs_compris::ajoute_champ terme_source_vitesse
+Champs_compris::ajoute_champ terme_source_interfaces
+Champs_compris::ajoute_champ gradient_indicatrice
+Champs_compris::ajoute_champ potentiel_faces
+Champs_compris::ajoute_champ potentiel_elements
+Champs_compris::ajoute_champ vitesse_delta_interface
+Champs_compris::ajoute_champ pression_laplacien_d
+Champs_compris::ajoute_champ temperature_mpoint
+Champs_compris::ajoute_champ temperature_mpointv
+Champs_compris::ajoute_champ derivee_temporelle_indicatrice
+Champs_compris::ajoute_champ temperature_thermique
+Champs_compris::ajoute_champ temperature_grad_thermique
+Champs_compris::ajoute_champ vitesse_conv_thermique
+Discretisation des conditions limites
+Champs_compris::ajoute_champ temperature_thermique_vapeur
+Champs_compris::ajoute_champ temperature_grad_thermique_vapeur
+Champs_compris::ajoute_champ vitesse_conv_thermique_vapeur
+Discretisation des conditions limites
+Champs_compris::ajoute_champ INDICATRICE_interf
+Champs_compris::ajoute_champ INDICATRICE_CACHE_interf
+Champs_compris::ajoute_champ INDICATRICE_FACES_interf
+Champs_compris::ajoute_champ VITESSE_FILTREE_interf
+Champs_compris::ajoute_champ FLUX_TMP_interf
+Champs_compris::ajoute_champ INDEX_ELEM
+Champs_compris::ajoute_champ NELEM_PAR_DIRECTION
+Champs_compris::ajoute_champ DISTANCE_INTERFACE_ELEM_interf
+Champs_compris::ajoute_champ DISTANCE_INTERFACE_FACE_interf
+Champs_compris::ajoute_champ DISTANCE_INTERFACE_FACE_COR_interf
+Champs_compris::ajoute_champ DISTANCE_INTERFACE_FACE_DIF_interf
+Champs_compris::ajoute_champ VITESSE_IMP_INTERP_interf
+Champs_compris::ajoute_champ NORMALE_INTERFACE_interf
+Champs_compris::ajoute_champ SURFACE_INTERFACE_interf
+Remaillage_FT::associer_zone_dis
+Discretisation des conditions limites
+Champs_compris::ajoute_champ viscosite_dynamique
+Champs_compris::ajoute_champ viscosite_cinematique
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+Champs_compris::ajoute_champ viscosite_dynamique
+Champs_compris::ajoute_champ viscosite_cinematique
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+viscosite_dynamique is already in the list of names of field !!
+Champs_compris::ajoute_champ viscosite_dynamique
+viscosite_cinematique is already in the list of names of field !!
+Champs_compris::ajoute_champ viscosite_cinematique
+Medium discretization.
+conductivite is already in the list of names of field !!
+Champs_compris::ajoute_champ conductivite
+diffusivite_thermique is already in the list of names of field !!
+Champs_compris::ajoute_champ diffusivite_thermique
+capacite_calorifique is already in the list of names of field !!
+Champs_compris::ajoute_champ capacite_calorifique
+masse_volumique is already in the list of names of field !!
+Champs_compris::ajoute_champ masse_volumique
+The problem that we are starting to discretize is pb2
+Discretization of the domain associated with the problem pb2
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom_solide :
+Not available for HEXAEDRE in dimension 3
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_solide_boundaries_paroi2 for the boundary paroi2 of the domain dom_solide
+Number of elements of the new domain : 82
+Elimination of 717 unnecessary nodes in the domain dom_solide_boundaries_paroi2
+Creating a surface domain named dom_solide_boundaries_bas2 for the boundary bas2 of the domain dom_solide
+Number of elements of the new domain : 200
+Elimination of 610 unnecessary nodes in the domain dom_solide_boundaries_bas2
+Creating a surface domain named dom_solide_boundaries_haut2 for the boundary haut2 of the domain dom_solide
+Number of elements of the new domain : 200
+Elimination of 610 unnecessary nodes in the domain dom_solide_boundaries_haut2
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between -0.004 and 0.004
+y is between -0.004 and 0.004
+z is between -0.0001 and 0
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 6.4e-09
+mean(volume cells)= 8e-12
+min(volume cells)= 8e-12
+max(volume cells)= 8e-12
+==============================================
+==============================================
+The boundary areas of the domain dom_solide are:
+Area of haut2  	= 6.4e-05
+Area of paroi2  	= 3.2e-06
+Area of bas2  	= 6.4e-05
+==============================================
+Calculation of elements and nodes on dom_solide :
+Total number of elements = 800
+Total number of nodes = 1323
+Total number of faces = 2880
+400 of them on boundary haut2
+160 of them on boundary paroi2
+400 of them on boundary bas2
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+On calcule les volumes entrelaces
+On genere les aretes
+Creation des aretes 
+L'objet de type Zone_VDF a ete rempli avec succes 
+Discretization of equations
+Conduction equation discretization
+Discretisation de la temperature
+Champs_compris::ajoute_champ temperature
+Discretisation des conditions limites
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+Shell command executed: mkdir -p lata
+Reading of the problem pb
+Reading of the equations
+Reading of data for a Navier_Stokes_FT_Disc equation
+Reading and typing of the turbulence model :Reading of data for a Modele_turbulence_hyd_sous_maille_Wale_VDF hydraulic turbulence model
+Lecture du type de loi de parois 
+et typage :NEGLIGEABLE_VDF
+Turbulence hydraulic model discretization
+Turbulent viscosity field discretization
+Champs_compris::ajoute_champ viscosite_turbulente
+Turbulent viscosity correction field discretization
+Champs_compris::ajoute_champ corr_visco_turb
+Kinetic turbulent energy field discretisation
+Champs_compris::ajoute_champ K
+Reading and typing of pressure solver : 
+Pressure solver type : Solv_GCP
+Reading and typing of the convection operator : 
+Op_Conv_Quick_VDF_Face
+Reading and typing of the diffusion operator : 
+Op_Dift_VDF_var_Face
+Reading of initial conditions
+EQUATION_INTERFACES_PROPRIETES_FLUIDE equation : INTERF
+ equation : thermique
+ equation : thermique_vapeur
+Reading of boundaries conditions
+Reading the paroi1 boundary condition of the Navier_Stokes_FT_Disc equation from the problem pb
+Reading the bas1 boundary condition of the Navier_Stokes_FT_Disc equation from the problem pb
+Reading the haut1 boundary condition of the Navier_Stokes_FT_Disc equation from the problem pb
+Reading of data for a Transport_Interfaces_FT_Disc equation
+METHODE_TRANSPORT VITESSE_INTERPOLEE
+ Transport velocity interpolated from the velocity 
+ of the following Navier_Stokes equation :
+HYDRAULIQUE
+Reading initial condition
+ Interface construction : (x^2+y^2+(z-(0.000848)*(0.4573484))^2-0.000848^2)
+lectureF }
+Iterations_correction_volume : 2
+METHODE_INTERPOLATION_V VDF_LINEAIRE
+Iterations number of the smoothing tool "distance_interface": 10
+Remailleur_Collision_FT_Thomas::readOn()
+Reading of boundaries conditions
+Reading the bas1 boundary condition of the Transport_Interfaces_FT_Disc equation from the problem pb
+Reading and interpretation of the function 55.*((sqrt(x*x+y*y))_GT_1.0e-3)+120.*((sqrt(x*x+y*y))_LT_0.85e-3)
+Interpretation of the function 55.*((sqrt(x*x+y*y))_GT_1.0e-3)+120.*((sqrt(x*x+y*y))_LT_0.85e-3) Ok
+Reading the paroi1 boundary condition of the Transport_Interfaces_FT_Disc equation from the problem pb
+Reading the haut1 boundary condition of the Transport_Interfaces_FT_Disc equation from the problem pb
+Name of subzone for interfaces deletion: zone_destruction
+Reading of data for a Convection_Diffusion_Temperature_FT_Disc equation
+ Interface equation for the temperature convection diffusion equation :INTERF
+ Navier_stokes equation for the temperature convection diffusion equation :HYDRAULIQUE
+ Equation_Concentration_FT::lire diffusivite
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Convection_Diffusion_Temperature_FT_Disc
+The discretization used is : VDF
+Op_Diff_VDF_const_P0_VDF
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+ Equation_Concentration_FT::lire convection
+Reading and typing of the convection operator : 
+Op_Conv_Quick_VDF_P0_VDF
+Reading of boundaries conditions
+Reading the bas1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+Lecture des parametres du contact (Echange_contact_VDF_FT_Disc::readOn)
+Reading the haut1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+Reading the paroi1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+Reading of initial conditions
+Reading and interpretation of the function -6.+(z<20e-4)*(12.*(1-z/20e-4))
+Interpretation of function -6.+(z<20e-4)*(12.*(1-z/20e-4)) Ok
+Reading of data for a Convection_Diffusion_Temperature_FT_Disc equation
+ Interface equation for the temperature convection diffusion equation :INTERF
+ Navier_stokes equation for the temperature convection diffusion equation :HYDRAULIQUE
+ Equation_Concentration_FT::lire diffusivite
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Convection_Diffusion_Temperature_FT_Disc
+The discretization used is : VDF
+Op_Diff_VDF_const_P0_VDF
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+ Equation_Concentration_FT::lire convection
+Reading and typing of the convection operator : 
+Op_Conv_Quick_VDF_P0_VDF
+Reading of boundaries conditions
+Reading the bas1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+Lecture des parametres du contact (Echange_contact_VDF_FT_Disc::readOn)
+Reading the haut1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+Reading the paroi1 boundary condition of the Convection_Diffusion_Temperature_FT_Disc equation from the problem pb
+end reading condmimutil
+Reading of initial conditions
+Reading and interpretation of the function 0.
+Interpretation of function 0. Ok
+Reading guidelines of postprocessing
+Reading of data for a Postraitement post-processing object 
+Reading of fields to be postprocessed
+Fluide_Diphasique : 0 
+
+Navier_Stokes_FT_Disc : 62 volume_maille vorticite critere_Q porosite_volumique y_plus reynolds_maille courant_maille taux_cisaillement pression_hydrostatique vitesse velocity vitesseX vitesseY vitesseZ pression P_star pression_pa Pressure gradient_pression gradient_pressionX gradient_pressionY gradient_pressionZ divergence_U diffusivite viscosite_dynamique masse_volumique masse_volumique_vnodes second_membre_projection derivee_u_etoile derivee_u_etoileX derivee_u_etoileY derivee_u_etoileZ terme_diffusion_vitesse terme_diffusion_vitesseX terme_diffusion_vitesseY terme_diffusion_vitesseZ terme_convection_vitesse terme_convection_vitesseX terme_convection_vitesseY terme_convection_vitesseZ terme_source_vitesse terme_source_vitesseX terme_source_vitesseY terme_source_vitesseZ terme_source_interfaces terme_source_interfacesX terme_source_interfacesY terme_source_interfacesZ gradient_indicatrice gradient_indicatriceX gradient_indicatriceY gradient_indicatriceZ potentiel_faces potentiel_elements vitesse_delta_interface vitesse_delta_interfaceX vitesse_delta_interfaceY vitesse_delta_interfaceZ pression_laplacien_d temperature_mpoint temperature_mpointv derivee_temporelle_indicatrice 
+
+Fluide_Diphasique : 0 
+
+Op_Dift_VDF_var_Face : 0 
+
+Op_Conv_Quick_VDF_Face : 0 
+
+Modele_turbulence_hyd_sous_maille_Wale_VDF : 3 viscosite_turbulente corr_visco_turb K 
+
+negligeable_VDF : 1 u_star 
+
+Convection_Diffusion_Temperature_FT_Disc : 9 volume_maille gradient_temperature h_echange_ temperature_thermique temperature_grad_thermique vitesse_conv_thermique vitesse_conv_thermiqueX vitesse_conv_thermiqueY vitesse_conv_thermiqueZ 
+
+Fluide_Incompressible : 6 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Op_Diff_VDF_const_P0_VDF : 0 
+
+Op_Conv_Quick_VDF_P0_VDF : 0 
+
+Convection_Diffusion_Temperature_FT_Disc : 9 volume_maille gradient_temperature h_echange_ temperature_thermique_vapeur temperature_grad_thermique_vapeur vitesse_conv_thermique_vapeur vitesse_conv_thermique_vapeurX vitesse_conv_thermique_vapeurY vitesse_conv_thermique_vapeurZ 
+
+Fluide_Incompressible : 6 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Op_Diff_VDF_const_P0_VDF : 0 
+
+Op_Conv_Quick_VDF_P0_VDF : 0 
+
+Transport_Interfaces_FT_Disc : 27 volume_maille INDICATRICE_interf INDICATRICE_CACHE_interf INDICATRICE_FACES_interf VITESSE_FILTREE_interf VITESSE_FILTREE_interfX VITESSE_FILTREE_interfY VITESSE_FILTREE_interfZ FLUX_TMP_interf INDEX_ELEM INDEX_ELEMX INDEX_ELEMY INDEX_ELEMZ NELEM_PAR_DIRECTION DISTANCE_INTERFACE_ELEM_interf DISTANCE_INTERFACE_FACE_interf DISTANCE_INTERFACE_FACE_COR_interf DISTANCE_INTERFACE_FACE_DIF_interf VITESSE_IMP_INTERP_interf VITESSE_IMP_INTERP_interfX VITESSE_IMP_INTERP_interfY VITESSE_IMP_INTERP_interfZ NORMALE_INTERFACE_interf NORMALE_INTERFACE_interfX NORMALE_INTERFACE_interfY NORMALE_INTERFACE_interfZ SURFACE_INTERFACE_interf 
+
+Fluide_Diphasique : 0 
+
+ Warning liste_postraitements obsolete option
+Reading of data for a Postraitement_ft_lata post-processing object 
+1.e-3Post-processing for the interface of transport equation : INTERF
+Zone_Cl_VDF::completer ...
+Zone_Cl_VDF::completer OK
+Initialize the remote connection dom_solide/haut2<-dom/bas1
+Zone_Cl_VDF::completer ...
+Zone_Cl_VDF::completer OK
+Zone_Cl_VDF::completer ...
+Zone_Cl_VDF::completer OK
+Zone_Cl_VDF::completer ...
+Zone_Cl_VDF::completer OK
+Step verification of data being read in progress...
+The read data are coherent
+Reading of the problem pb2
+Reading of the equations
+Reading of data for a Conduction equation
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Conduction
+The discretization used is : VDF
+Op_Diff_VDF_const_P0_VDF
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+Reading of initial conditions
+Reading of boundaries conditions
+Reading the paroi2 boundary condition of the Conduction equation from the problem pb2
+Reading the bas2 boundary condition of the Conduction equation from the problem pb2
+Reading and interpretation of the function 2471144*exp(-(x*x+y*y)/(3.6067*10^(-7)))
+Interpretation of the function 2471144*exp(-(x*x+y*y)/(3.6067*10^(-7))) Ok
+end reading condmimutil
+Reading the haut2 boundary condition of the Conduction equation from the problem pb2
+Lecture des parametres du contact (Echange_contact_VDF_FT_Disc_solid::readOn)
+Reading guidelines of postprocessing
+ Building of temperature_physique  { temperature_physique   refChamp { Pb_champ pb2 temperature } }
+Reading definition of field TEMPERATURE_PHYSIQUE
+Reading of data for a Postraitement post-processing object 
+Reading definition of field DIFFUSION_TS
+Reading of fields to be postprocessed
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Conduction : 2 volume_maille temperature 
+
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Op_Diff_VDF_const_P0_VDF : 0 
+
+Initialize the remote connection dom/bas1<-dom_solide/haut2
+Zone_Cl_VDF::completer ...
+Zone_Cl_VDF::completer OK
+Step verification of data being read in progress...
+The read data are coherent
+=====================================================
+Initialization of the problem pbc (Resoudre) in progress ... 
+=====================================================
+Probleme_FT_Disc_gen::preparer_calcul
+Fluide_Incompressible::initialiser()
+Fluide_IncompressibleMilieu_base:::initialiser
+Fluide_Incompressible::initialiser()
+Fluide_IncompressibleMilieu_base:::initialiser
+ Zone_VF::modifier_pour_Cl
+Modifications de Qdm pour les aretes coins touchant une paroi num_cond_lim=1
+Navier_Stokes_FT_Disc::preparer_calcul()
+The characteristic length of the subgrid scale model is calculated with the method : VOLUME
+Initialisation of the physical properties (rho, mu, ...)
+ based on the indicatrice field of the equation interf
+Assemblage de la matrice pression : Assembleur_P_VDF::assembler_rho_variable
+Norm of the residue: 0 (0)
+
+Final residue: 0 ( 0 )
+ Convergence in 0 iterations for solveur_pression
+clock Ax=B: 0.001483 s for solveur_pression
+Initial condition remeshing.
+The physical properties of a Fluide_Diphasique medium have been successfully checked.
+SolideMilieu_base:::initialiser
+ Zone_VF::modifier_pour_Cl
+The physical properties of a Solide medium have been successfully checked.
+=====================================================
+Solving of the problem pbc (Resoudre) in progress ... 
+=====================================================
+First postprocessing, this can take some minutes
+Postraitement_ft_lata::postraiter time =0.127214
+First postprocessing OK
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.0002
+          x(1) = -0.001
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = -0.0002
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = 0.0002
+          x(2) = 0.0002
+extrapoler_champ_elem: errcount=3
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.0002
+          x(1) = -0.001
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = -0.0002
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = 0.0002
+          x(2) = 0.0002
+extrapoler_champ_elem: errcount=3
+Norm of the residue: 0.00142212 (1)
+0.00327559 0.00206644 0.0039691 0.00202004 0.00340392 0.00162732 0.00167585 0.00205993 0.00249778 0.00246104 0.00150291 0.00211662 0.00143931 0.0015408 0.000732443 
+0.00123562 0.00176836 0.000635231 0.00187838 0.0017883 0.00141855 0.001602 0.000770646 0.000386037 0.000320378 0.000142283 0.000138084 0.000113341 4.45427e-05 7.18869e-05 
+4.01371e-05 2.84123e-05 2.48456e-05 1.24545e-05 8.97203e-06 6.86351e-06 2.27786e-06 3.26302e-06 2.03656e-06 6.68643e-07 9.87251e-07 5.76972e-07 3.43009e-07 3.04018e-07 1.20642e-07 
+5.58449e-08 5.20904e-08 2.27023e-08 2.46801e-08 1.98229e-08 5.24527e-09 1.00828e-08 5.83338e-09 1.26883e-09 2.20347e-09 1.18612e-09 1.01149e-09 1.43945e-09 5.14884e-10 5.31265e-10 
+3.79271e-10 9.95381e-11 7.11178e-11 5.47752e-11 1.47048e-11 1.88808e-11 1.45824e-11 4.6447e-12 6.78611e-12 3.10847e-12 1.68628e-12 2.22489e-12 7.69664e-13 
+Final residue: 7.69664e-13 ( 5.41207e-10 )
+ Convergence in 73 iterations for solveur_pression
+clock Ax=B: 0.032578 s for solveur_pression
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.0002
+          x(1) = -0.001
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = -0.0002
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = 0.0002
+          x(2) = 0.0002
+extrapoler_champ_elem: errcount=3
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.0002
+          x(1) = -0.001
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = -0.0002
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = 0.0002
+          x(2) = 0.0002
+extrapoler_champ_elem: errcount=3
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.0002
+          x(1) = -0.001
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = -0.0002
+          x(2) = 0.0002
+Time = 0.127214; extrapoler_champ_elem: distance lower than dx/2
+        Element position:
+          x(0) = 0.001
+          x(1) = 0.0002
+          x(2) = 0.0002
+extrapoler_champ_elem: errcount=3
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168702397854e-06 time 0.127224
+Surface_Totale_Interface interf t= 0.127224 surface= 1.46711e-05
+Centre_gravite_phases interf t= 0.127224 phase0: 1.16461e-05 2.06307e-05 0.000587284 phase1: -8.16564e-08 -1.44652e-07 0.00805197
+
+-------------------------------------------------------------------
+We treat the time step number 1 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127224
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 6.4e+19
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 6.4e+19
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 6.4e+19
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.144999 s
+
+Norm of the residue: 1.36895 (862.214)
+0.396713 0.118532 0.0571501 0.0185822 0.00661604 0.00320189 0.00667571 0.00921711 0.00359256 0.0046646 0.00941151 0.00481175 0.00667301 0.00830847 0.00449692 
+0.00606299 0.00732206 0.00439004 0.00573712 0.00627693 0.0082544 0.012686 0.0215137 0.0392965 0.0330439 0.0182528 0.0154599 0.00675736 0.00388282 0.0035759 
+0.00256256 0.00156137 0.00169861 0.00127335 0.000567353 0.000635204 0.00032501 0.00020159 0.000264947 0.000151123 6.49035e-05 6.69234e-05 3.89965e-05 2.34412e-05 1.66383e-05 
+1.14779e-05 6.48772e-06 2.94661e-06 1.71755e-06 1.13718e-06 6.82142e-07 4.30303e-07 3.59302e-07 1.81724e-07 1.68759e-07 1.28782e-07 4.6652e-08 4.07497e-08 2.92205e-08 2.00631e-08 
+2.21957e-08 1.53687e-08 9.01225e-09 6.4491e-09 3.15002e-09 1.50646e-09 7.88364e-10 5.52212e-10 3.61652e-10 2.11719e-10 1.68326e-10 8.12089e-11 3.82826e-11 3.00373e-11 1.5605e-11 
+7.58455e-12 6.821e-12 3.26484e-12 1.75067e-12 1.66563e-12 9.32082e-13 
+Final residue: 9.32082e-13 ( 5.87059e-10 )
+ Convergence in 81 iterations for solveur_pression
+clock Ax=B: 0.035966 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168699169575e-06 time 0.127234
+Surface_Totale_Interface interf t= 0.127234 surface= 1.46242e-05
+Centre_gravite_phases interf t= 0.127234 phase0: 1.2647e-05 2.14878e-05 0.000612587 phase1: -8.86779e-08 -1.50668e-07 0.0080518
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn2s. Progress: 9
+
+-------------------------------------------------------------------
+We treat the time step number 2 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127234
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0213656
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0213656
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0213656
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.144991 s
+
+Norm of the residue: 0.0012816 (0.921252)
+0.000425035 0.000158212 0.000108905 0.000143121 0.000131577 0.000108796 0.000102115 9.4443e-05 9.7087e-05 8.69382e-05 0.00011088 9.83136e-05 8.23893e-05 7.14884e-05 5.97854e-05 
+6.18997e-05 5.64167e-05 4.85343e-05 4.81671e-05 4.49085e-05 5.64899e-05 7.53074e-05 0.000121289 0.000113465 0.000142316 0.000259966 0.000186797 0.000168078 0.000137608 7.10187e-05 
+6.69412e-05 4.58347e-05 1.82292e-05 2.34265e-05 2.24471e-05 1.0407e-05 7.07396e-06 4.51625e-06 4.34609e-06 3.35155e-06 1.93082e-06 1.58287e-06 1.27218e-06 1.20426e-06 5.33138e-07 
+1.82653e-07 1.17458e-07 7.02316e-08 7.45124e-08 3.96222e-08 2.32003e-08 1.83209e-08 1.25822e-08 9.6322e-09 4.74276e-09 3.37941e-09 3.19032e-09 2.91082e-09 1.36273e-09 1.32299e-09 
+7.42371e-10 4.76002e-10 3.21069e-10 1.76694e-10 1.42559e-10 1.05228e-10 4.35669e-11 2.91125e-11 9.45526e-12 4.82192e-12 2.75507e-12 1.69724e-12 1.07044e-12 6.44091e-13 
+Final residue: 6.44091e-13 ( 4.62991e-10 )
+ Convergence in 74 iterations for solveur_pression
+clock Ax=B: 0.032288 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168697392248e-06 time 0.127244
+Surface_Totale_Interface interf t= 0.127244 surface= 1.4676e-05
+Centre_gravite_phases interf t= 0.127244 phase0: 1.24044e-05 2.19956e-05 0.000627298 phase1: -8.69791e-08 -1.54233e-07 0.0080517
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 19
+
+-------------------------------------------------------------------
+We treat the time step number 3 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127244
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0223209
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0223209
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0223209
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.14097 s
+
+Norm of the residue: 0.000967904 (0.74851)
+0.000289562 0.000115618 3.15209e-05 6.83015e-05 4.82726e-05 5.53406e-05 4.80482e-05 4.99077e-05 6.12457e-05 4.31027e-05 6.10271e-05 6.22687e-05 7.31861e-05 6.10646e-05 6.51451e-05 
+5.93047e-05 5.94297e-05 5.65134e-05 4.32609e-05 6.57119e-05 0.000111903 0.000133201 0.000236444 0.000244108 0.000151864 0.000220912 0.000192428 8.13783e-05 7.1064e-05 4.61561e-05 
+2.62081e-05 2.24389e-05 1.61204e-05 1.45605e-05 1.24543e-05 5.79778e-06 4.2604e-06 3.22497e-06 2.18994e-06 1.81085e-06 1.11688e-06 6.90217e-07 5.99167e-07 3.81724e-07 1.31102e-07 
+1.03748e-07 6.29688e-08 3.43596e-08 3.69991e-08 2.46476e-08 1.4179e-08 9.42564e-09 5.13631e-09 2.94795e-09 2.24807e-09 1.56773e-09 1.64449e-09 1.23224e-09 7.58181e-10 5.92081e-10 
+2.98303e-10 1.56272e-10 1.13245e-10 5.08372e-11 3.38858e-11 2.72615e-11 1.56007e-11 7.25718e-12 6.11702e-12 2.80995e-12 1.09265e-12 9.58401e-13 
+Final residue: 9.58401e-13 ( 7.41161e-10 )
+ Convergence in 72 iterations for solveur_pression
+clock Ax=B: 0.032115 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168696664899e-06 time 0.127254
+Surface_Totale_Interface interf t= 0.127254 surface= 1.4759e-05
+Centre_gravite_phases interf t= 0.127254 phase0: 1.29427e-05 2.22729e-05 0.000650826 phase1: -9.07547e-08 -1.56179e-07 0.00805153
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 30
+
+-------------------------------------------------------------------
+We treat the time step number 4 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127254
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0224216
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0224216
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0224216
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.146491 s
+
+Norm of the residue: 0.000822615 (0.593096)
+0.000234268 0.000143895 0.000122253 0.00016814 0.000190064 0.000302011 0.000409322 0.000375943 0.000486216 0.000388563 0.000459033 0.000474274 0.000465482 0.000382436 0.000395257 
+0.000383211 0.000473468 0.000518964 0.000561986 0.000498938 0.000476116 0.000561911 0.000505056 0.000446647 0.000251072 0.000170556 0.00016145 9.53845e-05 5.43002e-05 5.49026e-05 
+2.85812e-05 2.68621e-05 1.96293e-05 1.67048e-05 1.21385e-05 6.5859e-06 3.99931e-06 2.68801e-06 1.30996e-06 9.67881e-07 5.01896e-07 3.2981e-07 3.13638e-07 2.33225e-07 1.15898e-07 
+5.76137e-08 4.01775e-08 2.26852e-08 2.75066e-08 1.94344e-08 1.25211e-08 1.11411e-08 6.83161e-09 3.83974e-09 3.23426e-09 2.11228e-09 1.48638e-09 9.22881e-10 6.73434e-10 4.82827e-10 
+2.64251e-10 1.84656e-10 1.39071e-10 6.00268e-11 4.80837e-11 3.80709e-11 1.60024e-11 7.5365e-12 4.13828e-12 2.48234e-12 1.02649e-12 6.20787e-13 
+Final residue: 6.20787e-13 ( 4.4758e-10 )
+ Convergence in 72 iterations for solveur_pression
+clock Ax=B: 0.031812 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168696569496e-06 time 0.127264
+Surface_Totale_Interface interf t= 0.127264 surface= 1.48302e-05
+Centre_gravite_phases interf t= 0.127264 phase0: 1.33107e-05 2.22647e-05 0.000675743 phase1: -9.33354e-08 -1.56122e-07 0.00805136
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 40
+
+-------------------------------------------------------------------
+We treat the time step number 5 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127264
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.022361
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.022361
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.022361
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.139255 s
+
+Norm of the residue: 0.000729494 (0.514294)
+0.000254017 7.74692e-05 6.77391e-05 7.15043e-05 9.41916e-05 0.000135541 0.000140613 0.000153796 0.000194361 0.000293349 0.000345127 0.000302564 0.000333586 0.0003196 0.000330734 
+0.000201173 0.000245096 0.000197342 0.000204885 0.000212076 0.000233352 0.00038218 0.000309798 0.000276748 0.000233442 0.000124676 9.13983e-05 5.31147e-05 4.55847e-05 3.90144e-05 
+2.57798e-05 1.77743e-05 1.52384e-05 1.3024e-05 7.55796e-06 4.17298e-06 2.74553e-06 1.59428e-06 1.25545e-06 6.71123e-07 4.3783e-07 2.95107e-07 2.06371e-07 1.71374e-07 1.03158e-07 
+6.23628e-08 3.73998e-08 1.65743e-08 1.36648e-08 7.25941e-09 4.76363e-09 5.14744e-09 3.24584e-09 2.21501e-09 1.16666e-09 1.12976e-09 9.71555e-10 5.26879e-10 5.44059e-10 3.01334e-10 
+2.23176e-10 1.4195e-10 5.94734e-11 4.22912e-11 3.08412e-11 1.89779e-11 1.35484e-11 5.39533e-12 3.81814e-12 2.12553e-12 8.98695e-13 
+Final residue: 8.98695e-13 ( 6.33581e-10 )
+ Convergence in 71 iterations for solveur_pression
+clock Ax=B: 0.031286 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168697550893e-06 time 0.127274
+Surface_Totale_Interface interf t= 0.127274 surface= 1.48867e-05
+Centre_gravite_phases interf t= 0.127274 phase0: 1.35162e-05 2.21984e-05 0.000694806 phase1: -9.47752e-08 -1.55654e-07 0.00805122
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.838728 s. Progress: 50
+
+-------------------------------------------------------------------
+We treat the time step number 6 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127274
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0211557
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0211557
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0211557
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.13821 s
+
+Norm of the residue: 0.00188523 (1.27492)
+0.000785922 0.000489305 0.000900595 0.0013504 0.00163768 0.00225809 0.00218042 0.00315421 0.00524206 0.00461446 0.00579349 0.00481266 0.00620021 0.00385857 0.00289088 
+0.00281432 0.00209766 0.00123843 0.000663886 0.000431199 0.000526115 0.00070271 0.000850577 0.000805358 0.000601197 0.000361881 0.000245624 0.000181945 0.000120058 8.47061e-05 
+5.96139e-05 3.56056e-05 3.0299e-05 2.00303e-05 1.38555e-05 1.20615e-05 6.6277e-06 5.06804e-06 4.58562e-06 2.8287e-06 1.95176e-06 1.59264e-06 1.3547e-06 8.36587e-07 4.50193e-07 
+2.14445e-07 1.20766e-07 7.21201e-08 5.21679e-08 3.17955e-08 1.9342e-08 1.9223e-08 1.15794e-08 4.19399e-09 2.94369e-09 1.99753e-09 6.80206e-10 7.88567e-10 6.44841e-10 3.56764e-10 
+4.12636e-10 2.27812e-10 1.84536e-10 1.25914e-10 7.39606e-11 4.58038e-11 3.86981e-11 1.83534e-11 8.13853e-12 5.52452e-12 2.59247e-12 1.45013e-12 8.07811e-13 
+Final residue: 8.07811e-13 ( 5.46296e-10 )
+ Convergence in 73 iterations for solveur_pression
+clock Ax=B: 0.032098 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168697174771e-06 time 0.127284
+Surface_Totale_Interface interf t= 0.127284 surface= 1.49356e-05
+Centre_gravite_phases interf t= 0.127284 phase0: 1.364e-05 2.21207e-05 0.000710169 phase1: -9.56433e-08 -1.5511e-07 0.00805112
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.651034 s. Progress: 60
+
+-------------------------------------------------------------------
+We treat the time step number 7 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127284
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.021166
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.021166
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.021166
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.137993 s
+
+Norm of the residue: 0.000957054 (0.680258)
+0.000394398 0.000230151 0.000693522 0.00199076 0.00207435 0.0024927 0.00267386 0.00254932 0.00232819 0.00192163 0.00140016 0.00141741 0.00126997 0.00145769 0.00119025 
+0.00132892 0.00153524 0.00125152 0.000738056 0.00105051 0.000998731 0.000697 0.000523904 0.000354737 0.000210001 0.000112834 0.000101899 6.42221e-05 5.89971e-05 4.24296e-05 
+3.22719e-05 2.30935e-05 1.64099e-05 8.53057e-06 7.60959e-06 5.30314e-06 2.39341e-06 1.31727e-06 8.45238e-07 5.79806e-07 3.0369e-07 1.95353e-07 1.86433e-07 1.42065e-07 8.12876e-08 
+5.84837e-08 3.09138e-08 2.82615e-08 2.25598e-08 1.10163e-08 1.51847e-08 9.42774e-09 4.02109e-09 3.46101e-09 1.91078e-09 1.31033e-09 1.0301e-09 6.9562e-10 4.78152e-10 2.81424e-10 
+1.7441e-10 1.22619e-10 7.75684e-11 3.60411e-11 2.36714e-11 1.71178e-11 1.16765e-11 6.08452e-12 3.4105e-12 1.35851e-12 1.25119e-12 7.85216e-13 
+Final residue: 7.85216e-13 ( 5.58118e-10 )
+ Convergence in 72 iterations for solveur_pression
+clock Ax=B: 0.031989 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168696808403e-06 time 0.127294
+Surface_Totale_Interface interf t= 0.127294 surface= 1.49781e-05
+Centre_gravite_phases interf t= 0.127294 phase0: 1.37226e-05 2.20453e-05 0.000722899 phase1: -9.62236e-08 -1.54582e-07 0.00805103
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.47802 s. Progress: 70
+
+-------------------------------------------------------------------
+We treat the time step number 8 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127294
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0203792
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0203792
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0203792
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.134757 s
+
+Norm of the residue: 0.000425101 (0.297667)
+0.000142168 3.84557e-05 3.67895e-05 4.20002e-05 4.47579e-05 6.40607e-05 6.68616e-05 8.52349e-05 0.000134054 0.000194745 0.000204565 0.000183314 0.000213944 0.000243469 0.000144998 
+0.00018764 0.000164746 0.000100413 9.54532e-05 9.67099e-05 5.38844e-05 8.63234e-05 6.51589e-05 7.2534e-05 8.79961e-05 6.72378e-05 4.10403e-05 4.15754e-05 3.94891e-05 3.03752e-05 
+2.84479e-05 1.99354e-05 9.8296e-06 8.64467e-06 4.02689e-06 2.78021e-06 1.42173e-06 8.02307e-07 6.44546e-07 3.25296e-07 1.69125e-07 1.96641e-07 1.23215e-07 9.54949e-08 5.04356e-08 
+2.34143e-08 1.89712e-08 1.25817e-08 9.1535e-09 6.23791e-09 6.82051e-09 4.02892e-09 2.49504e-09 2.33778e-09 1.2929e-09 1.05755e-09 7.03808e-10 3.951e-10 3.2906e-10 1.98674e-10 
+9.86956e-11 7.34088e-11 4.88283e-11 2.77819e-11 1.98595e-11 1.46432e-11 7.92929e-12 3.34993e-12 1.94129e-12 1.04416e-12 6.32303e-13 
+Final residue: 6.32303e-13 ( 4.42755e-10 )
+ Convergence in 71 iterations for solveur_pression
+clock Ax=B: 0.031709 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168696587335e-06 time 0.127304
+Surface_Totale_Interface interf t= 0.127304 surface= 1.50154e-05
+Centre_gravite_phases interf t= 0.127304 phase0: 1.37829e-05 2.19753e-05 0.000733628 phase1: -9.66467e-08 -1.54092e-07 0.00805095
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.312292 s. Progress: 80
+
+-------------------------------------------------------------------
+We treat the time step number 9 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127304
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0202653
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0202653
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0202653
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+
+73 MBytes of RAM taken by the calculation.
+
+clock: Total time step: 0.138196 s
+
+Norm of the residue: 0.000304698 (0.214321)
+8.26076e-05 2.85567e-05 1.18041e-05 1.51051e-05 1.25572e-05 1.29056e-05 1.27354e-05 1.39438e-05 1.41748e-05 1.77368e-05 1.64099e-05 2.07287e-05 2.60616e-05 2.43868e-05 1.97033e-05 
+2.03393e-05 2.40854e-05 2.20979e-05 1.73553e-05 2.5757e-05 2.27596e-05 2.87792e-05 3.99727e-05 4.20802e-05 6.28757e-05 5.24762e-05 4.9895e-05 4.59829e-05 2.48866e-05 3.62932e-05 
+3.65731e-05 1.91724e-05 1.15578e-05 8.95143e-06 5.83228e-06 3.87314e-06 1.33953e-06 9.64871e-07 7.3842e-07 3.94815e-07 2.93326e-07 2.91523e-07 1.82279e-07 1.03317e-07 5.17981e-08 
+3.40381e-08 3.74826e-08 2.62904e-08 1.26178e-08 1.47319e-08 9.77493e-09 5.84163e-09 4.83472e-09 3.07195e-09 1.8646e-09 1.34368e-09 8.62037e-10 5.47777e-10 3.35337e-10 1.63856e-10 
+1.30386e-10 9.53544e-11 6.14384e-11 3.43342e-11 1.95384e-11 1.50253e-11 7.76916e-12 2.72254e-12 1.80809e-12 1.41621e-12 6.83632e-13 
+Final residue: 6.83632e-13 ( 4.80857e-10 )
+ Convergence in 71 iterations for solveur_pression
+clock Ax=B: 0.03148 s for solveur_pression
+Navier_Stokes_FT_Disc::projeter does nothing
+Construction of the divergence operator type : Op_Div_VDF_Face
+Volume_phase_1  1.0168696508902e-06 time 0.127314
+Surface_Totale_Interface interf t= 0.127314 surface= 1.50661e-05
+Centre_gravite_phases interf t= 0.127314 phase0: 1.36743e-05 2.22505e-05 0.000745714 phase1: -9.58847e-08 -1.56022e-07 0.00805087
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.15452 s. Progress: 90
+
+-------------------------------------------------------------------
+We treat the time step number 10 , for the time scheme ...
+   dt = 1e-05
+   time = 0.127314
+ 
+Printing of the time steps for the equation: Navier_Stokes_FT_Disc
+   diffusive time step : 0.00130012
+   convective time step : 0.0200573
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.15859
+   convective time step : 0.0200573
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature_FT_Disc
+   diffusive time step : 0.00132206
+   convective time step : 0.0200573
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 1.65553e-05
+
+73 MBytes of RAM taken by the calculation.
+---------------------------------------------------------
+The problem pb wants to stop : the maximum number of time steps reached
+
+Postraitement_ft_lata::postraiter time =0.127314
+
+clock: Total time step: 0.380332 s
+
+Opening the files of type EcrFicColl : PAR_VDF_FT_pb.sauv
+Backup of problem pb
+Backup of the field vitesse performed on time : 1.273135e-01
+Backup of the field pression performed on time : 1.273135e-01
+Backup of the field temperature_thermique performed on time : 1.273135e-01
+Backup of the field temperature_thermique_vapeur performed on time : 1.273135e-01
+Backup of the field INDICATRICE_interf performed on time : 1.273135e-01
+Backup of the field INDICATRICE_CACHE_interf performed on time : 1.273135e-01
+Creation of PAR_VDF_FT_pb.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb
+Backup of the field vitesse performed on time : 1.273135e-01
+Backup of the field pression performed on time : 1.273135e-01
+Backup of the field temperature_thermique performed on time : 1.273135e-01
+Backup of the field temperature_thermique_vapeur performed on time : 1.273135e-01
+Backup of the field INDICATRICE_interf performed on time : 1.273135e-01
+Backup of the field INDICATRICE_CACHE_interf performed on time : 1.273135e-01
+Opening the files of type EcrFicColl : PAR_VDF_FT_pb2.sauv
+Backup of problem pb2
+Backup of the field temperature performed on time : 1.273135e-01
+Creation of PAR_VDF_FT_pb2.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb2
+Backup of the field temperature performed on time : 1.273135e-01
+=====================================================
+End of solving of the problem pbc (Resoudre)
+=====================================================
+MAIN: End of data file
+75 MBytes of RAM taken by the calculation.
+
+--------------------------------------------
+clock: Total execution: 4.26695 s
+Arret des processes.

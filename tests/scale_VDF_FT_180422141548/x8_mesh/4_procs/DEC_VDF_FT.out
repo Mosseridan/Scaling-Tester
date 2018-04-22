@@ -1,0 +1,179 @@
+-------------------------------------------------------------------
+ 
+                          TRUST
+                      version : 1.7.6 
+                          CEA - DEN
+ 
+
+ 0 file(s) modified 
+
+
+ 405 file(s) created 
+
+ ------------------------------------------------------------------
+ 
+  Vous traitez le cas DEC_VDF_FT
+ 
+Reading data file 
+
+14 MBytes of RAM taken by the calculation.
+15 MBytes of RAM taken by the calculation.
+16 MBytes of RAM taken by the calculation.
+16 MBytes of RAM taken by the calculation.
+16 MBytes of RAM taken by the calculation.
+30 MBytes of RAM taken by the calculation.
+ Runtime parameters:
+   Objective type: METIS_OBJTYPE_CUT
+   Coarsening type: METIS_CTYPE_SHEM
+   Initial partitioning type: METIS_IPTYPE_GROW
+   Refinement type: METIS_RTYPE_FM
+   Perform a 2-hop matching: No
+   Number of balancing constraints: 1
+   Number of refinement iterations: 10
+   Random number seed: -1
+   Number of partitions: 4
+   Number of cuts: 1
+   User-supplied ufactor: 1
+   Target partition weights: 
+        0=[2.50e-01]   1=[2.50e-01]   2=[2.50e-01]   3=[2.50e-01]
+   Allowed maximum load imbalance: 1.001 
+
+    128000     752000     752000 [20] [     9600:  128000 ]
+     67274     556616     630548 [20] [     9600:  128000 ]
+     35323     370592     538456 [20] [     9600:  128000 ]
+     18367     223642     463402 [20] [     9600:  128000 ]
+      9532     127280     396784 [20] [     9600:  128000 ]
+      4942      69638     339774 [20] [     9600:  128000 ]
+      2558      37140     290972 [20] [     9600:  128000 ]
+      1325      19404     249018 [20] [     9600:  128000 ]
+       687       9896     212218 [20] [     9600:  128000 ]
+       353       4840     178670 [20] [     9600:  128000 ]
+       183       2350     150566 [20] [     9600:  128000 ]
+        95       1170     126632 [20] [     9600:  128000 ]
+        50        554     107824 [20] [     9600:  128000 ]
+        27        238      87678 [20] [     9600:  128000 ]
+        18        144      76428 [20] [     9600:  128000 ]
+     64000     374320     374320 [20] [     4800:   64000 ]
+     33667     276924     313654 [20] [     4800:   64000 ]
+     17661     184262     267744 [20] [     4800:   64000 ]
+      9186     110956     229960 [20] [     4800:   64000 ]
+      4764      62790     196470 [20] [     4800:   64000 ]
+      2454      34176     167858 [20] [     4800:   64000 ]
+      1268      18062     143386 [20] [     4800:   64000 ]
+       657       9294     122398 [20] [     4800:   64000 ]
+       340       4652     103710 [20] [     4800:   64000 ]
+       178       2338      87830 [20] [     4800:   64000 ]
+        93       1162      73460 [20] [     4800:   64000 ]
+        49        516      61014 [20] [     4800:   64000 ]
+        26        234      49662 [20] [     4800:   64000 ]
+        20        184      48036 [20] [     4800:   64000 ]
+     64000     374320     374320 [20] [     4800:   64000 ]
+     33664     276542     313648 [20] [     4800:   64000 ]
+     17661     184210     267604 [20] [     4800:   64000 ]
+      9187     110800     230180 [20] [     4800:   64000 ]
+      4759      62710     196806 [20] [     4800:   64000 ]
+      2463      34246     168210 [20] [     4800:   64000 ]
+      1272      18050     143538 [20] [     4800:   64000 ]
+       661       9350     122242 [20] [     4800:   64000 ]
+       342       4732     103648 [20] [     4800:   64000 ]
+       178       2358      87040 [20] [     4800:   64000 ]
+        92       1156      74070 [20] [     4800:   64000 ]
+        48        542      61584 [20] [     4800:   64000 ]
+        25        230      49512 [20] [     4800:   64000 ]
+        19        170      46718 [20] [     4800:   64000 ]
+
+Timing Information -------------------------------------------------
+ Multilevel: 		   0.241
+     Coarsening: 		   0.173
+            Matching: 			   0.072
+            Contract: 			   0.084
+     Initial Partition: 	   0.003
+     Uncoarsening: 		   0.056
+          Refinement: 			   0.047
+          Projection: 			   0.008
+     Splitting: 		   0.010
+********************************************************************
+
+ gk_mcore statistics
+           coresize:      1536312         nmops:         2048  cmop:      0
+        num_callocs:          418   num_hallocs:            0
+       size_callocs:     13687008  size_hallocs:            0
+        cur_callocs:            0   cur_hallocs:            0
+        max_callocs:      1536016   max_hallocs:            0
+ nbrpool statistics
+        nbrpoolsize:            0   nbrpoolcpos:            0
+    nbrpoolreallocs:            0
+
+ Runtime parameters:
+   Objective type: METIS_OBJTYPE_CUT
+   Coarsening type: METIS_CTYPE_SHEM
+   Initial partitioning type: METIS_IPTYPE_GROW
+   Refinement type: METIS_RTYPE_FM
+   Perform a 2-hop matching: No
+   Number of balancing constraints: 1
+   Number of refinement iterations: 10
+   Random number seed: -1
+   Number of partitions: 4
+   Number of cuts: 1
+   User-supplied ufactor: 1
+   Target partition weights: 
+        0=[2.50e-01]   1=[2.50e-01]   2=[2.50e-01]   3=[2.50e-01]
+   Allowed maximum load imbalance: 1.001 
+
+      6400      34560      34560 [20] [      480:    6400 ]
+      3368      24936      28496 [20] [      480:    6400 ]
+      1770      16134      23884 [20] [      480:    6400 ]
+       924       9370      20114 [20] [      480:    6400 ]
+       479       4946      16786 [20] [      480:    6400 ]
+       250       2450      13906 [20] [      480:    6400 ]
+       131       1138      11272 [20] [      480:    6400 ]
+        69        492       8818 [20] [      480:    6400 ]
+        38        226       6708 [20] [      480:    6400 ]
+        21        108       5052 [20] [      480:    6400 ]
+        18         90       4904 [20] [      480:    6400 ]
+      3200      17112      17112 [20] [      240:    3200 ]
+      1679      12262      14070 [20] [      240:    3200 ]
+       885       7886      11756 [20] [      240:    3200 ]
+       467       4550       9898 [20] [      240:    3200 ]
+       246       2426       8236 [20] [      240:    3200 ]
+       127       1190       6876 [20] [      240:    3200 ]
+        67        558       5556 [20] [      240:    3200 ]
+        38        264       4462 [20] [      240:    3200 ]
+        21        120       3308 [20] [      240:    3200 ]
+        17         98       3192 [20] [      240:    3200 ]
+      3200      17096      17096 [20] [      240:    3200 ]
+      1698      12410      14092 [20] [      240:    3200 ]
+       888       7980      11832 [20] [      240:    3200 ]
+       467       4612       9984 [20] [      240:    3200 ]
+       245       2442       8302 [20] [      240:    3200 ]
+       129       1218       6880 [20] [      240:    3200 ]
+        67        542       5546 [20] [      240:    3200 ]
+        35        240       4376 [20] [      240:    3200 ]
+        18         98       3192 [20] [      240:    3200 ]
+
+Timing Information -------------------------------------------------
+ Multilevel: 		   0.043
+     Coarsening: 		   0.031
+            Matching: 			   0.020
+            Contract: 			   0.010
+     Initial Partition: 	   0.001
+     Uncoarsening: 		   0.010
+          Refinement: 			   0.006
+          Projection: 			   0.003
+     Splitting: 		   0.002
+********************************************************************
+
+ gk_mcore statistics
+           coresize:        77112         nmops:         2048  cmop:      0
+        num_callocs:          315   num_hallocs:            0
+       size_callocs:       741200  size_hallocs:            0
+        cur_callocs:            0   cur_hallocs:            0
+        max_callocs:        76816   max_hallocs:            0
+ nbrpool statistics
+        nbrpoolsize:            0   nbrpoolcpos:            0
+    nbrpoolreallocs:            0
+
+45 MBytes of RAM taken by the calculation.
+
+--------------------------------------------
+clock: Total execution: 2.00059 s

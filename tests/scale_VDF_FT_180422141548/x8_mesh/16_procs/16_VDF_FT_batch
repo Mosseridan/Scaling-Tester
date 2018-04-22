@@ -1,0 +1,5 @@
+#!/bin/bash
+#SBATCH -n 16
+#SBATCH --exclusive
+#SBATCH --threads-per-core=1
+mpirun -np 16 /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt PAR_VDF_FT 16

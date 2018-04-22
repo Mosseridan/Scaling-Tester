@@ -1,0 +1,358 @@
+sed: couldn't flush stdout: Broken pipe
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_Noparallel with 1 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = DEC_VDF_FT
+feenableexcept enabled.
+Data file : DEC_VDF_FT
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VDF_FT_180422-141548/x8_mesh/8_procs
+Nom du cas DEC_VDF_FT
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+Debut de l'execution 
+MAIN: Reading and executing data file
+Dimension::interpreter : dimension = 3
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block pave1
+Step of 3D mesh in progress... 
+It was created 5% of coordxIt was created 10% of coordxIt was created 15% of coordxIt was created 20% of coordxIt was created 25% of coordxIt was created 30% of coordxIt was created 35% of coordxIt was created 40% of coordxIt was created 45% of coordxIt was created 50% of coordxIt was created 55% of coordxIt was created 60% of coordxIt was created 65% of coordxIt was created 70% of coordxIt was created 75% of coordxIt was created 80% of coordxIt was created 85% of coordxIt was created 90% of coordxIt was created 95% of coordx
+It was created 5% of coordyIt was created 10% of coordyIt was created 15% of coordyIt was created 20% of coordyIt was created 25% of coordyIt was created 30% of coordyIt was created 35% of coordyIt was created 40% of coordyIt was created 45% of coordyIt was created 50% of coordyIt was created 55% of coordyIt was created 60% of coordyIt was created 65% of coordyIt was created 70% of coordyIt was created 75% of coordyIt was created 80% of coordyIt was created 85% of coordyIt was created 90% of coordyIt was created 95% of coordy
+It was created 2% of coordzIt was created 5% of coordzIt was created 7% of coordzIt was created 10% of coordzIt was created 12% of coordzIt was created 15% of coordzIt was created 17% of coordzIt was created 20% of coordzIt was created 22% of coordzIt was created 25% of coordzIt was created 27% of coordzIt was created 30% of coordzIt was created 32% of coordzIt was created 35% of coordzIt was created 37% of coordzIt was created 40% of coordzIt was created 42% of coordzIt was created 45% of coordzIt was created 47% of coordzIt was created 50% of coordzIt was created 52% of coordzIt was created 55% of coordzIt was created 57% of coordzIt was created 60% of coordzIt was created 62% of coordzIt was created 65% of coordzIt was created 67% of coordzIt was created 70% of coordzIt was created 72% of coordzIt was created 75% of coordzIt was created 77% of coordzIt was created 80% of coordzIt was created 82% of coordzIt was created 85% of coordzIt was created 87% of coordzIt was created 90% of coordzIt was created 92% of coordzIt was created 95% of coordzIt was created 97% of coordz
+Step of mesh ended 
+Reading of the boundary paroi1
+End of reading of the boundary : paroi1
+Reading of the boundary haut1
+End of reading of the boundary : haut1
+Reading of the boundary bas1
+End of reading of the boundary : bas1
+Reading of the boundary paroi1
+End of reading of the boundary : paroi1
+Reading of the boundary paroi1
+End of reading of the boundary : paroi1
+Reading of the boundary paroi1
+End of reading of the boundary : paroi1
+Compressing objects of type Zone in progress... 
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom
+Execution of the interpreter Transformer
+Association of the domain on which the interpreter applies Transformer
+Reading and interpretation of the function x*0.008-0.004
+Interpretation of the function x*0.008-0.004 Ok
+Reading and interpretation of the function y*0.008-0.004
+Interpretation of the function y*0.008-0.004 Ok
+Reading and interpretation of the function z*0.016
+Interpretation of the function z*0.016 Ok
+Hexaedre::reordonner : 0 elements reversed
+Hexaedre::reordonner : 0 elements reversed
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block pave2
+Step of 3D mesh in progress... 
+It was created 5% of coordxIt was created 10% of coordxIt was created 15% of coordxIt was created 20% of coordxIt was created 25% of coordxIt was created 30% of coordxIt was created 35% of coordxIt was created 40% of coordxIt was created 45% of coordxIt was created 50% of coordxIt was created 55% of coordxIt was created 60% of coordxIt was created 65% of coordxIt was created 70% of coordxIt was created 75% of coordxIt was created 80% of coordxIt was created 85% of coordxIt was created 90% of coordxIt was created 95% of coordx
+It was created 5% of coordyIt was created 10% of coordyIt was created 15% of coordyIt was created 20% of coordyIt was created 25% of coordyIt was created 30% of coordyIt was created 35% of coordyIt was created 40% of coordyIt was created 45% of coordyIt was created 50% of coordyIt was created 55% of coordyIt was created 60% of coordyIt was created 65% of coordyIt was created 70% of coordyIt was created 75% of coordyIt was created 80% of coordyIt was created 85% of coordyIt was created 90% of coordyIt was created 95% of coordy
+It was created 50% of coordz
+Step of mesh ended 
+Reading of the boundary paroi2
+End of reading of the boundary : paroi2
+Reading of the boundary haut2
+End of reading of the boundary : haut2
+Reading of the boundary bas2
+End of reading of the boundary : bas2
+Reading of the boundary paroi2
+End of reading of the boundary : paroi2
+Reading of the boundary paroi2
+End of reading of the boundary : paroi2
+Reading of the boundary paroi2
+End of reading of the boundary : paroi2
+Compressing objects of type Zone in progress... 
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom_solide
+Execution of the interpreter Transformer
+Association of the domain on which the interpreter applies Transformer
+Reading and interpretation of the function x*0.008-0.004
+Interpretation of the function x*0.008-0.004 Ok
+Reading and interpretation of the function y*0.008-0.004
+Interpretation of the function y*0.008-0.004 Ok
+Reading and interpretation of the function z*0.0001-0.0001
+Interpretation of the function z*0.0001-0.0001 Ok
+Hexaedre::reordonner : 0 elements reversed
+Hexaedre::reordonner : 0 elements reversed
+Execution of the interpreter Raffiner_Simplexes
+Association of the domain on which the interpreter applies Raffiner_Simplexes
+Execution of the interpreter Raffiner_Simplexes
+Association of the domain on which the interpreter applies Raffiner_Simplexes
+Decouper : Splitting of a domain
+ Domain name to split : dom
+==============================================
+The extreme coordinates of the domain dom are:
+x is between -0.004 and 0.004
+y is between -0.004 and 0.004
+z is between 0 and 0.016
+==============================================
+==============================================
+The volume cells of the domain dom are:
+sum(volume cells)= 1.024e-06
+mean(volume cells)= 8e-12
+min(volume cells)= 8e-12
+max(volume cells)= 8e-12
+==============================================
+domaine = dom
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 8353
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 1
+The partitioner has generated 8 parts.
+Number of parts requested : 8
+Generation of 0 empty parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 8 parts:
+ Construction of part number 0
+  Number of nodes    : 18102
+  Number of elements : 16000
+  Number of joints   : 3
+  Joint 0 PeVoisin 1 NbSommets 903 NbFaces 840 NbElemDist 1680
+  Joint 1 PeVoisin 2 NbSommets 17 NbFaces 0 NbElemDist 80
+  Joint 2 PeVoisin 3 NbSommets 862 NbFaces 800 NbElemDist 1600
+               Total:    NbSommets 1782 NbFaces 1640 NbElemDist 3360
+Writing part 0 into the binary file DOM_0000.Zones
+Writing of 18102 nodes.
+Writing of 16000 elements.
+ Construction of part number 1
+  Number of nodes    : 18102
+  Number of elements : 16000
+  Number of joints   : 3
+  Joint 0 PeVoisin 0 NbSommets 903 NbFaces 840 NbElemDist 1680
+  Joint 1 PeVoisin 2 NbSommets 791 NbFaces 731 NbElemDist 1550
+  Joint 2 PeVoisin 3 NbSommets 114 NbFaces 69 NbElemDist 306
+               Total:    NbSommets 1808 NbFaces 1640 NbElemDist 3536
+Writing part 1 into the binary file DOM_0001.Zones
+Writing of 18102 nodes.
+Writing of 16000 elements.
+ Construction of part number 2
+  Number of nodes    : 18171
+  Number of elements : 16000
+  Number of joints   : 5
+  Joint 0 PeVoisin 0 NbSommets 17 NbFaces 0 NbElemDist 84
+  Joint 1 PeVoisin 1 NbSommets 791 NbFaces 731 NbElemDist 1462
+  Joint 2 PeVoisin 3 NbSommets 954 NbFaces 890 NbElemDist 1868
+  Joint 3 PeVoisin 6 NbSommets 937 NbFaces 874 NbElemDist 1760
+  Joint 4 PeVoisin 7 NbSommets 89 NbFaces 46 NbElemDist 224
+               Total:    NbSommets 2788 NbFaces 2541 NbElemDist 5398
+Writing part 2 into the binary file DOM_0002.Zones
+Writing of 18171 nodes.
+Writing of 16000 elements.
+ Construction of part number 3
+ Adding of a new joint : 6
+  Number of nodes    : 18125
+  Number of elements : 16000
+  Number of joints   : 5
+  Joint 0 PeVoisin 0 NbSommets 862 NbFaces 800 NbElemDist 1684
+  Joint 1 PeVoisin 1 NbSommets 114 NbFaces 69 NbElemDist 306
+  Joint 2 PeVoisin 2 NbSommets 954 NbFaces 890 NbElemDist 1772
+  Joint 3 PeVoisin 6 NbSommets 0 NbFaces 0 NbElemDist 76
+  Joint 4 PeVoisin 7 NbSommets 820 NbFaces 760 NbElemDist 1560
+               Total:    NbSommets 2750 NbFaces 2519 NbElemDist 5398
+Writing part 3 into the binary file DOM_0003.Zones
+Writing of 18125 nodes.
+Writing of 16000 elements.
+ Construction of part number 4
+  Number of nodes    : 18132
+  Number of elements : 16000
+  Number of joints   : 3
+  Joint 0 PeVoisin 5 NbSommets 903 NbFaces 840 NbElemDist 1680
+  Joint 1 PeVoisin 6 NbSommets 918 NbFaces 854 NbElemDist 1720
+  Joint 2 PeVoisin 7 NbSommets 27 NbFaces 6 NbElemDist 96
+               Total:    NbSommets 1848 NbFaces 1700 NbElemDist 3496
+Writing part 4 into the binary file DOM_0004.Zones
+Writing of 18132 nodes.
+Writing of 16000 elements.
+ Construction of part number 5
+  Number of nodes    : 18102
+  Number of elements : 16000
+  Number of joints   : 3
+  Joint 0 PeVoisin 4 NbSommets 903 NbFaces 840 NbElemDist 1680
+  Joint 1 PeVoisin 6 NbSommets 96 NbFaces 58 NbElemDist 272
+  Joint 2 PeVoisin 7 NbSommets 802 NbFaces 742 NbElemDist 1568
+               Total:    NbSommets 1801 NbFaces 1640 NbElemDist 3520
+Writing part 5 into the binary file DOM_0005.Zones
+Writing of 18102 nodes.
+Writing of 16000 elements.
+ Construction of part number 6
+ Adding of a new joint : 3
+  Number of nodes    : 18173
+  Number of elements : 16000
+  Number of joints   : 5
+  Joint 0 PeVoisin 2 NbSommets 937 NbFaces 874 NbElemDist 1742
+  Joint 1 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 74
+  Joint 2 PeVoisin 4 NbSommets 918 NbFaces 854 NbElemDist 1790
+  Joint 3 PeVoisin 5 NbSommets 96 NbFaces 58 NbElemDist 272
+  Joint 4 PeVoisin 7 NbSommets 906 NbFaces 843 NbElemDist 1674
+               Total:    NbSommets 2857 NbFaces 2629 NbElemDist 5552
+Writing part 6 into the binary file DOM_0006.Zones
+Writing of 18173 nodes.
+Writing of 16000 elements.
+ Construction of part number 7
+  Number of nodes    : 18107
+  Number of elements : 16000
+  Number of joints   : 5
+  Joint 0 PeVoisin 2 NbSommets 89 NbFaces 46 NbElemDist 258
+  Joint 1 PeVoisin 3 NbSommets 820 NbFaces 760 NbElemDist 1526
+  Joint 2 PeVoisin 4 NbSommets 27 NbFaces 6 NbElemDist 98
+  Joint 3 PeVoisin 5 NbSommets 802 NbFaces 742 NbElemDist 1496
+  Joint 4 PeVoisin 6 NbSommets 906 NbFaces 843 NbElemDist 1766
+               Total:    NbSommets 2644 NbFaces 2397 NbElemDist 5144
+Writing part 7 into the binary file DOM_0007.Zones
+Writing of 18107 nodes.
+Writing of 16000 elements.
+End of the interpreter Decouper
+Decouper : Splitting of a domain
+ Domain name to split : dom_solide
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between -0.004 and 0.004
+y is between -0.004 and 0.004
+z is between -0.0001 and 0
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 6.4e-09
+mean(volume cells)= 1e-12
+min(volume cells)= 1e-12
+max(volume cells)= 1e-12
+==============================================
+domaine = dom_solide
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 736
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 5
+The partitioner has generated 8 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 8 parts:
+ Construction of part number 0
+  Number of nodes    : 1175
+  Number of elements : 800
+  Number of joints   : 3
+  Joint 0 PeVoisin 4 NbSommets 140 NbFaces 108 NbElemDist 216
+  Joint 1 PeVoisin 6 NbSommets 30 NbFaces 20 NbElemDist 60
+  Joint 2 PeVoisin 7 NbSommets 45 NbFaces 32 NbElemDist 72
+               Total:    NbSommets 215 NbFaces 160 NbElemDist 348
+Writing part 0 into the binary file DOM_SOLIDE_0000.Zones
+Writing of 1175 nodes.
+Writing of 800 elements.
+ Construction of part number 1
+  Number of nodes    : 1170
+  Number of elements : 800
+  Number of joints   : 4
+  Joint 0 PeVoisin 2 NbSommets 75 NbFaces 56 NbElemDist 112
+  Joint 1 PeVoisin 3 NbSommets 10 NbFaces 4 NbElemDist 24
+  Joint 2 PeVoisin 4 NbSommets 105 NbFaces 80 NbElemDist 160
+  Joint 3 PeVoisin 5 NbSommets 125 NbFaces 96 NbElemDist 200
+               Total:    NbSommets 315 NbFaces 236 NbElemDist 496
+Writing part 1 into the binary file DOM_SOLIDE_0001.Zones
+Writing of 1170 nodes.
+Writing of 800 elements.
+ Construction of part number 2
+ Adding of a new joint : 5
+  Number of nodes    : 1175
+  Number of elements : 800
+  Number of joints   : 5
+  Joint 0 PeVoisin 1 NbSommets 75 NbFaces 56 NbElemDist 112
+  Joint 1 PeVoisin 3 NbSommets 105 NbFaces 80 NbElemDist 160
+  Joint 2 PeVoisin 4 NbSommets 15 NbFaces 8 NbElemDist 28
+  Joint 3 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 4 PeVoisin 6 NbSommets 115 NbFaces 88 NbElemDist 192
+               Total:    NbSommets 310 NbFaces 232 NbElemDist 500
+Writing part 2 into the binary file DOM_SOLIDE_0002.Zones
+Writing of 1175 nodes.
+Writing of 800 elements.
+ Construction of part number 3
+  Number of nodes    : 1160
+  Number of elements : 800
+  Number of joints   : 3
+  Joint 0 PeVoisin 1 NbSommets 10 NbFaces 4 NbElemDist 24
+  Joint 1 PeVoisin 2 NbSommets 105 NbFaces 80 NbElemDist 168
+  Joint 2 PeVoisin 5 NbSommets 65 NbFaces 48 NbElemDist 96
+               Total:    NbSommets 180 NbFaces 132 NbElemDist 288
+Writing part 3 into the binary file DOM_SOLIDE_0003.Zones
+Writing of 1160 nodes.
+Writing of 800 elements.
+ Construction of part number 4
+  Number of nodes    : 1180
+  Number of elements : 800
+  Number of joints   : 4
+  Joint 0 PeVoisin 0 NbSommets 140 NbFaces 108 NbElemDist 212
+  Joint 1 PeVoisin 1 NbSommets 105 NbFaces 80 NbElemDist 176
+  Joint 2 PeVoisin 2 NbSommets 15 NbFaces 8 NbElemDist 32
+  Joint 3 PeVoisin 6 NbSommets 40 NbFaces 28 NbElemDist 52
+               Total:    NbSommets 300 NbFaces 224 NbElemDist 472
+Writing part 4 into the binary file DOM_SOLIDE_0004.Zones
+Writing of 1180 nodes.
+Writing of 800 elements.
+ Construction of part number 5
+ Adding of a new joint : 2
+  Number of nodes    : 1175
+  Number of elements : 800
+  Number of joints   : 3
+  Joint 0 PeVoisin 1 NbSommets 125 NbFaces 96 NbElemDist 192
+  Joint 1 PeVoisin 2 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 2 PeVoisin 3 NbSommets 65 NbFaces 48 NbElemDist 96
+               Total:    NbSommets 190 NbFaces 144 NbElemDist 296
+Writing part 5 into the binary file DOM_SOLIDE_0005.Zones
+Writing of 1175 nodes.
+Writing of 800 elements.
+ Construction of part number 6
+  Number of nodes    : 1170
+  Number of elements : 800
+  Number of joints   : 4
+  Joint 0 PeVoisin 0 NbSommets 30 NbFaces 20 NbElemDist 56
+  Joint 1 PeVoisin 2 NbSommets 115 NbFaces 88 NbElemDist 176
+  Joint 2 PeVoisin 4 NbSommets 40 NbFaces 28 NbElemDist 76
+  Joint 3 PeVoisin 7 NbSommets 115 NbFaces 88 NbElemDist 184
+               Total:    NbSommets 300 NbFaces 224 NbElemDist 492
+Writing part 6 into the binary file DOM_SOLIDE_0006.Zones
+Writing of 1170 nodes.
+Writing of 800 elements.
+ Construction of part number 7
+  Number of nodes    : 1155
+  Number of elements : 800
+  Number of joints   : 2
+  Joint 0 PeVoisin 0 NbSommets 45 NbFaces 32 NbElemDist 68
+  Joint 1 PeVoisin 6 NbSommets 115 NbFaces 88 NbElemDist 176
+               Total:    NbSommets 160 NbFaces 120 NbElemDist 244
+Writing part 7 into the binary file DOM_SOLIDE_0007.Zones
+Writing of 1155 nodes.
+Writing of 800 elements.
+End of the interpreter Decouper
+MAIN: End of data file
+Arret des processes.
