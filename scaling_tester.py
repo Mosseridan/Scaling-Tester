@@ -2,9 +2,9 @@ import argparse
 import os
 import subprocess
 import distutils
+import time
 from distutils import dir_util
 from refine_mesh import refine_mesh
-
 
 def mkdir_if_none_exits(path):
     try:
@@ -103,7 +103,8 @@ def main(data_file, max_procs, times, refine):
     data_file_dir = os.path.dirname(os.path.abspath(data_file))
     print '\n@@ Data file directory: '+data_file_dir 
     
-    dest_dir = os.path.abspath(os.path.join('tests','scale_'+data_file_name))
+    timestr = time.strftime("%y%m%d-%H%M%S")
+    dest_dir = os.path.abspath(os.path.join('tests','scale_'+data_file_name+'_'+timestr))
     print '\n@@ destination directory: '+dest_dir
 
     mkdir_if_none_exits(dest_dir)
