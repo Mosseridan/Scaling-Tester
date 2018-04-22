@@ -4,79 +4,81 @@ import csv
 
 
 # assuming f is an open file.
-def get_number_elements(f):
-    number_elements = 0
-    for line in f :
-        if ("Total number of elements = " in line):
-            number_elements = number_elements + int(line[27:])
-        if ("Projection" in line):
-            break
-    return number_elements
+def get_number_elements(filename):
+    with open(filename, 'r') as f:
+        number_elements = 0
+        for line in f :
+            if ("Total number of elements = " in line):
+                number_elements = number_elements + int(line[27:])
+            if ("Projection" in line):
+                break
+        return number_elements
 
 
 
-def get_cpu_timesteps(f):
-    # how many time steps
-    i = 0
-    CPU_timestep = 0
-    for line in f:
-        if ("clock: Total time step: " in line):
-            i = i + 1
-            splitstring = line.split()
-           # print float(splitstring[4])
-            CPU_timestep = CPU_timestep + float(splitstring[4])
-    return CPU_timestep,i
+
+
+def get_cpu_timesteps(filename):
+    with open(filename, 'r') as f:
+        # how many time steps
+        i = 0
+        CPU_timestep = 0
+        for line in f:
+            if ("clock: Total time step: " in line):
+                i = i + 1
+                splitstring = line.split()
+                # print float(splitstring[4])
+                CPU_timestep = CPU_timestep + float(splitstring[4])
+        return CPU_timestep,i
 
 
 
-def get_total_time_memory(f):
-    totaltime = 0
-    memory = 0
-    f.seek(-250,2)
-    for line in f:
-        if ("MBytes of RAM taken by the calculation." in line):
-            splt = line.split()
-            memory = splt[0]
-        if ("clock: Total execution: " in line) :
-            splitstring = line.split()
-            totaltime = float(splitstring[3])
-            return totaltime,memory
+
+def get_total_time_memory(filename):
+    with open(filename, 'r') as f:
+        totaltime = 0
+        memory = 0
+        f.seek(-250,2)
+        for line in f:
+            if ("MBytes of RAM taken by the calculation." in line):
+                splt = line.split()
+                memory = splt[0]
+            if ("clock: Total execution: " in line) :
+                splitstring = line.split()
+                totaltime = float(splitstring[3])
+                return totaltime,memory
 
 
 
-def get_mpi_process(f):
-    f.seek(0)
-    for line in f:
-        if ("Running in parallel with " in line):
-            splt = line.split()
-            return int(splt[4])
+def get_mpi_process(filename):
+    with open(filename, 'r') as f:
+        f.seek(0)
+        for line in f:
+            if ("Running in parallel with " in line):
+                splt = line.split()
+                return int(splt[4])
 
 
 
-def parse_output(filename):
-    d = {}
-    f = open(filename,"r")
+def parse_output(filename):  
+    d = {} 
 
-    elements_count = get_number_elements(f)
-    total_cpu_time,cpu_timestep_count = get_cpu_timesteps(f)
-    total_exec_time,total_memory = get_total_time_memory(f)
-    mpi_proc_count = get_mpi_process(f)
-
-    
-
-
+    elements_count = get_number_elements(filename)    
     print "Number of elements: " + str(elements_count)
     d["Number of elements"] = elements_count
     
+    mpi_proc_count = get_mpi_process(filename)
     print "Number of mpi processes: " + str(mpi_proc_count)
     d['Number of mpi processes'] = mpi_proc_count
 
+    total_exec_time,total_memory = get_total_time_memory(filename)    
     print "Total execution time (sec): " + str(total_exec_time)
     d["Total execution time (sec)"] = total_exec_time    
     
     print "Total memory used (MB): " + str(total_memory)
     d["Total memory usage (MB)"] = total_memory
-
+    
+    total_cpu_time,cpu_timestep_count = get_cpu_timesteps(filename)
     print "Total cpu time (sec): " + str(total_cpu_time)    
     d["Total cpu time (sec)"] = total_cpu_time
    
@@ -95,10 +97,7 @@ def parse_output(filename):
         d["Elements per process"] = elements_count/mpi_proc_count
     else:
         print "Elements per process: " + str(0)
-        d["Elements per process"] = 0
-
-    f.close()
-    
+        d["Elements per process"] = 0    
    
     return d
 

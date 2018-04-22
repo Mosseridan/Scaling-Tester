@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
     print "\n@@ Writing results to test_results.csv"
 
-    with open(os.path.join(args.dir,'test_results.csv'), 'w') as csvfile:
+    with open(os.path.join(args.dir,'test_results.csv'), 'w') as results_file:
 
         fieldnames = [
             'Number of elements',            
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             'Elements per process'
         ]
 
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(results_file, fieldnames=fieldnames)
         writer.writeheader()
 
         for result in results:
