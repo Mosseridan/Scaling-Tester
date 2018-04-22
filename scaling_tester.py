@@ -6,7 +6,6 @@ from distutils import dir_util
 from refine_mesh import refine_mesh
 
 
-
 def mkdir_if_none_exits(path):
     try:
         os.mkdir(path)
@@ -121,19 +120,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Runs sacling test with TrioCFD on the provided data file.')
     parser.add_argument('-df',
         dest='data_file',
-        help='path to the data file to be executed.')
+        help='Path to the data file to be executed.')
     parser.add_argument('-mp',
         type=int,
         dest='max_procs',
-        help='maximal number of processes.')
+        help='Maximal number of processes.')
     parser.add_argument('-t',
         type=int,
         dest='times',
-        help='number of times each test will be executed.')
+        help='Number of times each test will be executed.')
     parser.add_argument('-r',
         action='store_true',
         dest='refine',
-        help='should the mesh be refined.')
+        help='Should the mesh be refined.')
     args = parser.parse_args()
 
     try:
@@ -143,3 +142,5 @@ if __name__ == '__main__':
         exit()
 
     main(args.data_file, args.max_procs, args.times, args.refine)
+
+    print "\n@@ Done"
