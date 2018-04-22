@@ -103,7 +103,7 @@ def main(data_file, max_procs, times, refine):
     data_file_dir = os.path.dirname(os.path.abspath(data_file))
     print '\n@@ Data file directory: '+data_file_dir 
     
-    timestr = time.strftime("%y%m%d-%H%M%S")
+    timestr = time.strftime("%y%m%d%H%M%S")
     dest_dir = os.path.abspath(os.path.join('tests','scale_'+data_file_name+'_'+timestr))
     print '\n@@ destination directory: '+dest_dir
 
