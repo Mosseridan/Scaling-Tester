@@ -1,0 +1,14 @@
+# Printing on the boundaries of the equation Convection_Diffusion_Temperature_Turbulent of the problem pb
+# Convective heat transfer rate=Integral(-rho*cp*T*u*ndS) [W] if SI units used
+# Boundary:	symmetry		wall		devant		derriere		Total
+# Time								
+1.985e-05 	-4.510e-12 	2.087e+00 	-2.387e+03 	2.385e+03 	3.316e-01
+3.974e-05 	-3.673e-04 	2.064e+00 	-2.389e+03 	2.385e+03 	-1.782e+00
+5.966e-05 	-1.028e-03 	2.102e+00 	-2.390e+03 	2.385e+03 	-3.472e+00
+7.961e-05 	-1.899e-03 	2.147e+00 	-2.392e+03 	2.385e+03 	-5.207e+00
+9.958e-05 	-2.822e-03 	2.169e+00 	-2.394e+03 	2.385e+03 	-7.049e+00
+1.196e-04 	-3.597e-03 	2.157e+00 	-2.396e+03 	2.385e+03 	-8.998e+00
+1.396e-04 	-4.137e-03 	2.118e+00 	-2.398e+03 	2.385e+03 	-1.093e+01
+1.596e-04 	-4.439e-03 	2.064e+00 	-2.400e+03 	2.385e+03 	-1.280e+01
+1.796e-04 	-4.527e-03 	2.003e+00 	-2.401e+03 	2.385e+03 	-1.457e+01
+1.996e-04 	-4.446e-03 	1.939e+00 	-2.403e+03 	2.385e+03 	-1.628e+01

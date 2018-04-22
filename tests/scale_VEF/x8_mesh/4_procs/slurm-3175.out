@@ -1,0 +1,1120 @@
+Initialized MPI with MPI_COMM_WORLD (using all processors)
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_MPI with 4 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = PAR_VEF
+Running in parallel with 4 processors
+feenableexcept enabled.
+Data file : PAR_VEF
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF/x8_mesh/4_procs
+Nom du cas PAR_VEF
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+-------------------------------------------------------------------
+ 
+                          TRUST
+                      version : 1.7.6 
+                          CEA - DEN
+ 
+
+ 0 file(s) modified 
+
+
+ 405 file(s) created 
+
+ ------------------------------------------------------------------
+ 
+  Vous traitez le cas PAR_VEF
+ 
+Reading data file 
+Debut de l'execution 
+MAIN: Reading and executing data file
+
+Dimension::interpreter : dimension = 3
+Reading of data for a Schema_euler_explicite time scheme
+Reading of the maximum number of time steps
+The next backup, by security, will take place after 23 hours of calculation.
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom_solide
+ Number of nodes: 6474
+ Reading zone Cavite1_Cavite2
+  Number of elements: 29376
+  Boundary (Bord) : paroi_a_40
+  Boundary (Bord) : paroi_a_20
+  Boundary (Bord) : Devant1
+  Boundary (Bord) : Derriere1
+  Boundary (Bord) : Devant2
+  Boundary (Bord) : Derriere2
+  Boundary (Raccord) : Paroi_echange1
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 1
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.032848
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom_fluide
+ Number of nodes: 6202
+ Reading zone Cavite3
+  Number of elements: 28224
+  Boundary (Bord) : Entree
+  Boundary (Bord) : Paroi
+  Boundary (Bord) : Sortie
+  Boundary (Bord) : Devant3
+  Boundary (Bord) : Derriere3
+  Boundary (Raccord) : Paroi_echange2
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 2
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+ Calculation of the thickness 2
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.034532
+Reading of data for a Fluide_Incompressible medium
+Fluide_IncompressibleMilieu_base::creer_alpha
+Reading of data for a Solide medium
+SolideMilieu_base::creer_alpha
+The chosen discretization is of type VEFPreP1B
+The chosen time scheme is of type Schema_euler_explicite
+We treat the problem pbc of type Probleme_Couple
+It corresponds to the coupling of the following problems: 
+ pb1 of type Pb_Conduction
+ pb2 of type Pb_Thermohydraulique
+Discretization of pbc in progress...
+The problem that we are starting to discretize is pb1
+Discretization of the domain associated with the problem pb1
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom_solide :
+Between 60 degrees and 70 degrees : 0 elements ( 0 %)
+Between 70 degrees and 80 degrees : 0 elements ( 0 %)
+Between 80 degrees and 90 degrees : 338 elements ( 1.1506 %)
+Between 90 degrees and 100 degrees : 16798 elements ( 57.1827 %)
+Between 100 degrees and 110 degrees : 0 elements ( 0 %)
+Between 110 degrees and 120 degrees : 2448 elements ( 8.33333 %)
+Between 120 degrees and 130 degrees : 0 elements ( 0 %)
+Between 130 degrees and 140 degrees : 4896 elements ( 16.6667 %)
+Between 140 degrees and 150 degrees : 4896 elements ( 16.6667 %)
+Between 150 degrees and 160 degrees : 0 elements ( 0 %)
+Between 160 degrees and 170 degrees : 0 elements ( 0 %)
+Between 170 degrees and 180 degrees : 0 elements ( 0 %)
+
+Zone_VEF::reordonner les_faces 
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_solide_boundaries_paroi_a_40 for the boundary paroi_a_40 of the domain dom_solide
+Number of elements of the new domain : 318
+Elimination of 1847 unnecessary nodes in the domain dom_solide_boundaries_paroi_a_40
+Creating a surface domain named dom_solide_boundaries_paroi_a_20 for the boundary paroi_a_20 of the domain dom_solide
+Number of elements of the new domain : 0
+Elimination of 2028 unnecessary nodes in the domain dom_solide_boundaries_paroi_a_20
+Creating a surface domain named dom_solide_boundaries_Devant1 for the boundary Devant1 of the domain dom_solide
+Number of elements of the new domain : 180
+Elimination of 1917 unnecessary nodes in the domain dom_solide_boundaries_Devant1
+Creating a surface domain named dom_solide_boundaries_Derriere1 for the boundary Derriere1 of the domain dom_solide
+Number of elements of the new domain : 223
+Elimination of 1897 unnecessary nodes in the domain dom_solide_boundaries_Derriere1
+Creating a surface domain named dom_solide_boundaries_Devant2 for the boundary Devant2 of the domain dom_solide
+Number of elements of the new domain : 0
+Elimination of 2028 unnecessary nodes in the domain dom_solide_boundaries_Devant2
+Creating a surface domain named dom_solide_boundaries_Derriere2 for the boundary Derriere2 of the domain dom_solide
+Number of elements of the new domain : 0
+Elimination of 2028 unnecessary nodes in the domain dom_solide_boundaries_Derriere2
+Creating a surface domain named dom_solide_boundaries_Paroi_echange1 for the boundary Paroi_echange1 of the domain dom_solide
+Number of elements of the new domain : 144
+Elimination of 1943 unnecessary nodes in the domain dom_solide_boundaries_Paroi_echange1
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between 0 and 1
+y is between 0 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 0.51
+mean(volume cells)= 1.73611e-05
+min(volume cells)= 1.73611e-05
+max(volume cells)= 1.73611e-05
+==============================================
+==============================================
+The boundary areas of the domain dom_solide are:
+Area of Paroi_echange1  	= 1.4
+Area of paroi_a_40  	= 2
+Area of paroi_a_20  	= 0.6
+Area of Devant1  	= 0.3
+Area of Derriere1  	= 0.3
+Area of Devant2  	= 0.21
+Area of Derriere2  	= 0.21
+==============================================
+Calculation of elements and nodes on dom_solide :
+Total number of elements = 29376
+Total number of nodes = 6137
+Total number of faces = 60528
+672 of them on boundary Paroi_echange1
+960 of them on boundary paroi_a_40
+288 of them on boundary paroi_a_20
+480 of them on boundary Devant1
+480 of them on boundary Derriere1
+336 of them on boundary Devant2
+336 of them on boundary Derriere2
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+Informations of the Zone VEF of the domain dom_solide : 
+Lowest cell size h=(Volume/max(Surface))= 0.00589256
+Average cell size <h>= 0.00739303
+==============================================
+La Zone_VEF_PreP1b a ete remplie avec succes
+Discretization of equations
+Conduction equation discretization
+Discretisation de la temperature
+Champs_compris::ajoute_champ temperature
+discretisation des conditions limites
+discretisation des conditions limites OK
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+The problem that we are starting to discretize is pb2
+Discretization of the domain associated with the problem pb2
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom_fluide :
+Between 60 degrees and 70 degrees : 0 elements ( 0 %)
+Between 70 degrees and 80 degrees : 0 elements ( 0 %)
+Between 80 degrees and 90 degrees : 196 elements ( 0.694444 %)
+Between 90 degrees and 100 degrees : 16268 elements ( 57.6389 %)
+Between 100 degrees and 110 degrees : 0 elements ( 0 %)
+Between 110 degrees and 120 degrees : 2352 elements ( 8.33333 %)
+Between 120 degrees and 130 degrees : 0 elements ( 0 %)
+Between 130 degrees and 140 degrees : 4704 elements ( 16.6667 %)
+Between 140 degrees and 150 degrees : 4704 elements ( 16.6667 %)
+Between 150 degrees and 160 degrees : 0 elements ( 0 %)
+Between 160 degrees and 170 degrees : 0 elements ( 0 %)
+Between 170 degrees and 180 degrees : 0 elements ( 0 %)
+
+Zone_VEF::reordonner les_faces 
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_fluide_boundaries_Entree for the boundary Entree of the domain dom_fluide
+Number of elements of the new domain : 0
+Elimination of 2420 unnecessary nodes in the domain dom_fluide_boundaries_Entree
+Creating a surface domain named dom_fluide_boundaries_Paroi for the boundary Paroi of the domain dom_fluide
+Number of elements of the new domain : 0
+Elimination of 2420 unnecessary nodes in the domain dom_fluide_boundaries_Paroi
+Creating a surface domain named dom_fluide_boundaries_Sortie for the boundary Sortie of the domain dom_fluide
+Number of elements of the new domain : 0
+Elimination of 2420 unnecessary nodes in the domain dom_fluide_boundaries_Sortie
+Creating a surface domain named dom_fluide_boundaries_Devant3 for the boundary Devant3 of the domain dom_fluide
+Number of elements of the new domain : 162
+Elimination of 2324 unnecessary nodes in the domain dom_fluide_boundaries_Devant3
+Creating a surface domain named dom_fluide_boundaries_Derriere3 for the boundary Derriere3 of the domain dom_fluide
+Number of elements of the new domain : 233
+Elimination of 2286 unnecessary nodes in the domain dom_fluide_boundaries_Derriere3
+Creating a surface domain named dom_fluide_boundaries_Paroi_echange2 for the boundary Paroi_echange2 of the domain dom_fluide
+Number of elements of the new domain : 336
+Elimination of 2231 unnecessary nodes in the domain dom_fluide_boundaries_Paroi_echange2
+==============================================
+The extreme coordinates of the domain dom_fluide are:
+x is between 0.3 and 1
+y is between 0.3 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_fluide are:
+sum(volume cells)= 0.49
+mean(volume cells)= 1.73611e-05
+min(volume cells)= 1.73611e-05
+max(volume cells)= 1.73611e-05
+==============================================
+==============================================
+The boundary areas of the domain dom_fluide are:
+Area of Paroi_echange2  	= 1.4
+Area of Entree  	= 0.4
+Area of Paroi  	= 0.6
+Area of Sortie  	= 0.4
+Area of Devant3  	= 0.49
+Area of Derriere3  	= 0.49
+==============================================
+Calculation of elements and nodes on dom_fluide :
+Total number of elements = 28224
+Total number of nodes = 5761
+Total number of faces = 57904
+672 of them on boundary Paroi_echange2
+192 of them on boundary Entree
+288 of them on boundary Paroi
+192 of them on boundary Sortie
+784 of them on boundary Devant3
+784 of them on boundary Derriere3
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+Informations of the Zone VEF of the domain dom_fluide : 
+Lowest cell size h=(Volume/max(Surface))= 0.00589256
+Average cell size <h>= 0.00739303
+==============================================
+La Zone_VEF_PreP1b a ete remplie avec succes
+Discretization of equations
+Hydraulic equation discretization (Navier_Stokes_std::discretiser)
+Velocity discretization
+Champs_compris::ajoute_champ vitesse
+Pressure discretization
+Champs_compris::ajoute_champ pression
+Pressure pa discretization
+Champs_compris::ajoute_champ pression_pa
+Velocity divergence discretization
+Pressure gradient discretization
+Construction of the divergence operator type : Op_Div_VEFPreP1B_P1NC
+Construction of the gradient operator type : Op_Grad_VEFPreP1B_P1NC
+Champs_compris::ajoute_champ gradient_pression
+Champs_compris::ajoute_champ divergence_U
+Navier_Stokes_std::discretiser_assembleur_pression : type=Assembleur_P_VEFPreP1B
+discretisation des conditions limites
+discretisation des conditions limites OK
+Energy equation discretization
+Discretisation de la temperature
+Champs_compris::ajoute_champ temperature
+discretisation des conditions limites
+discretisation des conditions limites OK
+Convection_Diffusion_Temperature::discretiser() ok
+Champs_compris::ajoute_champ viscosite_dynamique
+Champs_compris::ajoute_champ viscosite_cinematique
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ dilatabilite
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+Reading of the problem pb1
+Reading of the equations
+Reading of data for a Conduction equation
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Conduction
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+Reading of source terms
+Reading of term Puissance_Thermique
+and typing: Puissance_Thermique_VEF_P1NC
+Lecture du Champ Puissance
+Champs_compris::ajoute_champ Puissance_volumique
+Reading of initial conditions
+Reading of boundaries conditions
+Reading the paroi_a_40 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the paroi_a_20 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Paroi_echange1 boundary condition of the Conduction equation from the problem pb1
+Champ_front_contact_VEF::readOn : pb1Paroi_echange1TEMPERATURE
+      connecte a                : pb2Paroi_echange2TEMPERATURE
+end reading condmimutil
+Reading the Devant1 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Derriere1 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Devant2 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Derriere2 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading guidelines of postprocessing
+ Building of temperature_physique  { temperature_physique Tparoi_VEF { source  refChamp { Pb_champ pb1 temperature } }  }
+Reading definition of field TEMPERATURE_PHYSIQUE
+Reading of data for a Postraitement post-processing object 
+Reading of probes
+End of reading probes 
+Reading of fields to be postprocessed
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Conduction : 2 volume_maille temperature 
+
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Puissance_Thermique_VEF_P1NC : 1 Puissance_volumique 
+
+Construction of the OctreeRoot OK 
+Initialize the remote connection dom_fluide/Paroi_echange2<-dom_solide/Paroi_echange1
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Evaluateur_Source_VEF_Face::completer()
+Step verification of data being read in progress...
+The read data are coherent
+Reading of the problem pb2
+Reading of the equations
+Reading of data for a Navier_Stokes_standard equation
+Reading and typing of pressure solver : 
+Pressure solver type : Solv_GCP
+Reading and typing of the convection operator : 
+Op_Conv_Amont_VEF_P1NC
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Navier_Stokes_standard
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : viscosite_cinematique unit : m2/s
+Reading of source terms
+Reading of term boussinesq_temperature
+and typing: boussinesq_temperature_VEFPreP1B_P1NC
+Reading Boussinesq source term parameters.
+Reading of initial conditions
+Reading of boundaries conditions
+Reading the Entree boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Sortie boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Paroi boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Paroi_echange2 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Devant3 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Derriere3 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading of data for a Convection_Diffusion_Temperature equation
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Convection_Diffusion_Temperature
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+Reading and typing of the convection operator : 
+Op_Conv_Amont_VEF_P1NC
+Reading of source terms
+Reading of term Puissance_Thermique
+and typing: Puissance_Thermique_VEF_P1NC
+Lecture du Champ Puissance
+Champs_compris::ajoute_champ Puissance_volumique
+Reading of boundaries conditions
+Reading the Entree boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Reading the Sortie boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Reading the Paroi_echange2 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Champ_front_contact_VEF::readOn : pb2Paroi_echange2TEMPERATURE
+      connecte a                : pb1Paroi_echange1TEMPERATURE
+end reading condmimutil
+Reading the Paroi boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading the Devant3 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading the Derriere3 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading of initial conditions
+Reading guidelines of postprocessing
+ Building of temperature_physique  { temperature_physique Tparoi_VEF { source  refChamp { Pb_champ pb2 temperature } }  }
+Reading definition of field TEMPERATURE_PHYSIQUE
+Reading of data for a Postraitement post-processing object 
+Reading of probes
+End of reading probes 
+Reading of fields to be postprocessed
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Navier_Stokes_standard : 23 volume_maille vorticite critere_Q porosite_volumique y_plus reynolds_maille courant_maille taux_cisaillement pression_hydrostatique vitesse velocity vitesseX vitesseY vitesseZ pression P_star pression_pa Pressure gradient_pression gradient_pressionX gradient_pressionY gradient_pressionZ divergence_U 
+
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Op_Conv_Amont_VEF_P1NC : 0 
+
+Boussinesq_VEFPreP1B_P1NC : 0 
+
+Convection_Diffusion_Temperature : 4 volume_maille gradient_temperature h_echange_ temperature 
+
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Op_Conv_Amont_VEF_P1NC : 0 
+
+Puissance_Thermique_VEF_P1NC : 1 Puissance_volumique 
+
+Construction of the OctreeRoot OK 
+Initialisation de la roue pour la permutation des schemas de convection
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Fin creation esp. virtuel volumes_entrelaces_Cl_
+Initialisation de la roue pour la permutation des schemas de convection
+Initialize the remote connection dom_solide/Paroi_echange1<-dom_fluide/Paroi_echange2
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Fin creation esp. virtuel volumes_entrelaces_Cl_
+Evaluateur_Source_VEF_Face::completer()
+Step verification of data being read in progress...
+The read data are coherent
+=====================================================
+Initialization of the problem pbc (Resoudre) in progress ... 
+=====================================================
+SolideMilieu_base:::initialiser
+The physical properties of a Solide medium have been successfully checked.
+Fluide_Incompressible::initialiser()
+Fluide_IncompressibleMilieu_base:::initialiser
+Navier_Stokes_std::preparer_calcul()
+Assemblage de la matrice de pression P0 P1 en cours...
+Assemblage P0 OK
+Assemblage P1 OK
+Assemblage POP1 OK
+Update P0 OK
+Update P1 OK
+Modifie P1P1 Neumann OK
+Update POP1 OK
+Order of the matrix = 54226
+Changement de base pour la matrice: P0+P1->P1Bulle
+Conversion BlocSymToMatMorseSym...
+Projection of initial and boundaries conditions 
+-------------  Projection  -----------------
+--------------------------------------------
+Bilan de masse avant projection : 0.00658515
+Norm of the residue: 0.00398338 (1)
+0.00533984 0.00500034 0.00529228 0.00478827 0.00465747 0.00450734 0.00408201 0.00375121 0.00316108 0.00289742 0.00258403 0.00216361 0.00210425 0.00185169 0.00150212 
+0.00123356 0.00102851 0.000858873 0.000780266 0.000770879 0.000821766 0.000981186 0.0012356 0.00134781 0.00143531 0.00139142 0.00118128 0.00107286 0.000977563 0.000944031 
+0.000891638 0.000758474 0.00065664 0.000559501 0.00048292 0.000439478 0.000403149 0.00036505 0.000315729 0.000282743 0.000252654 0.000222115 0.00019254 0.000158033 0.00013717 
+0.000126285 0.000118246 0.000113928 0.000109311 0.000106626 9.7321e-05 8.72774e-05 7.70353e-05 6.76883e-05 5.88459e-05 5.03518e-05 4.19216e-05 3.52788e-05 3.11197e-05 2.76802e-05 
+2.29423e-05 1.8553e-05 1.50497e-05 1.20911e-05 9.73201e-06 7.58672e-06 6.0756e-06 4.95003e-06 4.07091e-06 3.80298e-06 3.63087e-06 3.60476e-06 3.65047e-06 3.11687e-06 2.51626e-06 
+2.01711e-06 1.68327e-06 1.60957e-06 1.62029e-06 1.74084e-06 1.81695e-06 1.85695e-06 1.79427e-06 1.69619e-06 1.64004e-06 1.52347e-06 1.44885e-06 1.36259e-06 1.20802e-06 1.08976e-06 
+9.79432e-07 9.34587e-07 9.48806e-07 9.61174e-07 9.19535e-07 8.28395e-07 7.56466e-07 7.10141e-07 6.85969e-07 6.84882e-07 6.71396e-07 6.40769e-07 6.08502e-07 5.61334e-07 5.19763e-07 
+4.7209e-07 4.29256e-07 3.91302e-07 3.58878e-07 3.37732e-07 3.16458e-07 2.9765e-07 2.89641e-07 2.93182e-07 3.0336e-07 3.03879e-07 2.93358e-07 2.67477e-07 2.33193e-07 2.04916e-07 
+1.77257e-07 1.61671e-07 1.43511e-07 1.23377e-07 1.09266e-07 9.42407e-08 8.12715e-08 7.03439e-08 6.00389e-08 5.14575e-08 4.40743e-08 3.7875e-08 3.41953e-08 3.22104e-08 3.25875e-08 
+3.31045e-08 3.30712e-08 3.15641e-08 2.96046e-08 2.85281e-08 2.69505e-08 2.48508e-08 2.19097e-08 1.93831e-08 1.75001e-08 1.66387e-08 1.6284e-08 1.6513e-08 1.67104e-08 1.70687e-08 
+1.68012e-08 1.61386e-08 1.54308e-08 1.41565e-08 1.28786e-08 1.13574e-08 1.04104e-08 1.01129e-08 1.01586e-08 1.05093e-08 1.12011e-08 1.19543e-08 1.2679e-08 1.32496e-08 1.37891e-08 
+1.47075e-08 1.59785e-08 1.78787e-08 2.02999e-08 2.20916e-08 2.28791e-08 2.39063e-08 2.5181e-08 2.755e-08 3.00883e-08 3.17256e-08 3.24125e-08 3.25005e-08 3.18333e-08 3.09275e-08 
+2.97166e-08 2.89756e-08 2.88047e-08 2.83651e-08 2.81131e-08 2.84089e-08 3.09804e-08 3.46844e-08 3.73247e-08 4.01947e-08 4.29421e-08 4.49415e-08 4.6019e-08 4.68719e-08 4.84568e-08 
+5.08689e-08 5.5816e-08 6.272e-08 7.17715e-08 8.07154e-08 8.72296e-08 9.12676e-08 8.89495e-08 8.32603e-08 7.67652e-08 6.917e-08 6.40317e-08 5.92745e-08 5.65482e-08 5.57523e-08 
+5.59534e-08 5.50004e-08 5.2031e-08 4.75469e-08 4.36228e-08 3.92753e-08 3.53905e-08 3.21205e-08 2.86193e-08 2.57626e-08 2.26527e-08 1.9472e-08 1.64973e-08 1.41097e-08 1.21992e-08 
+1.03307e-08 8.63764e-09 7.03454e-09 5.87482e-09 5.0427e-09 4.4738e-09 4.10813e-09 3.7954e-09 3.4651e-09 3.15939e-09 2.92745e-09 2.68984e-09 2.47338e-09 2.20393e-09 1.90941e-09 
+1.65442e-09 1.42668e-09 1.23141e-09 1.11759e-09 1.01292e-09 9.32517e-10 8.62121e-10 7.95887e-10 7.39277e-10 6.88794e-10 6.5201e-10 6.20952e-10 6.04321e-10 5.86997e-10 5.66057e-10 
+5.37456e-10 5.09025e-10 4.70666e-10 4.43401e-10 4.24662e-10 4.16486e-10 4.03415e-10 3.84725e-10 3.69455e-10 3.55367e-10 3.53513e-10 3.58744e-10 3.7311e-10 3.93261e-10 4.17741e-10 
+4.51313e-10 4.95894e-10 5.53278e-10 6.21693e-10 7.09927e-10 8.01656e-10 8.91703e-10 9.77529e-10 1.05153e-09 1.13131e-09 1.22837e-09 1.34159e-09 1.46284e-09 1.61464e-09 1.82263e-09 
+2.07646e-09 2.34094e-09 2.59688e-09 2.82174e-09 3.03933e-09 3.21545e-09 3.42819e-09 3.6844e-09 3.87364e-09 3.99986e-09 3.96508e-09 3.80425e-09 3.59833e-09 3.39838e-09 3.1711e-09 
+2.85963e-09 2.55298e-09 2.30775e-09 2.08995e-09 1.88801e-09 1.71073e-09 1.56439e-09 1.4208e-09 1.25977e-09 1.11292e-09 9.58539e-10 8.1624e-10 7.0333e-10 6.14894e-10 5.39609e-10 
+4.76524e-10 4.14768e-10 3.58895e-10 3.15262e-10 2.73018e-10 2.30805e-10 1.92451e-10 1.5638e-10 1.24746e-10 1.02774e-10 8.40578e-11 7.03873e-11 6.07798e-11 5.36808e-11 4.80632e-11 
+4.29365e-11 3.80407e-11 3.38424e-11 2.99871e-11 2.67118e-11 2.41348e-11 2.19226e-11 1.97568e-11 1.71451e-11 1.44861e-11 1.22442e-11 1.05297e-11 9.13262e-12 7.90424e-12 6.85916e-12 
+5.98849e-12 5.15589e-12 4.36859e-12 3.68426e-12 3.10408e-12 2.59819e-12 2.17818e-12 1.83128e-12 1.54079e-12 1.34029e-12 1.22852e-12 1.12139e-12 9.986e-13 
+Final residue: 9.986e-13 ( 2.50691e-10 )
+ Convergence in 358 iterations for solveur_pression
+clock Ax=B: 0.414857 s for solveur_pression
+Bilan de masse apres projection : 2.68907e-13
+-------------  Projection  OK---------------
+--------------------------------------------
+Estimation du champ de pression au demarrage:
+Norm of the residue: 0 (0)
+
+Final residue: 0 ( 0 )
+ Convergence in 0 iterations for solveur_pression
+clock Ax=B: 0.00144 s for solveur_pression
+The physical properties of a Fluide_Incompressible medium have been successfully checked.
+=====================================================
+Solving of the problem pbc (Resoudre) in progress ... 
+=====================================================
+First postprocessing, this can take some minutes
+First postprocessing OK
+
+Final residue: 9.08401e-13 ( 7.67096e-09 )
+ Convergence in 331 iterations for solveur_pression
+
+-------------------------------------------------------------------
+We treat the time step number 1 , for the time scheme ...
+   dt = 0.1
+   time = 0.1
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.1865
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.1865
+
+202 MBytes of RAM taken by the calculation.
+
+202 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 2.91495e-14 m3/s
+Relative value : 1.67901e-10
+time step continuity errors : sum local = 5.94889e-15, global = 5.10378e-20, cumulative = 5.10378e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.490365 s
+
+Norm of the residue: 1.17653e-05 (1)
+5.22063e-06 2.86358e-06 1.63717e-06 1.17225e-06 8.18527e-07 5.64622e-07 4.76388e-07 4.05568e-07 3.4368e-07 3.16503e-07 3.07762e-07 2.6728e-07 2.41979e-07 2.19723e-07 2.00069e-07 
+1.78582e-07 1.45659e-07 1.31474e-07 1.19311e-07 1.13099e-07 1.11467e-07 1.05241e-07 1.04209e-07 1.05026e-07 1.04703e-07 1.01646e-07 1.00195e-07 9.60414e-08 9.10001e-08 8.67167e-08 
+8.19015e-08 7.5169e-08 7.25634e-08 7.09047e-08 6.77492e-08 6.75545e-08 6.43915e-08 6.21654e-08 5.87362e-08 5.38795e-08 5.01145e-08 4.65346e-08 4.36404e-08 4.02416e-08 3.70723e-08 
+3.42066e-08 2.99668e-08 2.71025e-08 2.54214e-08 2.29067e-08 2.11208e-08 2.02801e-08 1.86533e-08 1.77662e-08 1.75799e-08 1.73001e-08 1.75992e-08 1.8053e-08 1.66668e-08 1.55137e-08 
+1.42362e-08 1.28411e-08 1.18703e-08 1.12829e-08 1.05731e-08 9.7971e-09 9.15846e-09 8.11384e-09 7.07315e-09 6.17343e-09 5.18276e-09 4.4773e-09 3.85267e-09 3.32924e-09 3.02162e-09 
+2.73477e-09 2.53964e-09 2.42951e-09 2.29908e-09 2.06313e-09 1.84043e-09 1.62497e-09 1.4187e-09 1.26823e-09 1.13204e-09 1.05669e-09 1.00118e-09 9.8629e-10 9.66223e-10 9.49184e-10 
+9.18208e-10 8.56479e-10 8.13215e-10 7.54919e-10 7.37068e-10 7.08412e-10 6.72429e-10 6.32498e-10 6.1809e-10 6.21339e-10 6.55605e-10 6.91313e-10 7.45482e-10 7.93361e-10 8.17265e-10 
+7.99459e-10 7.89467e-10 7.79888e-10 7.79608e-10 7.84435e-10 7.891e-10 8.07907e-10 8.35787e-10 8.40139e-10 8.2551e-10 8.32665e-10 8.45351e-10 8.96985e-10 9.7958e-10 1.08193e-09 
+1.15828e-09 1.18276e-09 1.18301e-09 1.1243e-09 1.09864e-09 1.10333e-09 1.15701e-09 1.23511e-09 1.30561e-09 1.4084e-09 1.52587e-09 1.67322e-09 1.74505e-09 1.82351e-09 1.92945e-09 
+2.00511e-09 2.11953e-09 2.24557e-09 2.38545e-09 2.46487e-09 2.55609e-09 2.69398e-09 2.93051e-09 3.20589e-09 3.44402e-09 3.68313e-09 3.93106e-09 4.09205e-09 4.29168e-09 4.47625e-09 
+4.51421e-09 4.50004e-09 4.35614e-09 4.29142e-09 4.30092e-09 4.2705e-09 4.39505e-09 4.47665e-09 4.51144e-09 4.43986e-09 4.25098e-09 3.84894e-09 3.41821e-09 2.91107e-09 2.47265e-09 
+2.09942e-09 1.87801e-09 1.6529e-09 1.43904e-09 1.26445e-09 1.0774e-09 9.4836e-10 8.39789e-10 7.50056e-10 6.75644e-10 6.16516e-10 5.47996e-10 4.86256e-10 4.31975e-10 3.92936e-10 
+3.63275e-10 3.39143e-10 3.31898e-10 3.30852e-10 3.26002e-10 3.18396e-10 3.11808e-10 3.13111e-10 3.14324e-10 3.08047e-10 2.9427e-10 2.81646e-10 2.75453e-10 2.71753e-10 2.70481e-10 
+2.70131e-10 2.65145e-10 2.54323e-10 2.43938e-10 2.27218e-10 2.07365e-10 1.86369e-10 1.68312e-10 1.4935e-10 1.28937e-10 1.09064e-10 9.09534e-11 7.43114e-11 6.12789e-11 5.12713e-11 
+4.38969e-11 3.91255e-11 3.67702e-11 3.52853e-11 3.46341e-11 3.46488e-11 3.44976e-11 3.37766e-11 3.21354e-11 2.99223e-11 2.75158e-11 2.48753e-11 2.2016e-11 1.96791e-11 1.76369e-11 
+1.57159e-11 1.39608e-11 1.21939e-11 1.06125e-11 9.11245e-12 7.94268e-12 7.26743e-12 6.56902e-12 6.10723e-12 5.79737e-12 5.50398e-12 5.17378e-12 4.79195e-12 4.44905e-12 4.23592e-12 
+4.11933e-12 4.01754e-12 3.92021e-12 3.82916e-12 3.75273e-12 3.71852e-12 3.74779e-12 3.88313e-12 4.11824e-12 4.47295e-12 4.92222e-12 5.47874e-12 6.02533e-12 6.46621e-12 6.84512e-12 
+7.24557e-12 7.62131e-12 8.20936e-12 8.95806e-12 1.00079e-11 1.12776e-11 1.24607e-11 1.42465e-11 1.60591e-11 1.74222e-11 1.94767e-11 2.14936e-11 2.3289e-11 2.54316e-11 2.78216e-11 
+3.05804e-11 3.37813e-11 3.62909e-11 3.80441e-11 3.83694e-11 3.71474e-11 3.47408e-11 3.1295e-11 2.81155e-11 2.43576e-11 2.15676e-11 1.8722e-11 1.613e-11 1.42265e-11 1.24187e-11 
+1.09604e-11 9.75296e-12 8.67946e-12 7.65695e-12 6.69505e-12 5.84412e-12 5.08247e-12 4.29428e-12 3.6397e-12 3.12215e-12 2.70341e-12 2.3093e-12 1.9969e-12 1.72802e-12 1.52287e-12 
+1.3746e-12 1.25456e-12 1.11064e-12 9.72248e-13 
+Final residue: 9.72248e-13 ( 8.2637e-08 )
+ Convergence in 304 iterations for solveur_pression
+clock Ax=B: 0.351705 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn8s. Progress: 9
+
+-------------------------------------------------------------------
+We treat the time step number 2 , for the time scheme ...
+   dt = 0.1
+   time = 0.2
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.18684
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.18684
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 3.43016e-14 m3/s
+Relative value : 1.97577e-10
+time step continuity errors : sum local = 7.00032e-15, global = -1.86574e-20, cumulative = 3.23804e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.444448 s
+
+Norm of the residue: 9.06866e-06 (1)
+4.05529e-06 2.19869e-06 1.18604e-06 8.57442e-07 6.15038e-07 4.30285e-07 3.63046e-07 3.09755e-07 2.60368e-07 2.41383e-07 2.32215e-07 2.05825e-07 1.83797e-07 1.6616e-07 1.49022e-07 
+1.36231e-07 1.10351e-07 9.81821e-08 9.0318e-08 8.61577e-08 8.44066e-08 7.86918e-08 7.6851e-08 7.65335e-08 7.62268e-08 7.35743e-08 7.2313e-08 6.98194e-08 6.66747e-08 6.29058e-08 
+6.04807e-08 5.61144e-08 5.42472e-08 5.31655e-08 5.0549e-08 5.1074e-08 4.96393e-08 4.75467e-08 4.4582e-08 4.12461e-08 3.82902e-08 3.55172e-08 3.32504e-08 3.04417e-08 2.79967e-08 
+2.58649e-08 2.26208e-08 2.07169e-08 1.91946e-08 1.72127e-08 1.57748e-08 1.51205e-08 1.36261e-08 1.2893e-08 1.28445e-08 1.26678e-08 1.28654e-08 1.30111e-08 1.20085e-08 1.11183e-08 
+1.02575e-08 9.30946e-09 8.67573e-09 8.36145e-09 7.87987e-09 7.38133e-09 6.89478e-09 6.13312e-09 5.3746e-09 4.73337e-09 4.00869e-09 3.46863e-09 3.00342e-09 2.58964e-09 2.36054e-09 
+2.14864e-09 1.97988e-09 1.88055e-09 1.76821e-09 1.58625e-09 1.41596e-09 1.23748e-09 1.07955e-09 9.66584e-10 8.70885e-10 8.20335e-10 7.80902e-10 7.68891e-10 7.51424e-10 7.36266e-10 
+7.1289e-10 6.68991e-10 6.32972e-10 5.93955e-10 5.83286e-10 5.59085e-10 5.28633e-10 4.95991e-10 4.83145e-10 4.87565e-10 5.15439e-10 5.45046e-10 5.86131e-10 6.32025e-10 6.57092e-10 
+6.49168e-10 6.48664e-10 6.42979e-10 6.48677e-10 6.52898e-10 6.50171e-10 6.63241e-10 6.88066e-10 6.91554e-10 6.77858e-10 6.84688e-10 7.00974e-10 7.49297e-10 8.27979e-10 9.1504e-10 
+9.83598e-10 9.93674e-10 9.89222e-10 9.45422e-10 9.27538e-10 9.40604e-10 9.86378e-10 1.05365e-09 1.11266e-09 1.18698e-09 1.27545e-09 1.38701e-09 1.45369e-09 1.51597e-09 1.61247e-09 
+1.69027e-09 1.79844e-09 1.90532e-09 2.01101e-09 2.07106e-09 2.13219e-09 2.22649e-09 2.41833e-09 2.63134e-09 2.81315e-09 2.98623e-09 3.17991e-09 3.30881e-09 3.46244e-09 3.58076e-09 
+3.60434e-09 3.59372e-09 3.47062e-09 3.40111e-09 3.42625e-09 3.41009e-09 3.50697e-09 3.56364e-09 3.57745e-09 3.51188e-09 3.34759e-09 3.02749e-09 2.6637e-09 2.27619e-09 1.94562e-09 
+1.64983e-09 1.4663e-09 1.26712e-09 1.07844e-09 9.3714e-10 8.00532e-10 7.04167e-10 6.24252e-10 5.63014e-10 5.09348e-10 4.65997e-10 4.10383e-10 3.58405e-10 3.1942e-10 2.92999e-10 
+2.70592e-10 2.55788e-10 2.50397e-10 2.46008e-10 2.43338e-10 2.3474e-10 2.29004e-10 2.28106e-10 2.27849e-10 2.23442e-10 2.16471e-10 2.08694e-10 2.06123e-10 2.04069e-10 2.02915e-10 
+2.02753e-10 1.97892e-10 1.90164e-10 1.81916e-10 1.69208e-10 1.54111e-10 1.3935e-10 1.26893e-10 1.12111e-10 9.5584e-11 8.11058e-11 6.82355e-11 5.58001e-11 4.67442e-11 4.0008e-11 
+3.49295e-11 3.15355e-11 2.9745e-11 2.86604e-11 2.77382e-11 2.74721e-11 2.70534e-11 2.61346e-11 2.48322e-11 2.3211e-11 2.13374e-11 1.9309e-11 1.70738e-11 1.51549e-11 1.36267e-11 
+1.20395e-11 1.05982e-11 9.21049e-12 7.94686e-12 6.83398e-12 5.92067e-12 5.35638e-12 4.85851e-12 4.49785e-12 4.18379e-12 3.84916e-12 3.45073e-12 3.08694e-12 2.72172e-12 2.41232e-12 
+2.19073e-12 1.99536e-12 1.79347e-12 1.60474e-12 1.40255e-12 1.22915e-12 1.08481e-12 9.67111e-13 
+Final residue: 9.67111e-13 ( 1.06643e-07 )
+ Convergence in 248 iterations for solveur_pression
+clock Ax=B: 0.28809 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn5s. Progress: 19
+
+-------------------------------------------------------------------
+We treat the time step number 3 , for the time scheme ...
+   dt = 0.1
+   time = 0.3
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.186862
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.186862
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.17525e-13 m3/s
+Relative value : 3.55695e-09
+time step continuity errors : sum local = 1.26026e-13, global = -1.09511e-20, cumulative = 2.14293e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.376507 s
+
+Norm of the residue: 7.35713e-06 (1)
+3.31379e-06 1.78603e-06 8.97743e-07 6.51804e-07 4.84208e-07 3.44439e-07 2.90097e-07 2.45166e-07 2.0745e-07 1.91486e-07 1.81473e-07 1.62835e-07 1.45224e-07 1.31183e-07 1.16275e-07 
+1.0979e-07 8.93822e-08 7.7961e-08 7.09338e-08 6.75014e-08 6.51657e-08 5.99308e-08 5.75021e-08 5.63562e-08 5.59991e-08 5.403e-08 5.31325e-08 5.19917e-08 4.93201e-08 4.63848e-08 
+4.48895e-08 4.21267e-08 4.0726e-08 4.00144e-08 3.83997e-08 3.90815e-08 3.88493e-08 3.71599e-08 3.48237e-08 3.22793e-08 3.00625e-08 2.78883e-08 2.61954e-08 2.38368e-08 2.19184e-08 
+2.03114e-08 1.7798e-08 1.64209e-08 1.50613e-08 1.34061e-08 1.20959e-08 1.1466e-08 1.01672e-08 9.4628e-09 9.38894e-09 9.24892e-09 9.35164e-09 9.34845e-09 8.62822e-09 7.96551e-09 
+7.40752e-09 6.76713e-09 6.38661e-09 6.23074e-09 5.92736e-09 5.63019e-09 5.29373e-09 4.75371e-09 4.20461e-09 3.74893e-09 3.19935e-09 2.77596e-09 2.41772e-09 2.0846e-09 1.90786e-09 
+1.73461e-09 1.58267e-09 1.48904e-09 1.39349e-09 1.25696e-09 1.12274e-09 9.75967e-10 8.51302e-10 7.64657e-10 6.94817e-10 6.57734e-10 6.29782e-10 6.16282e-10 5.97948e-10 5.79477e-10 
+5.57077e-10 5.25002e-10 4.97781e-10 4.73314e-10 4.66624e-10 4.43103e-10 4.1642e-10 3.89359e-10 3.76562e-10 3.8204e-10 4.05623e-10 4.31843e-10 4.65246e-10 5.08258e-10 5.34332e-10 
+5.36358e-10 5.44416e-10 5.44994e-10 5.56388e-10 5.61482e-10 5.55989e-10 5.61256e-10 5.78721e-10 5.76802e-10 5.60261e-10 5.63414e-10 5.8109e-10 6.25214e-10 6.96556e-10 7.76026e-10 
+8.41496e-10 8.48837e-10 8.35156e-10 7.97817e-10 7.86711e-10 8.05087e-10 8.41589e-10 8.99961e-10 9.5122e-10 1.01134e-09 1.08126e-09 1.16954e-09 1.23504e-09 1.29455e-09 1.37865e-09 
+1.45615e-09 1.56275e-09 1.65613e-09 1.73515e-09 1.776e-09 1.81037e-09 1.86428e-09 2.00256e-09 2.15531e-09 2.29109e-09 2.41666e-09 2.56145e-09 2.65254e-09 2.75513e-09 2.85085e-09 
+2.89454e-09 2.86978e-09 2.79387e-09 2.74078e-09 2.74554e-09 2.75262e-09 2.84084e-09 2.86922e-09 2.86989e-09 2.81289e-09 2.68403e-09 2.45415e-09 2.15e-09 1.84527e-09 1.58155e-09 
+1.33436e-09 1.17073e-09 9.93626e-10 8.2789e-10 7.09247e-10 6.0467e-10 5.32046e-10 4.78491e-10 4.34872e-10 3.99487e-10 3.66314e-10 3.21505e-10 2.8483e-10 2.50659e-10 2.26625e-10 
+2.08994e-10 1.95064e-10 1.89175e-10 1.85429e-10 1.81771e-10 1.75393e-10 1.70712e-10 1.68494e-10 1.67563e-10 1.64593e-10 1.59735e-10 1.54557e-10 1.54505e-10 1.54112e-10 1.53353e-10 
+1.54569e-10 1.4939e-10 1.43998e-10 1.37262e-10 1.28283e-10 1.1743e-10 1.066e-10 9.7997e-11 8.63842e-11 7.31213e-11 6.26483e-11 5.25332e-11 4.35611e-11 3.69347e-11 3.20101e-11 
+2.85361e-11 2.57281e-11 2.41604e-11 2.31233e-11 2.20752e-11 2.17627e-11 2.11937e-11 2.0269e-11 1.9206e-11 1.80296e-11 1.67181e-11 1.52575e-11 1.36205e-11 1.20644e-11 1.08734e-11 
+9.58209e-12 8.4313e-12 7.39179e-12 6.46151e-12 5.60384e-12 4.91066e-12 4.54654e-12 4.27916e-12 4.15683e-12 4.01744e-12 3.80692e-12 3.53472e-12 3.33669e-12 3.10382e-12 2.945e-12 
+2.89616e-12 2.89012e-12 2.84583e-12 2.81762e-12 2.7618e-12 2.744e-12 2.77268e-12 2.87287e-12 2.99908e-12 3.24083e-12 3.4989e-12 3.87407e-12 4.25645e-12 4.48399e-12 4.71928e-12 
+5.04355e-12 5.44382e-12 5.96514e-12 6.6779e-12 7.59626e-12 8.55302e-12 9.49317e-12 1.07445e-11 1.19782e-11 1.30791e-11 1.46541e-11 1.63122e-11 1.77514e-11 1.95274e-11 2.11758e-11 
+2.31175e-11 2.51482e-11 2.6506e-11 2.69395e-11 2.60809e-11 2.49324e-11 2.31382e-11 2.08797e-11 1.89289e-11 1.63637e-11 1.4282e-11 1.23952e-11 1.06382e-11 9.17818e-12 8.01558e-12 
+7.06443e-12 6.39207e-12 5.80575e-12 5.22613e-12 4.60007e-12 4.03961e-12 3.49858e-12 2.97887e-12 2.50917e-12 2.13195e-12 1.83016e-12 1.56947e-12 1.34419e-12 1.14972e-12 1.01788e-12 
+9.34159e-13 
+Final residue: 9.34159e-13 ( 1.26973e-07 )
+ Convergence in 301 iterations for solveur_pression
+clock Ax=B: 0.346808 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn3s. Progress: 30
+
+-------------------------------------------------------------------
+We treat the time step number 4 , for the time scheme ...
+   dt = 0.1
+   time = 0.4
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.186949
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.186949
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.38281e-13 m3/s
+Relative value : 3.6765e-09
+time step continuity errors : sum local = 1.30261e-13, global = -3.18148e-21, cumulative = 1.82479e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.435996 s
+
+Norm of the residue: 6.16807e-06 (1)
+2.78805e-06 1.50643e-06 7.15592e-07 5.22758e-07 4.00306e-07 2.88552e-07 2.41972e-07 2.02187e-07 1.72204e-07 1.5786e-07 1.47194e-07 1.32151e-07 1.18817e-07 1.07897e-07 9.52648e-08 
+9.08708e-08 7.4288e-08 6.42991e-08 5.79917e-08 5.43753e-08 5.14609e-08 4.65394e-08 4.39318e-08 4.18909e-08 4.13232e-08 3.96351e-08 3.87059e-08 3.81046e-08 3.62293e-08 3.39243e-08 
+3.30071e-08 3.12813e-08 3.02325e-08 2.98296e-08 2.89337e-08 2.9636e-08 3.02133e-08 2.8987e-08 2.719e-08 2.55507e-08 2.4008e-08 2.23324e-08 2.10994e-08 1.91299e-08 1.77275e-08 
+1.65192e-08 1.4526e-08 1.34418e-08 1.22349e-08 1.08001e-08 9.54605e-09 8.88771e-09 7.73885e-09 7.04696e-09 6.89671e-09 6.72345e-09 6.7103e-09 6.63075e-09 6.08239e-09 5.57634e-09 
+5.22907e-09 4.82649e-09 4.60423e-09 4.52313e-09 4.35152e-09 4.19721e-09 4.00267e-09 3.6533e-09 3.28077e-09 2.97314e-09 2.56201e-09 2.24065e-09 1.97118e-09 1.70475e-09 1.56302e-09 
+1.41186e-09 1.27626e-09 1.19244e-09 1.11456e-09 1.0131e-09 9.08392e-10 7.91486e-10 6.92661e-10 6.26751e-10 5.73844e-10 5.45607e-10 5.24957e-10 5.0947e-10 4.87114e-10 4.62812e-10 
+4.38584e-10 4.14864e-10 3.9566e-10 3.81152e-10 3.77163e-10 3.53893e-10 3.30293e-10 3.07778e-10 2.9533e-10 3.00259e-10 3.1851e-10 3.39788e-10 3.65877e-10 4.03042e-10 4.28298e-10 
+4.39778e-10 4.57769e-10 4.67642e-10 4.86919e-10 4.9588e-10 4.90973e-10 4.90513e-10 4.98581e-10 4.885e-10 4.66627e-10 4.6545e-10 4.82423e-10 5.22606e-10 5.87571e-10 6.60341e-10 
+7.2299e-10 7.32876e-10 7.14967e-10 6.80398e-10 6.70551e-10 6.88378e-10 7.18278e-10 7.69857e-10 8.16289e-10 8.65827e-10 9.21442e-10 9.93384e-10 1.05558e-09 1.11734e-09 1.19302e-09 
+1.26433e-09 1.36436e-09 1.44792e-09 1.51651e-09 1.54877e-09 1.56605e-09 1.58163e-09 1.66177e-09 1.76149e-09 1.85498e-09 1.94856e-09 2.05093e-09 2.11726e-09 2.19297e-09 2.27167e-09 
+2.33671e-09 2.34286e-09 2.28828e-09 2.24192e-09 2.22276e-09 2.18021e-09 2.23124e-09 2.27806e-09 2.28845e-09 2.25264e-09 2.17518e-09 2.01496e-09 1.76707e-09 1.5312e-09 1.32203e-09 
+1.1131e-09 9.63192e-10 8.01782e-10 6.54558e-10 5.5072e-10 4.68344e-10 4.12579e-10 3.7629e-10 3.419e-10 3.17087e-10 2.91598e-10 2.58874e-10 2.24362e-10 1.95028e-10 1.76226e-10 
+1.61624e-10 1.49367e-10 1.44123e-10 1.39579e-10 1.35626e-10 1.30038e-10 1.26896e-10 1.25262e-10 1.23835e-10 1.21222e-10 1.1674e-10 1.13512e-10 1.13848e-10 1.142e-10 1.13536e-10 
+1.14023e-10 1.11973e-10 1.0957e-10 1.04741e-10 9.86108e-11 9.07485e-11 8.29877e-11 7.70029e-11 6.77929e-11 5.74923e-11 4.94269e-11 4.10397e-11 3.44874e-11 2.98456e-11 2.62665e-11 
+2.38809e-11 2.17345e-11 2.03825e-11 1.93424e-11 1.84289e-11 1.79765e-11 1.73107e-11 1.66201e-11 1.57946e-11 1.48036e-11 1.38317e-11 1.26685e-11 1.14812e-11 1.03564e-11 9.41543e-12 
+8.41842e-12 7.57035e-12 6.84678e-12 6.23187e-12 5.67161e-12 5.26129e-12 5.20133e-12 5.30588e-12 5.58145e-12 5.81453e-12 5.86817e-12 5.86826e-12 5.95308e-12 5.94102e-12 6.08132e-12 
+6.47685e-12 6.93446e-12 7.39361e-12 7.84168e-12 8.17469e-12 8.59827e-12 9.1194e-12 9.86791e-12 1.06893e-11 1.19558e-11 1.32445e-11 1.46592e-11 1.63392e-11 1.73259e-11 1.8453e-11 
+2.00844e-11 2.18031e-11 2.41518e-11 2.70395e-11 3.02989e-11 3.31341e-11 3.54074e-11 3.83576e-11 4.12305e-11 4.27871e-11 4.51985e-11 4.66173e-11 4.6624e-11 4.6747e-11 4.57252e-11 
+4.45884e-11 4.26932e-11 3.95407e-11 3.54931e-11 3.08576e-11 2.72531e-11 2.38334e-11 2.08162e-11 1.82869e-11 1.55562e-11 1.32616e-11 1.14087e-11 9.768e-12 8.36347e-12 7.22878e-12 
+6.37982e-12 5.81833e-12 5.35604e-12 4.84744e-12 4.27406e-12 3.71924e-12 3.19995e-12 2.7145e-12 2.27259e-12 1.94103e-12 1.65859e-12 1.42119e-12 1.21099e-12 1.03278e-12 9.16126e-13 
+
+Final residue: 9.16126e-13 ( 1.48527e-07 )
+ Convergence in 300 iterations for solveur_pression
+clock Ax=B: 0.346415 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn3s. Progress: 40
+
+-------------------------------------------------------------------
+We treat the time step number 5 , for the time scheme ...
+   dt = 0.1
+   time = 0.5
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187088
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187088
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.62162e-13 m3/s
+Relative value : 3.81405e-09
+time step continuity errors : sum local = 1.35135e-13, global = -1.49678e-20, cumulative = 3.28004e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.47466 s
+
+Norm of the residue: 5.27263e-06 (1)
+2.38574e-06 1.29858e-06 5.96898e-07 4.4143e-07 3.44976e-07 2.50762e-07 2.08678e-07 1.73083e-07 1.47529e-07 1.3488e-07 1.24007e-07 1.10579e-07 1.0045e-07 9.17319e-08 8.09862e-08 
+7.72068e-08 6.34782e-08 5.47064e-08 4.93549e-08 4.56551e-08 4.23025e-08 3.77284e-08 3.51894e-08 3.25918e-08 3.17627e-08 3.01177e-08 2.90996e-08 2.86262e-08 2.73323e-08 2.54359e-08 
+2.47999e-08 2.35966e-08 2.27459e-08 2.24844e-08 2.20419e-08 2.26315e-08 2.34318e-08 2.26591e-08 2.13845e-08 2.04637e-08 1.94588e-08 1.81978e-08 1.73582e-08 1.57548e-08 1.47834e-08 
+1.39178e-08 1.2286e-08 1.14041e-08 1.03229e-08 9.0656e-09 7.87053e-09 7.20891e-09 6.185e-09 5.51001e-09 5.2946e-09 5.07241e-09 4.95897e-09 4.82875e-09 4.36977e-09 3.9603e-09 
+3.72283e-09 3.45196e-09 3.29898e-09 3.24089e-09 3.14503e-09 3.07724e-09 2.98151e-09 2.76713e-09 2.52216e-09 2.32729e-09 2.02946e-09 1.79547e-09 1.59736e-09 1.38967e-09 1.27919e-09 
+1.14869e-09 1.03066e-09 9.60665e-10 8.99535e-10 8.22697e-10 7.41459e-10 6.50368e-10 5.72721e-10 5.21932e-10 4.81378e-10 4.58728e-10 4.43757e-10 4.28921e-10 4.04831e-10 3.77539e-10 
+3.52568e-10 3.34492e-10 3.20564e-10 3.11808e-10 3.09363e-10 2.87842e-10 2.68185e-10 2.49497e-10 2.37872e-10 2.41339e-10 2.54506e-10 2.70582e-10 2.90481e-10 3.21702e-10 3.45421e-10 
+3.63257e-10 3.8914e-10 4.08526e-10 4.36609e-10 4.5272e-10 4.51775e-10 4.50243e-10 4.51275e-10 4.34512e-10 4.06943e-10 3.99877e-10 4.13392e-10 4.4761e-10 5.04913e-10 5.69896e-10 
+6.30074e-10 6.46269e-10 6.32334e-10 6.01196e-10 5.88654e-10 6.00957e-10 6.24585e-10 6.69544e-10 7.12255e-10 7.55672e-10 8.01295e-10 8.61676e-10 9.22537e-10 9.8817e-10 1.06082e-09 
+1.12549e-09 1.22063e-09 1.30268e-09 1.37412e-09 1.40976e-09 1.42082e-09 1.41239e-09 1.44783e-09 1.50543e-09 1.56164e-09 1.6281e-09 1.69667e-09 1.73907e-09 1.78944e-09 1.84158e-09 
+1.9126e-09 1.92034e-09 1.87978e-09 1.83527e-09 1.7857e-09 1.73977e-09 1.75399e-09 1.78106e-09 1.80485e-09 1.79175e-09 1.7434e-09 1.64111e-09 1.45532e-09 1.27968e-09 1.11768e-09 
+9.45931e-10 8.11205e-10 6.63977e-10 5.32046e-10 4.4009e-10 3.69414e-10 3.22488e-10 2.93516e-10 2.68446e-10 2.50829e-10 2.327e-10 2.07736e-10 1.79063e-10 1.54784e-10 1.39252e-10 
+1.27469e-10 1.16838e-10 1.1221e-10 1.07662e-10 1.03728e-10 9.89976e-11 9.68963e-11 9.59886e-11 9.43812e-11 9.21945e-11 8.79321e-11 8.51555e-11 8.54894e-11 8.59635e-11 8.55527e-11 
+8.64612e-11 8.50431e-11 8.42572e-11 8.10868e-11 7.67436e-11 7.16897e-11 6.61714e-11 6.17999e-11 5.44775e-11 4.6223e-11 3.9748e-11 3.27811e-11 2.77546e-11 2.43826e-11 2.16774e-11 
+2.00774e-11 1.8495e-11 1.72969e-11 1.65047e-11 1.55402e-11 1.52063e-11 1.46348e-11 1.40467e-11 1.33222e-11 1.24978e-11 1.17374e-11 1.08667e-11 1.01346e-11 9.39934e-12 8.81536e-12 
+8.13694e-12 7.59823e-12 7.19587e-12 6.88037e-12 6.65661e-12 6.5815e-12 6.89729e-12 7.45688e-12 8.24891e-12 8.93782e-12 9.41457e-12 9.76166e-12 1.03845e-11 1.07518e-11 1.12018e-11 
+1.20977e-11 1.3294e-11 1.44392e-11 1.56654e-11 1.65429e-11 1.74898e-11 1.85625e-11 1.99357e-11 2.14915e-11 2.38117e-11 2.61642e-11 2.87688e-11 3.17851e-11 3.34954e-11 3.54306e-11 
+3.81292e-11 4.07618e-11 4.44704e-11 4.87268e-11 5.30397e-11 5.61418e-11 5.76701e-11 5.95465e-11 6.05923e-11 5.94535e-11 5.91566e-11 5.74173e-11 5.44703e-11 5.22251e-11 4.87995e-11 
+4.54376e-11 4.13918e-11 3.67448e-11 3.18382e-11 2.69913e-11 2.35799e-11 2.05365e-11 1.80453e-11 1.58342e-11 1.36234e-11 1.16371e-11 9.96782e-12 8.64705e-12 7.42144e-12 6.48731e-12 
+5.79131e-12 5.31527e-12 4.91335e-12 4.42188e-12 3.87443e-12 3.33188e-12 2.82693e-12 2.3745e-12 1.99475e-12 1.7079e-12 1.46237e-12 1.25279e-12 1.06035e-12 9.03976e-13 
+Final residue: 9.03976e-13 ( 1.71447e-07 )
+ Convergence in 299 iterations for solveur_pression
+clock Ax=B: 0.345697 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn2s. Progress: 50
+
+-------------------------------------------------------------------
+We treat the time step number 6 , for the time scheme ...
+   dt = 0.1
+   time = 0.6
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187267
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187267
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.83104e-13 m3/s
+Relative value : 3.93468e-09
+time step continuity errors : sum local = 1.39409e-13, global = -1.10646e-20, cumulative = -7.78459e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.507931 s
+
+Norm of the residue: 4.57878e-06 (1)
+2.07064e-06 1.13785e-06 5.17478e-07 3.91892e-07 3.10296e-07 2.26061e-07 1.85957e-07 1.54049e-07 1.30714e-07 1.19455e-07 1.08101e-07 9.57171e-08 8.7872e-08 8.05228e-08 7.11007e-08 
+6.7602e-08 5.58464e-08 4.80759e-08 4.35413e-08 3.99732e-08 3.6292e-08 3.20058e-08 2.95469e-08 2.6679e-08 2.55878e-08 2.38963e-08 2.27416e-08 2.22427e-08 2.1302e-08 1.96412e-08 
+1.91178e-08 1.81549e-08 1.74231e-08 1.72034e-08 1.69945e-08 1.74356e-08 1.81411e-08 1.77022e-08 1.68904e-08 1.64916e-08 1.59246e-08 1.49726e-08 1.44505e-08 1.3208e-08 1.25902e-08 
+1.20192e-08 1.06785e-08 9.97871e-09 9.01425e-09 7.91394e-09 6.78594e-09 6.14058e-09 5.21787e-09 4.57066e-09 4.31059e-09 4.04769e-09 3.85349e-09 3.68484e-09 3.2716e-09 2.91437e-09 
+2.72042e-09 2.51e-09 2.37572e-09 2.31008e-09 2.24646e-09 2.21854e-09 2.17774e-09 2.05152e-09 1.89264e-09 1.77825e-09 1.57303e-09 1.41032e-09 1.27184e-09 1.11752e-09 1.03649e-09 
+9.28208e-10 8.28828e-10 7.74095e-10 7.28774e-10 6.70677e-10 6.08098e-10 5.38371e-10 4.7964e-10 4.40494e-10 4.09833e-10 3.91998e-10 3.82265e-10 3.69767e-10 3.45675e-10 3.17598e-10 
+2.93e-10 2.78773e-10 2.67898e-10 2.6194e-10 2.59963e-10 2.40716e-10 2.24574e-10 2.08824e-10 1.97832e-10 1.99627e-10 2.08216e-10 2.19346e-10 2.33441e-10 2.58422e-10 2.79273e-10 
+2.99372e-10 3.29111e-10 3.55525e-10 3.91017e-10 4.15218e-10 4.22224e-10 4.2496e-10 4.22974e-10 4.02045e-10 3.69895e-10 3.5682e-10 3.65634e-10 3.9277e-10 4.41395e-10 4.98127e-10 
+5.54844e-10 5.76664e-10 5.69381e-10 5.4236e-10 5.28134e-10 5.34195e-10 5.51886e-10 5.89648e-10 6.2755e-10 6.64261e-10 7.0169e-10 7.5289e-10 8.11309e-10 8.7685e-10 9.46539e-10 
+1.00483e-09 1.09605e-09 1.17925e-09 1.26064e-09 1.31045e-09 1.32526e-09 1.30582e-09 1.31016e-09 1.33518e-09 1.35999e-09 1.40153e-09 1.44091e-09 1.46004e-09 1.48239e-09 1.51289e-09 
+1.56881e-09 1.60099e-09 1.55845e-09 1.51207e-09 1.44771e-09 1.37684e-09 1.37087e-09 1.39486e-09 1.42359e-09 1.42147e-09 1.39549e-09 1.33336e-09 1.20046e-09 1.07767e-09 9.58576e-10 
+8.21553e-10 7.03988e-10 5.70479e-10 4.51684e-10 3.68584e-10 3.05692e-10 2.64328e-10 2.38581e-10 2.19018e-10 2.06157e-10 1.90702e-10 1.68278e-10 1.46764e-10 1.2686e-10 1.13148e-10 
+1.03686e-10 9.44576e-11 8.99201e-11 8.56372e-11 8.17768e-11 7.77659e-11 7.63025e-11 7.59634e-11 7.41955e-11 7.20701e-11 6.79856e-11 6.53546e-11 6.55072e-11 6.58679e-11 6.57158e-11 
+6.7248e-11 6.64063e-11 6.60134e-11 6.43418e-11 6.18776e-11 5.87466e-11 5.46772e-11 5.16729e-11 4.57054e-11 3.89122e-11 3.35737e-11 2.76052e-11 2.34653e-11 2.07545e-11 1.86389e-11 
+1.74872e-11 1.6342e-11 1.54812e-11 1.47985e-11 1.41024e-11 1.37751e-11 1.32184e-11 1.26925e-11 1.1996e-11 1.12669e-11 1.06413e-11 9.98399e-12 9.58984e-12 9.19328e-12 8.9555e-12 
+8.58587e-12 8.36884e-12 8.27495e-12 8.26151e-12 8.39495e-12 8.73408e-12 9.52189e-12 1.06205e-11 1.20237e-11 1.33397e-11 1.44335e-11 1.54e-11 1.67522e-11 1.75176e-11 1.84028e-11 
+1.99174e-11 2.18245e-11 2.39864e-11 2.61887e-11 2.78327e-11 2.93964e-11 3.11282e-11 3.29874e-11 3.52407e-11 3.82492e-11 4.14228e-11 4.42965e-11 4.78313e-11 4.95324e-11 5.114e-11 
+5.38364e-11 5.62223e-11 5.97576e-11 6.44716e-11 6.84596e-11 6.99636e-11 6.92849e-11 6.86617e-11 6.65326e-11 6.26322e-11 6.0105e-11 5.64051e-11 5.23749e-11 4.94507e-11 4.54937e-11 
+4.16673e-11 3.70949e-11 3.23986e-11 2.76466e-11 2.31991e-11 2.01785e-11 1.75572e-11 1.54501e-11 1.36595e-11 1.18441e-11 1.02383e-11 8.86566e-12 7.79151e-12 6.77678e-12 5.99966e-12 
+5.40453e-12 4.954e-12 4.57139e-12 4.08361e-12 3.56673e-12 3.05317e-12 2.58192e-12 2.16654e-12 1.81774e-12 1.55744e-12 1.32318e-12 1.12503e-12 9.47563e-13 
+Final residue: 9.47563e-13 ( 2.06947e-07 )
+ Convergence in 298 iterations for solveur_pression
+clock Ax=B: 0.345628 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn2s. Progress: 60
+
+-------------------------------------------------------------------
+We treat the time step number 7 , for the time scheme ...
+   dt = 0.1
+   time = 0.7
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187472
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187472
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.99118e-13 m3/s
+Relative value : 4.02692e-09
+time step continuity errors : sum local = 1.42677e-13, global = 1.52378e-20, cumulative = 7.45322e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.468821 s
+
+Norm of the residue: 4.02654e-06 (1)
+1.81311e-06 1.00444e-06 4.59628e-07 3.5922e-07 2.86442e-07 2.08388e-07 1.69681e-07 1.41285e-07 1.1886e-07 1.08484e-07 9.65598e-08 8.53993e-08 7.91912e-08 7.2603e-08 6.39129e-08 
+6.00382e-08 4.99438e-08 4.31658e-08 3.94906e-08 3.60667e-08 3.22853e-08 2.82986e-08 2.58876e-08 2.29541e-08 2.16328e-08 1.98961e-08 1.87189e-08 1.81543e-08 1.73935e-08 1.58116e-08 
+1.53143e-08 1.4495e-08 1.38507e-08 1.36191e-08 1.35039e-08 1.37933e-08 1.4305e-08 1.40732e-08 1.35585e-08 1.34647e-08 1.31872e-08 1.24552e-08 1.21678e-08 1.123e-08 1.08608e-08 
+1.05296e-08 9.44544e-09 8.91102e-09 8.06352e-09 7.10268e-09 6.05223e-09 5.44503e-09 4.61716e-09 4.00956e-09 3.72897e-09 3.4469e-09 3.20198e-09 3.00504e-09 2.6156e-09 2.28958e-09 
+2.1128e-09 1.92412e-09 1.78919e-09 1.70796e-09 1.64928e-09 1.62971e-09 1.60998e-09 1.52451e-09 1.41468e-09 1.34623e-09 1.20375e-09 1.09014e-09 9.95512e-10 8.83988e-10 8.25334e-10 
+7.39262e-10 6.58611e-10 6.18254e-10 5.86106e-10 5.41708e-10 4.94074e-10 4.41942e-10 3.99964e-10 3.70315e-10 3.47771e-10 3.35058e-10 3.3085e-10 3.21686e-10 2.99785e-10 2.73815e-10 
+2.51554e-10 2.4056e-10 2.31796e-10 2.27201e-10 2.24934e-10 2.08222e-10 1.94849e-10 1.81356e-10 1.70819e-10 1.7123e-10 1.76258e-10 1.83261e-10 1.92442e-10 2.11713e-10 2.29162e-10 
+2.48408e-10 2.77853e-10 3.06345e-10 3.44796e-10 3.74739e-10 3.90271e-10 4.00385e-10 3.98868e-10 3.7706e-10 3.42758e-10 3.25397e-10 3.30476e-10 3.50994e-10 3.91235e-10 4.40859e-10 
+4.93108e-10 5.18082e-10 5.16803e-10 4.94174e-10 4.80667e-10 4.82585e-10 4.9547e-10 5.2591e-10 5.57514e-10 5.8665e-10 6.18019e-10 6.62514e-10 7.16869e-10 7.76822e-10 8.40653e-10 
+8.91475e-10 9.77855e-10 1.05916e-09 1.14636e-09 1.21111e-09 1.23436e-09 1.2161e-09 1.20266e-09 1.20827e-09 1.21128e-09 1.23457e-09 1.25321e-09 1.25306e-09 1.2508e-09 1.26229e-09 
+1.31134e-09 1.33338e-09 1.30221e-09 1.25883e-09 1.18914e-09 1.11705e-09 1.09844e-09 1.11015e-09 1.13697e-09 1.13893e-09 1.12546e-09 1.09068e-09 9.97346e-10 9.12936e-10 8.29182e-10 
+7.22386e-10 6.22242e-10 5.03435e-10 3.97282e-10 3.21221e-10 2.64591e-10 2.27295e-10 2.04293e-10 1.87315e-10 1.75753e-10 1.62772e-10 1.45352e-10 1.24269e-10 1.08148e-10 9.68387e-11 
+8.78987e-11 7.88808e-11 7.48087e-11 7.06275e-11 6.68271e-11 6.35052e-11 6.26e-11 6.27771e-11 6.10281e-11 5.88926e-11 5.50244e-11 5.26338e-11 5.24195e-11 5.24762e-11 5.21213e-11 
+5.33117e-11 5.3216e-11 5.37225e-11 5.30428e-11 5.1349e-11 4.9657e-11 4.67545e-11 4.45041e-11 3.9669e-11 3.40193e-11 2.9571e-11 2.44134e-11 2.08228e-11 1.85017e-11 1.66991e-11 
+1.58871e-11 1.51269e-11 1.44362e-11 1.40377e-11 1.34777e-11 1.32171e-11 1.27079e-11 1.22492e-11 1.15881e-11 1.09087e-11 1.03879e-11 9.89952e-12 9.77446e-12 9.67808e-12 9.77542e-12 
+9.72887e-12 9.84007e-12 1.00475e-11 1.03282e-11 1.08302e-11 1.16227e-11 1.29018e-11 1.45949e-11 1.65479e-11 1.84859e-11 2.0293e-11 2.19562e-11 2.43327e-11 2.58657e-11 2.69725e-11 
+2.90903e-11 3.19971e-11 3.51865e-11 3.84979e-11 4.10582e-11 4.31992e-11 4.55069e-11 4.79227e-11 5.05211e-11 5.38728e-11 5.70297e-11 5.91404e-11 6.20739e-11 6.27139e-11 6.30656e-11 
+6.44075e-11 6.51634e-11 6.70905e-11 7.03873e-11 7.29461e-11 7.29235e-11 7.08239e-11 6.86174e-11 6.48157e-11 5.96183e-11 5.6266e-11 5.21552e-11 4.82049e-11 4.53442e-11 4.16243e-11 
+3.80052e-11 3.3497e-11 2.90157e-11 2.45945e-11 2.05321e-11 1.78304e-11 1.55176e-11 1.37475e-11 1.22207e-11 1.06598e-11 9.27101e-12 8.06829e-12 7.14285e-12 6.27051e-12 5.59011e-12 
+5.05546e-12 4.60263e-12 4.22197e-12 3.74191e-12 3.26292e-12 2.80335e-12 2.38445e-12 2.01482e-12 1.69621e-12 1.46328e-12 1.23931e-12 1.04906e-12 8.81701e-13 
+Final residue: 8.81701e-13 ( 2.18972e-07 )
+ Convergence in 298 iterations for solveur_pression
+clock Ax=B: 0.3456 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 70
+
+-------------------------------------------------------------------
+We treat the time step number 8 , for the time scheme ...
+   dt = 0.1
+   time = 0.8
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187693
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187693
+
+203 MBytes of RAM taken by the calculation.
+
+203 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 7.10724e-13 m3/s
+Relative value : 4.09377e-09
+time step continuity errors : sum local = 1.45046e-13, global = 1.77453e-20, cumulative = 2.51985e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.50774 s
+
+Norm of the residue: 3.60406e-06 (1)
+1.61052e-06 8.96786e-07 4.15717e-07 3.3602e-07 2.67692e-07 1.93849e-07 1.56239e-07 1.31121e-07 1.09714e-07 9.9601e-08 8.75899e-08 7.78386e-08 7.2739e-08 6.66653e-08 5.85309e-08 
+5.42372e-08 4.54334e-08 4.00023e-08 3.6618e-08 3.3153e-08 2.9377e-08 2.55581e-08 2.3172e-08 2.03368e-08 1.89122e-08 1.72014e-08 1.58166e-08 1.51812e-08 1.45997e-08 1.32126e-08 
+1.26513e-08 1.18516e-08 1.1248e-08 1.09821e-08 1.0867e-08 1.10632e-08 1.14159e-08 1.12539e-08 1.09492e-08 1.10342e-08 1.09103e-08 1.03491e-08 1.02084e-08 9.53522e-09 9.35125e-09 
+9.1832e-09 8.33657e-09 7.98897e-09 7.25452e-09 6.41627e-09 5.47498e-09 4.91941e-09 4.18539e-09 3.61881e-09 3.32656e-09 3.04068e-09 2.77629e-09 2.56616e-09 2.19646e-09 1.89252e-09 
+1.72471e-09 1.54598e-09 1.40653e-09 1.31275e-09 1.25118e-09 1.22844e-09 1.2112e-09 1.14184e-09 1.05797e-09 1.01215e-09 9.10052e-10 8.27272e-10 7.60204e-10 6.80254e-10 6.3565e-10 
+5.69137e-10 5.05766e-10 4.7636e-10 4.53577e-10 4.20475e-10 3.85308e-10 3.4851e-10 3.20563e-10 2.98912e-10 2.83688e-10 2.76587e-10 2.77821e-10 2.73726e-10 2.56921e-10 2.35751e-10 
+2.18035e-10 2.10605e-10 2.04138e-10 2.01149e-10 1.99386e-10 1.85958e-10 1.75249e-10 1.63784e-10 1.53633e-10 1.52965e-10 1.55141e-10 1.58896e-10 1.64447e-10 1.78755e-10 1.92718e-10 
+2.09301e-10 2.36034e-10 2.63381e-10 3.01049e-10 3.33547e-10 3.55277e-10 3.72307e-10 3.73046e-10 3.53037e-10 3.19443e-10 2.99728e-10 3.01723e-10 3.16415e-10 3.49095e-10 3.92889e-10 
+4.40462e-10 4.67509e-10 4.71215e-10 4.52962e-10 4.41717e-10 4.42202e-10 4.51657e-10 4.76188e-10 5.01864e-10 5.24252e-10 5.50855e-10 5.90129e-10 6.39952e-10 6.93197e-10 7.49637e-10 
+7.92603e-10 8.71872e-10 9.48957e-10 1.039e-09 1.11659e-09 1.14853e-09 1.13778e-09 1.11546e-09 1.11163e-09 1.10131e-09 1.10911e-09 1.11088e-09 1.09546e-09 1.08884e-09 1.0693e-09 
+1.0973e-09 1.12107e-09 1.08589e-09 1.04533e-09 9.7547e-10 9.08949e-10 8.84632e-10 8.85781e-10 9.09613e-10 9.13493e-10 9.07342e-10 8.90991e-10 8.28216e-10 7.71974e-10 7.16676e-10 
+6.35416e-10 5.53158e-10 4.50408e-10 3.56656e-10 2.87701e-10 2.35865e-10 2.02164e-10 1.81072e-10 1.65898e-10 1.55835e-10 1.44689e-10 1.29223e-10 1.10315e-10 9.54126e-11 8.45869e-11 
+7.6499e-11 6.79782e-11 6.37018e-11 5.96935e-11 5.60482e-11 5.3247e-11 5.25398e-11 5.28746e-11 5.11986e-11 4.91526e-11 4.56655e-11 4.34869e-11 4.31608e-11 4.29809e-11 4.25242e-11 
+4.36419e-11 4.3769e-11 4.43527e-11 4.42425e-11 4.35612e-11 4.27912e-11 4.06145e-11 3.90485e-11 3.51709e-11 3.05802e-11 2.68733e-11 2.23901e-11 1.92024e-11 1.71085e-11 1.55042e-11 
+1.48166e-11 1.42423e-11 1.38389e-11 1.35785e-11 1.30963e-11 1.30175e-11 1.27937e-11 1.23264e-11 1.17028e-11 1.10655e-11 1.06767e-11 1.03257e-11 1.03957e-11 1.05588e-11 1.09848e-11 
+1.12521e-11 1.17345e-11 1.22354e-11 1.28063e-11 1.36909e-11 1.49338e-11 1.67812e-11 1.9073e-11 2.17927e-11 2.44618e-11 2.71774e-11 2.96365e-11 3.29944e-11 3.51789e-11 3.6843e-11 
+3.96361e-11 4.33068e-11 4.75222e-11 5.17353e-11 5.50562e-11 5.77209e-11 6.07708e-11 6.32076e-11 6.64088e-11 6.91817e-11 7.18788e-11 7.27153e-11 7.36422e-11 7.18943e-11 7.01291e-11 
+6.89541e-11 6.72444e-11 6.74829e-11 6.85068e-11 7.02256e-11 6.95869e-11 6.6548e-11 6.35693e-11 5.91523e-11 5.36774e-11 5.02264e-11 4.63288e-11 4.30215e-11 4.05899e-11 3.74353e-11 
+3.43666e-11 3.02826e-11 2.62105e-11 2.22199e-11 1.85201e-11 1.60894e-11 1.40215e-11 1.24389e-11 1.1059e-11 9.73323e-12 8.48797e-12 7.41997e-12 6.62136e-12 5.8666e-12 5.25911e-12 
+4.77039e-12 4.30574e-12 3.92107e-12 3.44539e-12 2.99555e-12 2.58076e-12 2.20739e-12 1.86835e-12 1.57193e-12 1.35769e-12 1.15192e-12 9.7901e-13 
+Final residue: 9.7901e-13 ( 2.71641e-07 )
+ Convergence in 297 iterations for solveur_pression
+clock Ax=B: 0.352409 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 80
+
+-------------------------------------------------------------------
+We treat the time step number 9 , for the time scheme ...
+   dt = 0.1
+   time = 0.9
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187842
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187842
+
+205 MBytes of RAM taken by the calculation.
+
+205 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 7.20483e-13 m3/s
+Relative value : 4.14998e-09
+time step continuity errors : sum local = 1.47037e-13, global = -2.29064e-20, cumulative = 2.29212e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.444449 s
+
+Norm of the residue: 3.26813e-06 (1)
+1.45181e-06 8.10517e-07 3.82062e-07 3.18962e-07 2.53062e-07 1.82e-07 1.45327e-07 1.22991e-07 1.03104e-07 9.24274e-08 8.10598e-08 7.25332e-08 6.75175e-08 6.18165e-08 5.43327e-08 
+5.02259e-08 4.23545e-08 3.71754e-08 3.40724e-08 3.08174e-08 2.70405e-08 2.34763e-08 2.11159e-08 1.84103e-08 1.69054e-08 1.52438e-08 1.38058e-08 1.31736e-08 1.25881e-08 1.12442e-08 
+1.06734e-08 9.94582e-09 9.37478e-09 9.07446e-09 8.92995e-09 9.02033e-09 9.22412e-09 9.11878e-09 8.92487e-09 9.0755e-09 9.03116e-09 8.60008e-09 8.56656e-09 8.08527e-09 8.02736e-09 
+7.97833e-09 7.34065e-09 7.14912e-09 6.54323e-09 5.82535e-09 4.99575e-09 4.50411e-09 3.85967e-09 3.33499e-09 3.03616e-09 2.76198e-09 2.49415e-09 2.27823e-09 1.92806e-09 1.64327e-09 
+1.48219e-09 1.30984e-09 1.16899e-09 1.06939e-09 1.00635e-09 9.79073e-10 9.58126e-10 8.94142e-10 8.23503e-10 7.85075e-10 7.05496e-10 6.38711e-10 5.86275e-10 5.2601e-10 4.88597e-10 
+4.35521e-10 3.84136e-10 3.60405e-10 3.42013e-10 3.16037e-10 2.89355e-10 2.63634e-10 2.45124e-10 2.29198e-10 2.19487e-10 2.16867e-10 2.22184e-10 2.23344e-10 2.1334e-10 1.99004e-10 
+1.87535e-10 1.84339e-10 1.81149e-10 1.80803e-10 1.81027e-10 1.71644e-10 1.63755e-10 1.54407e-10 1.44978e-10 1.43642e-10 1.43411e-10 1.44352e-10 1.46936e-10 1.56633e-10 1.67124e-10 
+1.80239e-10 2.03028e-10 2.27602e-10 2.62313e-10 2.94826e-10 3.2004e-10 3.41871e-10 3.4553e-10 3.28335e-10 2.96743e-10 2.76049e-10 2.75404e-10 2.85116e-10 3.11008e-10 3.49637e-10 
+3.92155e-10 4.20456e-10 4.28242e-10 4.14295e-10 4.06365e-10 4.07348e-10 4.14608e-10 4.35461e-10 4.57099e-10 4.74862e-10 4.98462e-10 5.33951e-10 5.80219e-10 6.29025e-10 6.78619e-10 
+7.15795e-10 7.87939e-10 8.5935e-10 9.50645e-10 1.03867e-09 1.07829e-09 1.07795e-09 1.05479e-09 1.04513e-09 1.02384e-09 1.01715e-09 1.00181e-09 9.70887e-10 9.35907e-10 9.1966e-10 
+9.35635e-10 9.4025e-10 8.99752e-10 8.55156e-10 7.86437e-10 7.23426e-10 6.94752e-10 6.88083e-10 7.04442e-10 7.07747e-10 7.07285e-10 7.04045e-10 6.68845e-10 6.3667e-10 6.06149e-10 
+5.49908e-10 4.87765e-10 4.03722e-10 3.22502e-10 2.61129e-10 2.13696e-10 1.83447e-10 1.63184e-10 1.50018e-10 1.43204e-10 1.32436e-10 1.16125e-10 1.00214e-10 8.59772e-11 7.54192e-11 
+6.80369e-11 5.98383e-11 5.54643e-11 5.1612e-11 4.80164e-11 4.55613e-11 4.48817e-11 4.52173e-11 4.36207e-11 4.17639e-11 3.8746e-11 3.68334e-11 3.64899e-11 3.61081e-11 3.55849e-11 
+3.63019e-11 3.61988e-11 3.6955e-11 3.7389e-11 3.74065e-11 3.72858e-11 3.57995e-11 3.47355e-11 3.17284e-11 2.8033e-11 2.49168e-11 2.09885e-11 1.81136e-11 1.61976e-11 1.47287e-11 
+1.42061e-11 1.37989e-11 1.35654e-11 1.34579e-11 1.316e-11 1.31796e-11 1.30292e-11 1.25751e-11 1.19998e-11 1.14343e-11 1.11556e-11 1.09184e-11 1.11517e-11 1.155e-11 1.2297e-11 
+1.28947e-11 1.37516e-11 1.4544e-11 1.53845e-11 1.66382e-11 1.82832e-11 2.06242e-11 2.34797e-11 2.67371e-11 2.99945e-11 3.35587e-11 3.68823e-11 4.12246e-11 4.42626e-11 4.64613e-11 
+4.98658e-11 5.44057e-11 5.92976e-11 6.40341e-11 6.78974e-11 7.08231e-11 7.39281e-11 7.64611e-11 7.91531e-11 8.12468e-11 8.26154e-11 8.09777e-11 7.9824e-11 7.61948e-11 7.16705e-11 
+6.83541e-11 6.48779e-11 6.29848e-11 6.29064e-11 6.30995e-11 6.16034e-11 5.86255e-11 5.54877e-11 5.12719e-11 4.6367e-11 4.31644e-11 3.98443e-11 3.73184e-11 3.54698e-11 3.30211e-11 
+3.06112e-11 2.71113e-11 2.35739e-11 2.00987e-11 1.67637e-11 1.45641e-11 1.2702e-11 1.12133e-11 9.99571e-12 8.74094e-12 7.69684e-12 6.78755e-12 6.11194e-12 5.46811e-12 4.93217e-12 
+4.50167e-12 4.04382e-12 3.65275e-12 3.18853e-12 2.76456e-12 2.3871e-12 2.05626e-12 1.74863e-12 1.47736e-12 1.27695e-12 1.08507e-12 9.20598e-13 
+Final residue: 9.20598e-13 ( 2.8169e-07 )
+ Convergence in 297 iterations for solveur_pression
+clock Ax=B: 0.343732 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.505031 s. Progress: 90
+
+-------------------------------------------------------------------
+We treat the time step number 10 , for the time scheme ...
+   dt = 0.1
+   time = 1
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 0.881917
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 33.4362
+   convective time step : 0.187966
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 0.873848
+   convective time step : 0.187966
+
+205 MBytes of RAM taken by the calculation.
+---------------------------------------------------------
+The problem pb1 wants to stop : the maximum number of time steps reached
+
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 7.30043e-13 m3/s
+Relative value : 4.20505e-09
+time step continuity errors : sum local = 1.48988e-13, global = 3.88035e-20, cumulative = 4.10956e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.817387 s
+
+Opening the files of type EcrFicColl : solide.rep
+Backup of problem pb1
+Backup of the field temperature performed on time : 1.000000e+00
+Creation of PAR_VEF_pb1.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb1
+Backup of the field temperature performed on time : 1.000000e+00
+Opening the files of type EcrFicColl : fluide.rep
+Backup of problem pb2
+Backup of the field vitesse performed on time : 1.000000e+00
+Backup of the field pression performed on time : 1.000000e+00
+Backup of the field temperature performed on time : 1.000000e+00
+Creation of PAR_VEF_pb2.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb2
+Backup of the field vitesse performed on time : 1.000000e+00
+Backup of the field pression performed on time : 1.000000e+00
+Backup of the field temperature performed on time : 1.000000e+00
+=====================================================
+End of solving of the problem pbc (Resoudre)
+=====================================================
+MAIN: End of data file
+206 MBytes of RAM taken by the calculation.
+
+--------------------------------------------
+clock: Total execution: 8.39388 s
+Arret des processes.

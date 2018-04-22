@@ -1,0 +1,1021 @@
+Initialized MPI with MPI_COMM_WORLD (using all processors)
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_MPI with 2 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = PAR_VEF
+Running in parallel with 2 processors
+feenableexcept enabled.
+Data file : PAR_VEF
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF/x1_mesh/2_procs
+Nom du cas PAR_VEF
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+-------------------------------------------------------------------
+ 
+                          TRUST
+                      version : 1.7.6 
+                          CEA - DEN
+ 
+Debut de l'execution 
+MAIN: Reading and executing data file
+
+ 0 file(s) modified 
+
+
+ 405 file(s) created 
+
+ ------------------------------------------------------------------
+ 
+  Vous traitez le cas PAR_VEF
+ 
+Reading data file 
+
+Dimension::interpreter : dimension = 3
+Reading of data for a Schema_euler_explicite time scheme
+Reading of the maximum number of time steps
+The next backup, by security, will take place after 23 hours of calculation.
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom_solide
+ Number of nodes: 1045
+ Reading zone Cavite1_Cavite2
+  Number of elements: 3672
+  Boundary (Bord) : paroi_a_40
+  Boundary (Bord) : paroi_a_20
+  Boundary (Bord) : Devant1
+  Boundary (Bord) : Derriere1
+  Boundary (Bord) : Devant2
+  Boundary (Bord) : Derriere2
+  Boundary (Raccord) : Paroi_echange1
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 1
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.009485
+Execution of the Scatter module.
+Reading the domain
+Scatter::lire_domaine format binaire
+ If crash, your file is probably the other format
+ then try ScatterFormatte
+Expecting new format (old format not any more supported)
+Reading geometry file, file format: Domaine::printOn
+Reading domain dom_fluide
+ Number of nodes: 994
+ Reading zone Cavite3
+  Number of elements: 3528
+  Boundary (Bord) : Entree
+  Boundary (Bord) : Paroi
+  Boundary (Bord) : Sortie
+  Boundary (Bord) : Devant3
+  Boundary (Bord) : Derriere3
+  Boundary (Raccord) : Paroi_echange2
+Calculation of renum_items_communs for the nodes
+Construire_structures_paralleles
+Calculation of remote space of elements : thickness 2
+Nodes-elements connectivity ...
+ Calculation of the thickness 1
+ Calculation of the thickness 2
+Scatter::calculer_espace_distant_sommets : start
+End Distribue_zones
+Scatter time : 0.021585
+Reading of data for a Fluide_Incompressible medium
+Fluide_IncompressibleMilieu_base::creer_alpha
+Reading of data for a Solide medium
+SolideMilieu_base::creer_alpha
+The chosen discretization is of type VEFPreP1B
+The chosen time scheme is of type Schema_euler_explicite
+We treat the problem pbc of type Probleme_Couple
+It corresponds to the coupling of the following problems: 
+ pb1 of type Pb_Conduction
+ pb2 of type Pb_Thermohydraulique
+Discretization of pbc in progress...
+The problem that we are starting to discretize is pb1
+Discretization of the domain associated with the problem pb1
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom_solide :
+Between 60 degrees and 70 degrees : 0 elements ( 0 %)
+Between 70 degrees and 80 degrees : 0 elements ( 0 %)
+Between 80 degrees and 90 degrees : 245 elements ( 6.67211 %)
+Between 90 degrees and 100 degrees : 2203 elements ( 59.9946 %)
+Between 100 degrees and 110 degrees : 0 elements ( 0 %)
+Between 110 degrees and 120 degrees : 0 elements ( 0 %)
+Between 120 degrees and 130 degrees : 0 elements ( 0 %)
+Between 130 degrees and 140 degrees : 0 elements ( 0 %)
+Between 140 degrees and 150 degrees : 1224 elements ( 33.3333 %)
+Between 150 degrees and 160 degrees : 0 elements ( 0 %)
+Between 160 degrees and 170 degrees : 0 elements ( 0 %)
+Between 170 degrees and 180 degrees : 0 elements ( 0 %)
+
+Zone_VEF::reordonner les_faces 
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_solide_boundaries_paroi_a_40 for the boundary paroi_a_40 of the domain dom_solide
+Number of elements of the new domain : 132
+Elimination of 528 unnecessary nodes in the domain dom_solide_boundaries_paroi_a_40
+Creating a surface domain named dom_solide_boundaries_paroi_a_20 for the boundary paroi_a_20 of the domain dom_solide
+Number of elements of the new domain : 36
+Elimination of 584 unnecessary nodes in the domain dom_solide_boundaries_paroi_a_20
+Creating a surface domain named dom_solide_boundaries_Devant1 for the boundary Devant1 of the domain dom_solide
+Number of elements of the new domain : 108
+Elimination of 541 unnecessary nodes in the domain dom_solide_boundaries_Devant1
+Creating a surface domain named dom_solide_boundaries_Derriere1 for the boundary Derriere1 of the domain dom_solide
+Number of elements of the new domain : 108
+Elimination of 541 unnecessary nodes in the domain dom_solide_boundaries_Derriere1
+Creating a surface domain named dom_solide_boundaries_Devant2 for the boundary Devant2 of the domain dom_solide
+Number of elements of the new domain : 0
+Elimination of 609 unnecessary nodes in the domain dom_solide_boundaries_Devant2
+Creating a surface domain named dom_solide_boundaries_Derriere2 for the boundary Derriere2 of the domain dom_solide
+Number of elements of the new domain : 0
+Elimination of 609 unnecessary nodes in the domain dom_solide_boundaries_Derriere2
+Creating a surface domain named dom_solide_boundaries_Paroi_echange1 for the boundary Paroi_echange1 of the domain dom_solide
+Number of elements of the new domain : 84
+Elimination of 556 unnecessary nodes in the domain dom_solide_boundaries_Paroi_echange1
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between 0 and 1
+y is between 0 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 0.51
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+==============================================
+The boundary areas of the domain dom_solide are:
+Area of Paroi_echange1  	= 1.4
+Area of paroi_a_40  	= 2
+Area of paroi_a_20  	= 0.6
+Area of Devant1  	= 0.3
+Area of Derriere1  	= 0.3
+Area of Devant2  	= 0.21
+Area of Derriere2  	= 0.21
+==============================================
+Calculation of elements and nodes on dom_solide :
+Total number of elements = 3672
+Total number of nodes = 1011
+Total number of faces = 7788
+168 of them on boundary Paroi_echange1
+240 of them on boundary paroi_a_40
+72 of them on boundary paroi_a_20
+120 of them on boundary Devant1
+120 of them on boundary Derriere1
+84 of them on boundary Devant2
+84 of them on boundary Derriere2
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+Informations of the Zone VEF of the domain dom_solide : 
+Lowest cell size h=(Volume/max(Surface))= 0.0117851
+Average cell size <h>= 0.0147034
+==============================================
+La Zone_VEF_PreP1b a ete remplie avec succes
+Discretization of equations
+Conduction equation discretization
+Discretisation de la temperature
+Champs_compris::ajoute_champ temperature
+discretisation des conditions limites
+discretisation des conditions limites OK
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+The problem that we are starting to discretize is pb2
+Discretization of the domain associated with the problem pb2
+<<<<<< Discretization VF >>>>>>>>>>
+
+Histogram of the largest angle of each element found into the mesh dom_fluide :
+Between 60 degrees and 70 degrees : 0 elements ( 0 %)
+Between 70 degrees and 80 degrees : 0 elements ( 0 %)
+Between 80 degrees and 90 degrees : 168 elements ( 4.7619 %)
+Between 90 degrees and 100 degrees : 2184 elements ( 61.9048 %)
+Between 100 degrees and 110 degrees : 0 elements ( 0 %)
+Between 110 degrees and 120 degrees : 0 elements ( 0 %)
+Between 120 degrees and 130 degrees : 0 elements ( 0 %)
+Between 130 degrees and 140 degrees : 0 elements ( 0 %)
+Between 140 degrees and 150 degrees : 1176 elements ( 33.3333 %)
+Between 150 degrees and 160 degrees : 0 elements ( 0 %)
+Between 160 degrees and 170 degrees : 0 elements ( 0 %)
+Between 170 degrees and 180 degrees : 0 elements ( 0 %)
+
+Zone_VEF::reordonner les_faces 
+Scatter::calculer_espace_distant_faces : start
+Creating a surface domain named dom_fluide_boundaries_Entree for the boundary Entree of the domain dom_fluide
+Number of elements of the new domain : 36
+Elimination of 718 unnecessary nodes in the domain dom_fluide_boundaries_Entree
+Creating a surface domain named dom_fluide_boundaries_Paroi for the boundary Paroi of the domain dom_fluide
+Number of elements of the new domain : 0
+Elimination of 743 unnecessary nodes in the domain dom_fluide_boundaries_Paroi
+Creating a surface domain named dom_fluide_boundaries_Sortie for the boundary Sortie of the domain dom_fluide
+Number of elements of the new domain : 0
+Elimination of 743 unnecessary nodes in the domain dom_fluide_boundaries_Sortie
+Creating a surface domain named dom_fluide_boundaries_Devant3 for the boundary Devant3 of the domain dom_fluide
+Number of elements of the new domain : 104
+Elimination of 679 unnecessary nodes in the domain dom_fluide_boundaries_Devant3
+Creating a surface domain named dom_fluide_boundaries_Derriere3 for the boundary Derriere3 of the domain dom_fluide
+Number of elements of the new domain : 92
+Elimination of 685 unnecessary nodes in the domain dom_fluide_boundaries_Derriere3
+Creating a surface domain named dom_fluide_boundaries_Paroi_echange2 for the boundary Paroi_echange2 of the domain dom_fluide
+Number of elements of the new domain : 132
+Elimination of 662 unnecessary nodes in the domain dom_fluide_boundaries_Paroi_echange2
+==============================================
+The extreme coordinates of the domain dom_fluide are:
+x is between 0.3 and 1
+y is between 0.3 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_fluide are:
+sum(volume cells)= 0.49
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+==============================================
+The boundary areas of the domain dom_fluide are:
+Area of Paroi_echange2  	= 1.4
+Area of Entree  	= 0.4
+Area of Paroi  	= 0.6
+Area of Sortie  	= 0.4
+Area of Devant3  	= 0.49
+Area of Derriere3  	= 0.49
+==============================================
+Calculation of elements and nodes on dom_fluide :
+Total number of elements = 3528
+Total number of nodes = 935
+Total number of faces = 7420
+168 of them on boundary Paroi_echange2
+48 of them on boundary Entree
+72 of them on boundary Paroi
+48 of them on boundary Sortie
+196 of them on boundary Devant3
+196 of them on boundary Derriere3
+==============================================
+<<<<<< End of Discretization VF >>>>>>>>>>
+Informations of the Zone VEF of the domain dom_fluide : 
+Lowest cell size h=(Volume/max(Surface))= 0.0117851
+Average cell size <h>= 0.0147034
+==============================================
+La Zone_VEF_PreP1b a ete remplie avec succes
+Discretization of equations
+Hydraulic equation discretization (Navier_Stokes_std::discretiser)
+Velocity discretization
+Champs_compris::ajoute_champ vitesse
+Pressure discretization
+Champs_compris::ajoute_champ pression
+Pressure pa discretization
+Champs_compris::ajoute_champ pression_pa
+Velocity divergence discretization
+Pressure gradient discretization
+Construction of the divergence operator type : Op_Div_VEFPreP1B_P1NC
+Construction of the gradient operator type : Op_Grad_VEFPreP1B_P1NC
+Champs_compris::ajoute_champ gradient_pression
+Champs_compris::ajoute_champ divergence_U
+Navier_Stokes_std::discretiser_assembleur_pression : type=Assembleur_P_VEFPreP1B
+discretisation des conditions limites
+discretisation des conditions limites OK
+Energy equation discretization
+Discretisation de la temperature
+Champs_compris::ajoute_champ temperature
+discretisation des conditions limites
+discretisation des conditions limites OK
+Convection_Diffusion_Temperature::discretiser() ok
+Champs_compris::ajoute_champ viscosite_dynamique
+Champs_compris::ajoute_champ viscosite_cinematique
+Medium discretization.
+Champs_compris::ajoute_champ conductivite
+Champs_compris::ajoute_champ diffusivite_thermique
+Champs_compris::ajoute_champ dilatabilite
+Champs_compris::ajoute_champ capacite_calorifique
+Champs_compris::ajoute_champ masse_volumique
+Reading of the problem pb1
+Reading of the equations
+Reading of data for a Conduction equation
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Conduction
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+Reading of source terms
+Reading of term Puissance_Thermique
+and typing: Puissance_Thermique_VEF_P1NC
+Lecture du Champ Puissance
+Champs_compris::ajoute_champ Puissance_volumique
+Reading of initial conditions
+Reading of boundaries conditions
+Reading the paroi_a_40 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the paroi_a_20 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Paroi_echange1 boundary condition of the Conduction equation from the problem pb1
+Champ_front_contact_VEF::readOn : pb1Paroi_echange1TEMPERATURE
+      connecte a                : pb2Paroi_echange2TEMPERATURE
+end reading condmimutil
+Reading the Devant1 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Derriere1 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Devant2 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading the Derriere2 boundary condition of the Conduction equation from the problem pb1
+end reading condmimutil
+Reading guidelines of postprocessing
+ Building of temperature_physique  { temperature_physique Tparoi_VEF { source  refChamp { Pb_champ pb1 temperature } }  }
+Reading definition of field TEMPERATURE_PHYSIQUE
+Reading of data for a Postraitement post-processing object 
+Reading of probes
+End of reading probes 
+Reading of fields to be postprocessed
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Conduction : 2 volume_maille temperature 
+
+Solide : 4 conductivite diffusivite_thermique capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Puissance_Thermique_VEF_P1NC : 1 Puissance_volumique 
+
+Construction of the OctreeRoot OK 
+Initialize the remote connection dom_fluide/Paroi_echange2<-dom_solide/Paroi_echange1
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Evaluateur_Source_VEF_Face::completer()
+Step verification of data being read in progress...
+The read data are coherent
+Reading of the problem pb2
+Reading of the equations
+Reading of data for a Navier_Stokes_standard equation
+Reading and typing of pressure solver : 
+Pressure solver type : Solv_GCP
+Reading and typing of the convection operator : 
+Op_Conv_Amont_VEF_P1NC
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Navier_Stokes_standard
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : viscosite_cinematique unit : m2/s
+Reading of source terms
+Reading of term boussinesq_temperature
+and typing: boussinesq_temperature_VEFPreP1B_P1NC
+Reading Boussinesq source term parameters.
+Reading of initial conditions
+Reading of boundaries conditions
+Reading the Entree boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Sortie boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Paroi boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Paroi_echange2 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Devant3 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading the Derriere3 boundary condition of the Navier_Stokes_standard equation from the problem pb2
+Reading of data for a Convection_Diffusion_Temperature equation
+Reading and typing of the diffusion operator : 
+Operateur_Diff::typer()
+We treat the diffusive operator of : Convection_Diffusion_Temperature
+The discretization used is : VEFPreP1B
+Op_Diff_VEF_const_P1NC
+Operateur_Diff_base::associer_diffusivite_pour_pas_de_temps
+ field name : diffusivite_thermique unit : m2/s
+Reading and typing of the convection operator : 
+Op_Conv_Amont_VEF_P1NC
+Reading of source terms
+Reading of term Puissance_Thermique
+and typing: Puissance_Thermique_VEF_P1NC
+Lecture du Champ Puissance
+Champs_compris::ajoute_champ Puissance_volumique
+Reading of boundaries conditions
+Reading the Entree boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Reading the Sortie boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Reading the Paroi_echange2 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+Champ_front_contact_VEF::readOn : pb2Paroi_echange2TEMPERATURE
+      connecte a                : pb1Paroi_echange1TEMPERATURE
+end reading condmimutil
+Reading the Paroi boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading the Devant3 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading the Derriere3 boundary condition of the Convection_Diffusion_Temperature equation from the problem pb2
+end reading condmimutil
+Reading of initial conditions
+Reading guidelines of postprocessing
+ Building of temperature_physique  { temperature_physique Tparoi_VEF { source  refChamp { Pb_champ pb2 temperature } }  }
+Reading definition of field TEMPERATURE_PHYSIQUE
+Reading of data for a Postraitement post-processing object 
+Reading of probes
+End of reading probes 
+Reading of fields to be postprocessed
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Navier_Stokes_standard : 23 volume_maille vorticite critere_Q porosite_volumique y_plus reynolds_maille courant_maille taux_cisaillement pression_hydrostatique vitesse velocity vitesseX vitesseY vitesseZ pression P_star pression_pa Pressure gradient_pression gradient_pressionX gradient_pressionY gradient_pressionZ divergence_U 
+
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Op_Conv_Amont_VEF_P1NC : 0 
+
+Boussinesq_VEFPreP1B_P1NC : 0 
+
+Convection_Diffusion_Temperature : 4 volume_maille gradient_temperature h_echange_ temperature 
+
+Fluide_Incompressible : 7 viscosite_dynamique viscosite_cinematique conductivite diffusivite_thermique dilatabilite capacite_calorifique masse_volumique 
+
+Op_Diff_VEF_const_P1NC : 0 
+
+Op_Conv_Amont_VEF_P1NC : 0 
+
+Puissance_Thermique_VEF_P1NC : 1 Puissance_volumique 
+
+Construction of the OctreeRoot OK 
+Initialisation de la roue pour la permutation des schemas de convection
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Fin creation esp. virtuel volumes_entrelaces_Cl_
+Initialisation de la roue pour la permutation des schemas de convection
+Initialize the remote connection dom_solide/Paroi_echange1<-dom_fluide/Paroi_echange2
+On passe dans Zone_Cl_VEFP1B::remplir_volumes_entrelaces
+Fin creation esp. virtuel volumes_entrelaces_Cl_
+Evaluateur_Source_VEF_Face::completer()
+Step verification of data being read in progress...
+The read data are coherent
+=====================================================
+Initialization of the problem pbc (Resoudre) in progress ... 
+=====================================================
+SolideMilieu_base:::initialiser
+The physical properties of a Solide medium have been successfully checked.
+Fluide_Incompressible::initialiser()
+Fluide_IncompressibleMilieu_base:::initialiser
+Navier_Stokes_std::preparer_calcul()
+Assemblage de la matrice de pression P0 P1 en cours...
+Assemblage P0 OK
+Assemblage P1 OK
+Assemblage POP1 OK
+Update P0 OK
+Update P1 OK
+Modifie P1P1 Neumann OK
+Update POP1 OK
+Order of the matrix = 6896
+Changement de base pour la matrice: P0+P1->P1Bulle
+Conversion BlocSymToMatMorseSym...
+Projection of initial and boundaries conditions 
+-------------  Projection  -----------------
+--------------------------------------------
+Bilan de masse avant projection : 0.0130998
+Norm of the residue: 0.00796404 (1)
+0.00862563 0.00783991 0.0072188 0.00578995 0.00428285 0.00335842 0.00232758 0.00178041 0.00161489 0.0014666 0.00186849 0.00258149 0.00251283 0.00210057 0.00140935 
+0.00116912 0.00108054 0.00093522 0.000702501 0.000566204 0.000503456 0.000464884 0.000393359 0.000320222 0.000229311 0.000169928 0.000136093 0.000111077 8.57054e-05 7.05159e-05 
+5.44111e-05 4.18806e-05 3.2088e-05 2.59453e-05 2.383e-05 2.25623e-05 2.33041e-05 2.1699e-05 2.06658e-05 2.05933e-05 1.95668e-05 1.80589e-05 1.68633e-05 1.44838e-05 1.12956e-05 
+9.02018e-06 7.06314e-06 5.91195e-06 4.75663e-06 4.02787e-06 3.37633e-06 2.68443e-06 2.31408e-06 1.8667e-06 1.47459e-06 1.23133e-06 1.05888e-06 9.70155e-07 9.89008e-07 1.05392e-06 
+1.11075e-06 1.07336e-06 1.00894e-06 9.09038e-07 8.468e-07 8.49864e-07 9.21086e-07 9.92409e-07 1.05364e-06 1.28552e-06 1.58826e-06 1.76893e-06 2.00128e-06 2.2086e-06 2.22406e-06 
+2.31719e-06 2.50294e-06 2.70274e-06 2.68557e-06 2.79586e-06 3.01798e-06 3.19799e-06 3.34503e-06 3.35156e-06 3.10005e-06 2.97532e-06 3.13629e-06 3.2516e-06 3.28421e-06 3.39867e-06 
+3.26559e-06 2.90902e-06 2.33704e-06 1.78201e-06 1.34822e-06 1.1178e-06 9.32337e-07 7.86232e-07 6.77471e-07 5.32217e-07 4.1823e-07 3.28773e-07 2.58268e-07 1.98462e-07 1.55271e-07 
+1.22989e-07 9.60843e-08 7.79486e-08 7.1072e-08 6.51431e-08 5.92013e-08 5.3528e-08 5.05143e-08 4.78241e-08 4.50432e-08 4.35538e-08 4.07541e-08 4.01658e-08 4.6298e-08 5.25389e-08 
+6.38295e-08 7.96408e-08 9.6952e-08 1.21911e-07 1.49799e-07 1.75735e-07 1.9206e-07 2.09232e-07 2.2191e-07 2.19027e-07 1.94452e-07 1.62848e-07 1.37267e-07 1.12082e-07 9.22705e-08 
+7.05787e-08 5.16324e-08 3.81098e-08 3.2303e-08 2.88233e-08 2.48396e-08 2.13102e-08 1.77503e-08 1.47759e-08 1.26989e-08 1.07396e-08 8.78531e-09 6.88655e-09 5.2256e-09 3.7385e-09 
+2.88338e-09 2.2334e-09 1.96168e-09 1.67974e-09 1.34705e-09 1.12325e-09 8.62891e-10 6.82646e-10 5.36822e-10 4.02042e-10 3.03648e-10 2.27261e-10 1.72528e-10 1.23712e-10 8.73564e-11 
+6.63218e-11 5.11971e-11 3.85686e-11 2.89497e-11 2.14365e-11 1.57532e-11 1.23696e-11 9.74564e-12 7.87891e-12 6.42531e-12 5.03453e-12 3.731e-12 2.75845e-12 2.03401e-12 1.60152e-12 
+1.28338e-12 1.01108e-12 8.10452e-13 
+Final residue: 8.10452e-13 ( 1.01764e-10 )
+ Convergence in 183 iterations for solveur_pression
+clock Ax=B: 0.045663 s for solveur_pression
+Bilan de masse apres projection : 2.22161e-13
+-------------  Projection  OK---------------
+--------------------------------------------
+Estimation du champ de pression au demarrage:
+Norm of the residue: 0 (0)
+
+Final residue: 0 ( 0 )
+ Convergence in 0 iterations for solveur_pression
+clock Ax=B: 0.000285 s for solveur_pression
+The physical properties of a Fluide_Incompressible medium have been successfully checked.
+=====================================================
+Solving of the problem pbc (Resoudre) in progress ... 
+=====================================================
+First postprocessing, this can take some minutes
+First postprocessing OK
+
+Final residue: 9.06763e-13 ( 7.42254e-09 )
+ Convergence in 164 iterations for solveur_pression
+
+-------------------------------------------------------------------
+We treat the time step number 1 , for the time scheme ...
+   dt = 0.1
+   time = 0.1
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.415834
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.415834
+
+61 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 4.52083e-14 m3/s
+Relative value : 3.25499e-11
+time step continuity errors : sum local = 9.22618e-15, global = 6.281e-21, cumulative = 6.281e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.095207 s
+
+Norm of the residue: 4.51002e-06 (1)
+2.3429e-06 1.21303e-06 7.29402e-07 5.25849e-07 3.94773e-07 3.73014e-07 3.15722e-07 2.42167e-07 1.85299e-07 1.78305e-07 1.69278e-07 1.6128e-07 1.76756e-07 1.60654e-07 1.33813e-07 
+1.10321e-07 1.00722e-07 9.61775e-08 8.76266e-08 7.61035e-08 6.40903e-08 5.53383e-08 4.9479e-08 4.34733e-08 3.82521e-08 3.59539e-08 3.19504e-08 2.68488e-08 2.57833e-08 2.3817e-08 
+2.12996e-08 1.7629e-08 1.51815e-08 1.21653e-08 9.48546e-09 8.2108e-09 6.98184e-09 5.5687e-09 4.55768e-09 3.73557e-09 3.0296e-09 2.48579e-09 2.18244e-09 2.06028e-09 1.92426e-09 
+1.92497e-09 1.9869e-09 2.03453e-09 1.92024e-09 1.84317e-09 1.85331e-09 1.94128e-09 2.15563e-09 2.37307e-09 2.42067e-09 2.2585e-09 2.06038e-09 1.87255e-09 1.98835e-09 2.06766e-09 
+2.20813e-09 2.643e-09 3.02147e-09 3.58132e-09 4.39697e-09 5.46396e-09 6.40315e-09 6.84173e-09 7.13273e-09 6.85883e-09 6.37143e-09 6.1373e-09 5.54372e-09 4.94766e-09 4.35872e-09 
+3.79384e-09 3.2632e-09 2.87696e-09 2.55071e-09 2.15419e-09 1.86368e-09 1.67343e-09 1.56253e-09 1.54205e-09 1.48623e-09 1.3579e-09 1.12998e-09 9.24199e-10 8.05829e-10 7.45371e-10 
+7.3013e-10 7.00798e-10 6.29078e-10 6.08063e-10 5.66456e-10 5.06816e-10 4.30251e-10 3.52857e-10 2.95643e-10 2.72079e-10 2.66278e-10 2.65376e-10 2.75268e-10 2.93036e-10 3.14224e-10 
+3.61232e-10 4.39017e-10 5.63554e-10 6.84157e-10 8.65824e-10 1.09385e-09 1.32693e-09 1.45927e-09 1.45117e-09 1.49517e-09 1.52029e-09 1.40599e-09 1.17673e-09 9.86033e-10 8.41153e-10 
+7.91557e-10 7.43598e-10 6.69945e-10 5.44957e-10 4.44777e-10 3.69886e-10 3.07036e-10 2.50468e-10 2.04589e-10 1.63958e-10 1.31815e-10 1.1023e-10 9.05926e-11 6.74964e-11 5.33115e-11 
+4.29589e-11 3.33642e-11 2.68579e-11 2.14507e-11 1.7242e-11 1.44606e-11 1.14963e-11 8.21269e-12 5.89115e-12 4.2277e-12 3.10624e-12 2.24441e-12 1.59162e-12 1.16836e-12 9.20218e-13 
+
+Final residue: 9.20218e-13 ( 2.04038e-07 )
+ Convergence in 150 iterations for solveur_pression
+clock Ax=B: 0.037633 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0h0mn1s. Progress: 9
+
+-------------------------------------------------------------------
+We treat the time step number 2 , for the time scheme ...
+   dt = 0.1
+   time = 0.2
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416013
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416013
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 6.54011e-14 m3/s
+Relative value : 4.70888e-11
+time step continuity errors : sum local = 1.33472e-14, global = -4.20883e-20, cumulative = -3.58073e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.070977 s
+
+Norm of the residue: 3.97708e-06 (1)
+2.05285e-06 1.02114e-06 6.41182e-07 4.68279e-07 3.48424e-07 3.32843e-07 2.76648e-07 2.12786e-07 1.66383e-07 1.59429e-07 1.49466e-07 1.44175e-07 1.56872e-07 1.42129e-07 1.18555e-07 
+9.7732e-08 8.92365e-08 8.57908e-08 7.8251e-08 6.73697e-08 5.68914e-08 4.95598e-08 4.40525e-08 3.8474e-08 3.40993e-08 3.13537e-08 2.77556e-08 2.37756e-08 2.29974e-08 2.1237e-08 
+1.88065e-08 1.5656e-08 1.35879e-08 1.08435e-08 8.52039e-09 7.37193e-09 6.19185e-09 4.95673e-09 4.05082e-09 3.29754e-09 2.68946e-09 2.22327e-09 1.94493e-09 1.83726e-09 1.71579e-09 
+1.72761e-09 1.78419e-09 1.83574e-09 1.74328e-09 1.65709e-09 1.66703e-09 1.76128e-09 1.95407e-09 2.16768e-09 2.20438e-09 2.06292e-09 1.87728e-09 1.70281e-09 1.80284e-09 1.88007e-09 
+2.03273e-09 2.4361e-09 2.77659e-09 3.30134e-09 4.02242e-09 4.99078e-09 5.83664e-09 6.18212e-09 6.41965e-09 6.15094e-09 5.75127e-09 5.54521e-09 4.99801e-09 4.45848e-09 3.91483e-09 
+3.38845e-09 2.89685e-09 2.54899e-09 2.25477e-09 1.90929e-09 1.64889e-09 1.48802e-09 1.39237e-09 1.38184e-09 1.32763e-09 1.20326e-09 1.00194e-09 8.13754e-10 7.09644e-10 6.63267e-10 
+6.53243e-10 6.22151e-10 5.62267e-10 5.40398e-10 4.99441e-10 4.50879e-10 3.83415e-10 3.12716e-10 2.66214e-10 2.4621e-10 2.40525e-10 2.39113e-10 2.47516e-10 2.63791e-10 2.84183e-10 
+3.28382e-10 4.00526e-10 5.15345e-10 6.24738e-10 7.87506e-10 1.00047e-09 1.22155e-09 1.32134e-09 1.30983e-09 1.34873e-09 1.3736e-09 1.27021e-09 1.07625e-09 9.13504e-10 7.90575e-10 
+7.1419e-10 6.70337e-10 5.98461e-10 4.83062e-10 3.9271e-10 3.2786e-10 2.7337e-10 2.23582e-10 1.82557e-10 1.46188e-10 1.17298e-10 9.82796e-11 8.14194e-11 6.14639e-11 4.88963e-11 
+3.95533e-11 3.08855e-11 2.49053e-11 1.9796e-11 1.59976e-11 1.32865e-11 1.03639e-11 7.31376e-12 5.20858e-12 3.74666e-12 2.76095e-12 2.00515e-12 1.43099e-12 1.05914e-12 8.40414e-13 
+
+Final residue: 8.40414e-13 ( 2.11314e-07 )
+ Convergence in 150 iterations for solveur_pression
+clock Ax=B: 0.037499 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.868976 s. Progress: 19
+
+-------------------------------------------------------------------
+We treat the time step number 3 , for the time scheme ...
+   dt = 0.1
+   time = 0.3
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416158
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416158
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 9.31571e-14 m3/s
+Relative value : 6.70731e-11
+time step continuity errors : sum local = 1.90116e-14, global = 3.42645e-20, cumulative = -1.54278e-21
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.071484 s
+
+Norm of the residue: 3.55338e-06 (1)
+1.81167e-06 8.93204e-07 5.66629e-07 4.19732e-07 3.107e-07 2.96577e-07 2.45637e-07 1.90123e-07 1.49209e-07 1.42103e-07 1.32169e-07 1.28335e-07 1.38621e-07 1.25556e-07 1.05241e-07 
+8.65937e-08 7.92411e-08 7.62981e-08 7.02499e-08 6.02045e-08 5.10172e-08 4.47456e-08 3.91408e-08 3.41398e-08 3.02479e-08 2.77587e-08 2.38954e-08 2.11073e-08 2.04716e-08 1.84592e-08 
+1.65536e-08 1.39097e-08 1.2125e-08 9.72686e-09 7.66053e-09 6.61794e-09 5.52172e-09 4.45033e-09 3.61781e-09 2.92666e-09 2.39971e-09 1.99634e-09 1.74027e-09 1.6409e-09 1.53156e-09 
+1.54808e-09 1.6027e-09 1.64994e-09 1.57414e-09 1.48632e-09 1.49113e-09 1.59518e-09 1.77637e-09 1.98006e-09 2.00646e-09 1.8848e-09 1.70331e-09 1.54508e-09 1.63449e-09 1.70815e-09 
+1.86426e-09 2.24066e-09 2.54578e-09 3.01219e-09 3.65016e-09 4.49993e-09 5.27086e-09 5.55965e-09 5.7582e-09 5.50372e-09 5.18217e-09 5.00772e-09 4.50047e-09 3.99631e-09 3.5387e-09 
+3.03405e-09 2.56614e-09 2.2425e-09 1.97148e-09 1.68133e-09 1.45652e-09 1.32192e-09 1.24631e-09 1.23876e-09 1.18788e-09 1.06078e-09 8.87776e-10 7.17854e-10 6.28224e-10 5.92802e-10 
+5.80942e-10 5.51021e-10 5.02747e-10 4.80499e-10 4.38442e-10 4.01192e-10 3.40293e-10 2.76253e-10 2.38767e-10 2.2241e-10 2.16363e-10 2.16415e-10 2.19191e-10 2.34805e-10 2.57966e-10 
+2.99829e-10 3.63273e-10 4.6564e-10 5.62525e-10 7.03448e-10 8.93621e-10 1.09248e-09 1.17742e-09 1.16607e-09 1.20672e-09 1.24195e-09 1.14189e-09 9.7106e-10 8.18621e-10 7.23172e-10 
+6.50312e-10 6.03388e-10 5.32757e-10 4.2811e-10 3.45435e-10 2.8826e-10 2.38386e-10 1.96798e-10 1.62631e-10 1.31396e-10 1.05716e-10 8.79728e-11 7.27695e-11 5.56407e-11 4.46844e-11 
+3.66327e-11 2.88311e-11 2.32346e-11 1.83217e-11 1.48296e-11 1.22104e-11 9.41065e-12 6.55379e-12 4.63777e-12 3.31869e-12 2.4514e-12 1.78714e-12 1.28691e-12 9.65818e-13 
+Final residue: 9.65818e-13 ( 2.71803e-07 )
+ Convergence in 149 iterations for solveur_pression
+clock Ax=B: 0.03701 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.676884 s. Progress: 30
+
+-------------------------------------------------------------------
+We treat the time step number 4 , for the time scheme ...
+   dt = 0.1
+   time = 0.4
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416284
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416284
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 9.80376e-14 m3/s
+Relative value : 7.05871e-11
+time step continuity errors : sum local = 2.00077e-14, global = -6.43206e-20, cumulative = -6.58633e-20
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.083469 s
+
+Norm of the residue: 3.21874e-06 (1)
+1.6157e-06 7.94033e-07 5.07223e-07 3.79934e-07 2.78394e-07 2.65039e-07 2.19361e-07 1.71269e-07 1.34663e-07 1.27157e-07 1.17161e-07 1.14029e-07 1.22273e-07 1.11165e-07 9.3536e-08 
+7.69962e-08 7.05242e-08 6.79056e-08 6.32127e-08 5.42257e-08 4.59813e-08 4.04331e-08 3.4788e-08 3.04092e-08 2.66994e-08 2.50279e-08 2.18e-08 1.8788e-08 1.83355e-08 1.64999e-08 
+1.48465e-08 1.25021e-08 1.09295e-08 8.79129e-09 6.94964e-09 5.97102e-09 4.95779e-09 4.01487e-09 3.24426e-09 2.61071e-09 2.1511e-09 1.8003e-09 1.56764e-09 1.46932e-09 1.36748e-09 
+1.3898e-09 1.43998e-09 1.48397e-09 1.42077e-09 1.33564e-09 1.33527e-09 1.44152e-09 1.6175e-09 1.80938e-09 1.82813e-09 1.73076e-09 1.55044e-09 1.40343e-09 1.48066e-09 1.55131e-09 
+1.70662e-09 2.05377e-09 2.33201e-09 2.73056e-09 3.29287e-09 4.03546e-09 4.74869e-09 4.9997e-09 5.17169e-09 4.94697e-09 4.68968e-09 4.53774e-09 4.083e-09 3.56925e-09 3.17066e-09 
+2.69453e-09 2.2667e-09 1.97184e-09 1.73311e-09 1.48382e-09 1.26428e-09 1.16234e-09 1.10394e-09 1.10261e-09 1.06294e-09 9.3599e-10 7.87171e-10 6.35879e-10 5.58188e-10 5.29465e-10 
+5.15546e-10 4.86226e-10 4.48316e-10 4.27378e-10 3.87927e-10 3.56674e-10 3.02457e-10 2.4627e-10 2.1374e-10 1.99263e-10 1.94562e-10 1.9738e-10 1.97188e-10 2.12303e-10 2.32617e-10 
+2.71127e-10 3.28754e-10 4.19534e-10 5.02417e-10 6.24321e-10 7.90904e-10 9.73545e-10 1.04504e-09 1.03343e-09 1.08016e-09 1.11197e-09 1.04332e-09 9.02318e-10 7.63662e-10 6.5339e-10 
+5.88802e-10 5.41754e-10 4.76611e-10 3.81347e-10 3.06492e-10 2.54814e-10 2.09169e-10 1.73064e-10 1.44224e-10 1.18314e-10 9.55951e-11 7.89798e-11 6.52638e-11 5.06284e-11 4.09094e-11 
+3.39146e-11 2.68923e-11 2.15833e-11 1.68984e-11 1.36761e-11 1.11862e-11 8.54185e-12 5.87011e-12 4.1289e-12 2.95264e-12 2.17889e-12 1.59526e-12 1.15574e-12 8.81525e-13 
+Final residue: 8.81525e-13 ( 2.73873e-07 )
+ Convergence in 149 iterations for solveur_pression
+clock Ax=B: 0.0371 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.558655 s. Progress: 40
+
+-------------------------------------------------------------------
+We treat the time step number 5 , for the time scheme ...
+   dt = 0.1
+   time = 0.5
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416399
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416399
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.15744e-13 m3/s
+Relative value : 8.33358e-11
+time step continuity errors : sum local = 2.36213e-14, global = -1.28325e-19, cumulative = -1.94188e-19
+
+clock: Total time step: 0.105277 s
+
+Norm of the residue: 2.96166e-06 (1)
+1.46201e-06 7.06681e-07 4.56308e-07 3.46596e-07 2.48738e-07 2.36347e-07 1.95796e-07 1.54402e-07 1.21856e-07 1.13337e-07 1.03695e-07 1.00771e-07 1.06829e-07 9.79297e-08 8.31712e-08 
+6.83683e-08 6.23815e-08 6.02532e-08 5.66483e-08 4.87346e-08 4.13307e-08 3.64566e-08 3.09092e-08 2.71453e-08 2.36731e-08 2.24065e-08 1.94569e-08 1.66768e-08 1.61476e-08 1.45781e-08 
+1.31656e-08 1.11522e-08 9.79143e-09 7.92948e-09 6.30371e-09 5.37845e-09 4.46339e-09 3.62053e-09 2.91442e-09 2.33083e-09 1.92726e-09 1.625e-09 1.41222e-09 1.3113e-09 1.21716e-09 
+1.24233e-09 1.28365e-09 1.32726e-09 1.27469e-09 1.19627e-09 1.19048e-09 1.29197e-09 1.46203e-09 1.64215e-09 1.66245e-09 1.59384e-09 1.41396e-09 1.26985e-09 1.33325e-09 1.39952e-09 
+1.54833e-09 1.86218e-09 2.11618e-09 2.44875e-09 2.93159e-09 3.58583e-09 4.24434e-09 4.47266e-09 4.63276e-09 4.44986e-09 4.25253e-09 4.10173e-09 3.70038e-09 3.21894e-09 2.82703e-09 
+2.38765e-09 1.99748e-09 1.7397e-09 1.53549e-09 1.31991e-09 1.1188e-09 1.02818e-09 9.75515e-10 9.81969e-10 9.44844e-10 8.2706e-10 6.97064e-10 5.60483e-10 4.92523e-10 4.69324e-10 
+4.55656e-10 4.27201e-10 3.96014e-10 3.77957e-10 3.40742e-10 3.1628e-10 2.68358e-10 2.20598e-10 1.91753e-10 1.7938e-10 1.75802e-10 1.75318e-10 1.74481e-10 1.87104e-10 2.04982e-10 
+2.41262e-10 2.92349e-10 3.70836e-10 4.42159e-10 5.48106e-10 6.94491e-10 8.56523e-10 9.23806e-10 9.11485e-10 9.62485e-10 1.01066e-09 9.35351e-10 8.0787e-10 6.82967e-10 5.94778e-10 
+5.37088e-10 4.88458e-10 4.2617e-10 3.39798e-10 2.71878e-10 2.27147e-10 1.84902e-10 1.51365e-10 1.25868e-10 1.03725e-10 8.5501e-11 7.07271e-11 5.85544e-11 4.60794e-11 3.74173e-11 
+3.12635e-11 2.50481e-11 1.99856e-11 1.55801e-11 1.25562e-11 1.02296e-11 7.75483e-12 5.27902e-12 3.68716e-12 2.64434e-12 1.94299e-12 1.42748e-12 1.03901e-12 8.06369e-13 
+Final residue: 8.06369e-13 ( 2.72269e-07 )
+ Convergence in 149 iterations for solveur_pression
+clock Ax=B: 0.037116 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.480339 s. Progress: 50
+
+-------------------------------------------------------------------
+We treat the time step number 6 , for the time scheme ...
+   dt = 0.1
+   time = 0.6
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416514
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416514
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.34016e-13 m3/s
+Relative value : 9.64914e-11
+time step continuity errors : sum local = 2.73502e-14, global = 4.85292e-20, cumulative = -1.45659e-19
+
+clock: Total time step: 0.074707 s
+
+Norm of the residue: 2.76931e-06 (1)
+1.32865e-06 6.37065e-07 4.10236e-07 3.15683e-07 2.22538e-07 2.10601e-07 1.75899e-07 1.39399e-07 1.09706e-07 1.00164e-07 9.08631e-08 8.76454e-08 9.18187e-08 8.51175e-08 7.32216e-08 
+6.02143e-08 5.47048e-08 5.30412e-08 5.0633e-08 4.36953e-08 3.71194e-08 3.28323e-08 2.74123e-08 2.4276e-08 2.09655e-08 1.9812e-08 1.71261e-08 1.46094e-08 1.40318e-08 1.26665e-08 
+1.15218e-08 9.89167e-09 8.71583e-09 7.1432e-09 5.69466e-09 4.84093e-09 4.03748e-09 3.28796e-09 2.63246e-09 2.0906e-09 1.72924e-09 1.46492e-09 1.27102e-09 1.16964e-09 1.08162e-09 
+1.10334e-09 1.12981e-09 1.16875e-09 1.12358e-09 1.05697e-09 1.04972e-09 1.14476e-09 1.30999e-09 1.48452e-09 1.5116e-09 1.46819e-09 1.29084e-09 1.1472e-09 1.19443e-09 1.25582e-09 
+1.3879e-09 1.66764e-09 1.89239e-09 2.16232e-09 2.56189e-09 3.12744e-09 3.72643e-09 3.95906e-09 4.12316e-09 3.99484e-09 3.85072e-09 3.69004e-09 3.33727e-09 2.91224e-09 2.52715e-09 
+2.11056e-09 1.74218e-09 1.514e-09 1.33681e-09 1.15478e-09 9.7754e-10 8.95823e-10 8.51328e-10 8.60754e-10 8.30253e-10 7.24044e-10 6.10815e-10 4.89977e-10 4.30194e-10 4.11619e-10 
+3.97109e-10 3.69958e-10 3.45645e-10 3.3018e-10 2.97127e-10 2.768e-10 2.3756e-10 1.99691e-10 1.7258e-10 1.61918e-10 1.56445e-10 1.55623e-10 1.52419e-10 1.62934e-10 1.78952e-10 
+2.10349e-10 2.53617e-10 3.20013e-10 3.77324e-10 4.67364e-10 5.92597e-10 7.32958e-10 7.9885e-10 7.85007e-10 8.42554e-10 8.95835e-10 8.55003e-10 7.45569e-10 6.25971e-10 5.37263e-10 
+4.85333e-10 4.36324e-10 3.78987e-10 3.0197e-10 2.42183e-10 2.01705e-10 1.64309e-10 1.34868e-10 1.13308e-10 9.49939e-11 7.73176e-11 6.30901e-11 5.20933e-11 4.12628e-11 3.4084e-11 
+2.88403e-11 2.34087e-11 1.86244e-11 1.44127e-11 1.14877e-11 9.31693e-12 7.02628e-12 4.78691e-12 3.30571e-12 2.37516e-12 1.73594e-12 1.28246e-12 9.42029e-13 
+Final residue: 9.42029e-13 ( 3.40167e-07 )
+ Convergence in 148 iterations for solveur_pression
+clock Ax=B: 0.036803 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.367741 s. Progress: 60
+
+-------------------------------------------------------------------
+We treat the time step number 7 , for the time scheme ...
+   dt = 0.1
+   time = 0.7
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.416633
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.416633
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.46242e-13 m3/s
+Relative value : 1.05294e-10
+time step continuity errors : sum local = 2.98452e-14, global = 1.7693e-20, cumulative = -1.27966e-19
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.072753 s
+
+Norm of the residue: 2.59909e-06 (1)
+1.21625e-06 5.78456e-07 3.71062e-07 2.89445e-07 2.01061e-07 1.89133e-07 1.5885e-07 1.26534e-07 9.94027e-08 8.92023e-08 8.03391e-08 7.68275e-08 7.95284e-08 7.43878e-08 6.47593e-08 
+5.33471e-08 4.82405e-08 4.69025e-08 4.54581e-08 3.93298e-08 3.35181e-08 2.97701e-08 2.45526e-08 2.17985e-08 1.86897e-08 1.75691e-08 1.51383e-08 1.28777e-08 1.22847e-08 1.11016e-08 
+1.01431e-08 8.8103e-09 7.78522e-09 6.45339e-09 5.16505e-09 4.37147e-09 3.65601e-09 2.98856e-09 2.38522e-09 1.88572e-09 1.55966e-09 1.32584e-09 1.14981e-09 1.05066e-09 9.68826e-10 
+9.86862e-10 1.00226e-09 1.03616e-09 9.95941e-10 9.40012e-10 9.30849e-10 1.01762e-09 1.17557e-09 1.34322e-09 1.37729e-09 1.35475e-09 1.18272e-09 1.04216e-09 1.07509e-09 1.13164e-09 
+1.24956e-09 1.50183e-09 1.70328e-09 1.92513e-09 2.25481e-09 2.74394e-09 3.27814e-09 3.51963e-09 3.69287e-09 3.60437e-09 3.48967e-09 3.3265e-09 3.01726e-09 2.64318e-09 2.27323e-09 
+1.8797e-09 1.53017e-09 1.32737e-09 1.16968e-09 1.0129e-09 8.54619e-10 7.82016e-10 7.45998e-10 7.56144e-10 7.32886e-10 6.38596e-10 5.36838e-10 4.31529e-10 3.78747e-10 3.63175e-10 
+3.48139e-10 3.21165e-10 3.01128e-10 2.89569e-10 2.57525e-10 2.39085e-10 2.04812e-10 1.71482e-10 1.5423e-10 1.43914e-10 1.39549e-10 1.38233e-10 1.33492e-10 1.40108e-10 1.54725e-10 
+1.83586e-10 2.21151e-10 2.75845e-10 3.23633e-10 4.0243e-10 5.10005e-10 6.43531e-10 6.94647e-10 6.90822e-10 7.37402e-10 7.93643e-10 7.47913e-10 6.43143e-10 5.43558e-10 4.71337e-10 
+4.35677e-10 3.91724e-10 3.38381e-10 2.69967e-10 2.16789e-10 1.79765e-10 1.46261e-10 1.20201e-10 1.01726e-10 8.59087e-11 6.94981e-11 5.61148e-11 4.62526e-11 3.70198e-11 3.09604e-11 
+2.66028e-11 2.1689e-11 1.72384e-11 1.32786e-11 1.05083e-11 8.47595e-12 6.36515e-12 4.38084e-12 2.97992e-12 2.15664e-12 1.57144e-12 1.16273e-12 8.61726e-13 
+Final residue: 8.61726e-13 ( 3.31548e-07 )
+ Convergence in 148 iterations for solveur_pression
+clock Ax=B: 0.037088 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.271841 s. Progress: 70
+
+-------------------------------------------------------------------
+We treat the time step number 8 , for the time scheme ...
+   dt = 0.1
+   time = 0.8
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.41676
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.41676
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.5903e-13 m3/s
+Relative value : 1.14502e-10
+time step continuity errors : sum local = 3.24551e-14, global = -2.61638e-21, cumulative = -1.30582e-19
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.083683 s
+
+Norm of the residue: 2.46879e-06 (1)
+1.11726e-06 5.30287e-07 3.37354e-07 2.66208e-07 1.82345e-07 1.69996e-07 1.44585e-07 1.15367e-07 9.03475e-08 7.92187e-08 7.03244e-08 6.63387e-08 6.76812e-08 6.38717e-08 5.63741e-08 
+4.66006e-08 4.20459e-08 4.10228e-08 4.04798e-08 3.52157e-08 3.03057e-08 2.70715e-08 2.20085e-08 1.95717e-08 1.66568e-08 1.55423e-08 1.33066e-08 1.12131e-08 1.05891e-08 9.53337e-09 
+8.75889e-09 7.73701e-09 6.89659e-09 5.79547e-09 4.66818e-09 3.95021e-09 3.32666e-09 2.73374e-09 2.17936e-09 1.71246e-09 1.41181e-09 1.20167e-09 1.04244e-09 9.47761e-10 8.68769e-10 
+8.79802e-10 8.82656e-10 9.05841e-10 8.69941e-10 8.23491e-10 8.16079e-10 8.96603e-10 1.04903e-09 1.21134e-09 1.26178e-09 1.26219e-09 1.09864e-09 9.54925e-10 9.70396e-10 1.01823e-09 
+1.12029e-09 1.34808e-09 1.52434e-09 1.70133e-09 1.96782e-09 2.37928e-09 2.85588e-09 3.10775e-09 3.30066e-09 3.25276e-09 3.14473e-09 2.98469e-09 2.71622e-09 2.38632e-09 2.03214e-09 
+1.65785e-09 1.32734e-09 1.14692e-09 1.00423e-09 8.70031e-10 7.27826e-10 6.66051e-10 6.37676e-10 6.48057e-10 6.34333e-10 5.55457e-10 4.66385e-10 3.77625e-10 3.30693e-10 3.16223e-10 
+2.99315e-10 2.72655e-10 2.56204e-10 2.46666e-10 2.19259e-10 2.03887e-10 1.77443e-10 1.52129e-10 1.35842e-10 1.27271e-10 1.22067e-10 1.20349e-10 1.14437e-10 1.19628e-10 1.32752e-10 
+1.56094e-10 1.87451e-10 2.31756e-10 2.67946e-10 3.32579e-10 4.21586e-10 5.32676e-10 5.85656e-10 5.79403e-10 6.30866e-10 6.89512e-10 6.79903e-10 6.02532e-10 5.13727e-10 4.39876e-10 
+3.94941e-10 3.498e-10 3.00898e-10 2.40358e-10 1.9156e-10 1.57347e-10 1.27517e-10 1.04727e-10 8.9219e-11 7.5842e-11 6.15195e-11 4.92291e-11 4.05108e-11 3.28722e-11 2.78291e-11 
+2.42845e-11 1.98874e-11 1.58563e-11 1.21974e-11 9.56462e-12 7.67524e-12 5.74942e-12 4.00595e-12 2.70192e-12 1.97043e-12 1.43483e-12 1.06784e-12 8.01352e-13 
+Final residue: 8.01352e-13 ( 3.24593e-07 )
+ Convergence in 148 iterations for solveur_pression
+clock Ax=B: 0.036784 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.178119 s. Progress: 80
+
+-------------------------------------------------------------------
+We treat the time step number 9 , for the time scheme ...
+   dt = 0.1
+   time = 0.9
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.4169
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.4169
+
+62 MBytes of RAM taken by the calculation.
+
+62 MBytes of RAM taken by the calculation.
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.71779e-13 m3/s
+Relative value : 1.23681e-10
+time step continuity errors : sum local = 3.5057e-14, global = -9.06545e-20, cumulative = -2.21237e-19
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.100486 s
+
+Norm of the residue: 2.33891e-06 (1)
+1.03665e-06 4.8988e-07 3.08591e-07 2.46479e-07 1.6687e-07 1.53926e-07 1.32073e-07 1.05854e-07 8.27384e-08 7.12216e-08 6.26482e-08 5.83302e-08 5.86947e-08 5.57047e-08 4.97103e-08 
+4.12177e-08 3.70802e-08 3.62023e-08 3.62291e-08 3.1699e-08 2.75509e-08 2.47615e-08 1.99339e-08 1.77002e-08 1.50044e-08 1.38862e-08 1.18445e-08 9.92449e-09 9.27663e-09 8.35326e-09 
+7.67097e-09 6.85402e-09 6.14386e-09 5.22586e-09 4.24313e-09 3.57898e-09 3.01869e-09 2.4918e-09 1.98965e-09 1.56064e-09 1.28367e-09 1.09508e-09 9.51458e-10 8.61434e-10 7.84906e-10 
+7.91661e-10 7.88843e-10 8.06291e-10 7.74264e-10 7.33204e-10 7.25738e-10 7.99397e-10 9.44121e-10 1.09738e-09 1.1572e-09 1.17526e-09 1.02452e-09 8.82761e-10 8.84708e-10 9.26144e-10 
+1.0168e-09 1.22444e-09 1.38558e-09 1.53089e-09 1.74828e-09 2.0969e-09 2.51727e-09 2.7658e-09 2.97301e-09 2.95942e-09 2.86273e-09 2.70313e-09 2.45894e-09 2.16799e-09 1.83554e-09 
+1.48351e-09 1.17486e-09 1.01099e-09 8.79654e-10 7.61509e-10 6.31581e-10 5.77498e-10 5.54883e-10 5.64482e-10 5.55611e-10 4.8926e-10 4.10287e-10 3.34531e-10 2.93549e-10 2.79715e-10 
+2.62236e-10 2.36579e-10 2.22252e-10 2.14337e-10 1.89623e-10 1.75564e-10 1.54139e-10 1.33075e-10 1.21756e-10 1.13513e-10 1.07852e-10 1.05386e-10 9.9413e-11 1.02651e-10 1.14369e-10 
+1.34565e-10 1.61378e-10 1.97033e-10 2.26271e-10 2.8111e-10 3.55502e-10 4.57284e-10 4.97106e-10 5.01015e-10 5.44539e-10 5.98198e-10 6.07368e-10 5.41588e-10 4.66354e-10 3.98288e-10 
+3.56539e-10 3.15337e-10 2.70589e-10 2.17013e-10 1.71949e-10 1.40433e-10 1.13101e-10 9.25651e-11 7.89871e-11 6.72414e-11 5.4899e-11 4.36658e-11 3.58312e-11 2.93617e-11 2.50496e-11 
+2.2078e-11 1.81444e-11 1.45218e-11 1.12137e-11 8.73925e-12 7.00581e-12 5.23803e-12 3.67943e-12 2.46884e-12 1.80555e-12 1.31181e-12 9.81101e-13 
+Final residue: 9.81101e-13 ( 4.19469e-07 )
+ Convergence in 147 iterations for solveur_pression
+clock Ax=B: 0.036699 s for solveur_pression
+
+Estimated CPU time to finish the run (according to nb_pas_dt_max value) : 0.0899387 s. Progress: 90
+
+-------------------------------------------------------------------
+We treat the time step number 10 , for the time scheme ...
+   dt = 0.1
+   time = 1
+ 
+Printing of the time steps for the equation: Conduction
+   diffusive time step : 3.52767
+ 
+Printing of the time steps for the equation: Navier_Stokes_standard
+   diffusive time step : 133.745
+   convective time step : 0.417052
+ 
+Printing of the time steps for the equation: Convection_Diffusion_Temperature
+   diffusive time step : 3.49539
+   convective time step : 0.417052
+
+62 MBytes of RAM taken by the calculation.
+---------------------------------------------------------
+The problem pb1 wants to stop : the maximum number of time steps reached
+
+
+Cell balance flow rate control for the problem pb2 : 
+Absolute value : 1.72189e-13 m3/s
+Relative value : 1.23976e-10
+time step continuity errors : sum local = 3.51405e-14, global = -2.03746e-20, cumulative = -2.41612e-19
+
+********************** Advice (printed only on the first 100 time steps) *********************
+You should use PETSc Cholesky solver instead of an iterative method for the pressure solver.
+For the caracteristics of your problem, it will be faster and give a better mass flow balance.
+**********************************************************************************************
+
+
+clock: Total time step: 0.147321 s
+
+Opening the files of type EcrFicColl : solide.rep
+Backup of problem pb1
+Backup of the field temperature performed on time : 1.000000e+00
+Creation of PAR_VEF_pb1.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb1
+Backup of the field temperature performed on time : 1.000000e+00
+Opening the files of type EcrFicColl : fluide.rep
+Backup of problem pb2
+Backup of the field vitesse performed on time : 1.000000e+00
+Backup of the field pression performed on time : 1.000000e+00
+Backup of the field temperature performed on time : 1.000000e+00
+Creation of PAR_VEF_pb2.xyz (EcrFicPartageMPIIO) for resumption of a calculation with a different number of processors.
+Backup of problem pb2
+Backup of the field vitesse performed on time : 1.000000e+00
+Backup of the field pression performed on time : 1.000000e+00
+Backup of the field temperature performed on time : 1.000000e+00
+=====================================================
+End of solving of the problem pbc (Resoudre)
+=====================================================
+MAIN: End of data file
+62 MBytes of RAM taken by the calculation.
+
+--------------------------------------------
+clock: Total execution: 2.49824 s
+Arret des processes.

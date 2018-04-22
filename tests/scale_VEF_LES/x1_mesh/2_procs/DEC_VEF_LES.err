@@ -1,0 +1,164 @@
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_Noparallel with 1 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = DEC_VEF_LES
+feenableexcept enabled.
+Data file : DEC_VEF_LES
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF_LES/x1_mesh/2_procs
+Nom du cas DEC_VEF_LES
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+Debut de l'execution 
+MAIN: Reading and executing data file
+Dimension::interpreter : dimension = 3
+It treats a calculation with a precision 1e-05
+It deals with a calculation using precision format 5
+Execution of the interpreter Lire_Tgrid
+Reading a mesh which comes from Tgrid
+Association of the domain on which the interpreter applies Lire_Tgrid
+Reading of the file Tube_coude_463259.msh ...
+The total number of elements to read is 463259
+3D elements of type Tetrahedron
+Reading a comment:
+(0
+
+Reading of the dimension of the case:
+Dimension 3.
+
+Reading a comment:
+(0
+
+The total number of nodes to read is 89710
+
+89710 nodes are read in the area 8
+
+
+The type of area 9 is 1 (1:fluid, 17:solid)
+
+The total number of faces to read is 950399
+
+Reading a comment:
+(0
+
+902637 internal faces are read in the area 10
+
+Reading a comment:
+(0
+
+19438 faces are read from the boundary number 11
+
+Reading a comment:
+(0
+
+27656 faces are read from the boundary number 12
+
+Reading a comment:
+(0
+
+334 faces are read from the boundary number 13
+
+Reading a comment:
+(0
+
+334 faces are read from the boundary number 14
+
+Reading a comment:
+(0
+
+Reading of a name:
+The area 9 is called fluid
+
+Reading of a name:
+The area 10 is called interieur
+
+Reading of a name:
+The area 11 is called symmetry
+
+Reading of a name:
+The area 12 is called wall
+
+Reading of a name:
+The area 13 is called outlet
+
+Reading of a name:
+The area 14 is called inlet
+
+Elimination of 0 unnecessary nodes in the domain dom
+Execution of the interpreter Dilate
+Association of the domain on which the interpreter applies Dilate
+Expands the domain dom of a factor 0.001
+Execution of the interpreter Transformer
+Association of the domain on which the interpreter applies Transformer
+Reading and interpretation of the function x
+Interpretation of the function x Ok
+Reading and interpretation of the function y
+Interpretation of the function y Ok
+Reading and interpretation of the function -z
+Interpretation of the function -z Ok
+Execution of the interpreter ExtrudeBord
+Association of the domain on which the interpreter applies ExtrudeBord
+number of 3D nodes :89710
+number of 3D faces of inlet :334
+number of nodes per faces in 3D :3
+boundary maintained symmetry
+boundary maintained wall
+boundary to eliminate outlet
+Decouper : Splitting of a domain
+ Domain name to split : box
+==============================================
+The extreme coordinates of the domain box are:
+x is between -0.5334 and -0.4572
+y is between -0.1624 and -0.1524
+z is between 0 and 0.0381
+==============================================
+==============================================
+The volume cells of the domain box are:
+sum(volume cells)= 2.27368e-05
+mean(volume cells)= 1.21561e-09
+min(volume cells)= 5.47064e-10
+max(volume cells)= 4.81391e-09
+==============================================
+domaine = box
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 207
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 1
+The partitioner has generated 2 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 2 parts:
+ Construction of part number 0
+  Number of nodes    : 2243
+  Number of elements : 9352
+  Number of joints   : 1
+  Joint 0 PeVoisin 1 NbSommets 122 NbFaces 207 NbElemDist 2689
+               Total:    NbSommets 122 NbFaces 207 NbElemDist 2689
+Writing part 0 into the binary file box_0000.Zones
+Writing of 2243 nodes.
+Writing of 9352 elements.
+ Construction of part number 1
+  Number of nodes    : 2248
+  Number of elements : 9352
+  Number of joints   : 1
+  Joint 0 PeVoisin 0 NbSommets 122 NbFaces 207 NbElemDist 2428
+               Total:    NbSommets 122 NbFaces 207 NbElemDist 2428
+Writing part 1 into the binary file box_0001.Zones
+Writing of 2248 nodes.
+Writing of 9352 elements.
+End of the interpreter Decouper
+MAIN: End of data file
+Arret des processes.

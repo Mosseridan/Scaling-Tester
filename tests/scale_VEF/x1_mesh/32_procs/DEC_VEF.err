@@ -1,0 +1,1584 @@
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_Noparallel with 1 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = DEC_VEF
+feenableexcept enabled.
+Data file : DEC_VEF
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF/x1_mesh/32_procs
+Nom du cas DEC_VEF
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+Debut de l'execution 
+MAIN: Reading and executing data file
+Dimension::interpreter : dimension = 3
+Reading of data for a Schema_euler_explicite time scheme
+Reading of the maximum number of time steps
+The next backup, by security, will take place after 23 hours of calculation.
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block Cavite1
+Step of 3D mesh in progress... 
+It was created 33% of coordxIt was created 66% of coordx
+It was created 10% of coordyIt was created 20% of coordyIt was created 30% of coordyIt was created 40% of coordyIt was created 50% of coordyIt was created 60% of coordyIt was created 70% of coordyIt was created 80% of coordyIt was created 90% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary paroi_a_20
+End of reading of the boundary : paroi_a_20
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary Paroi_echange1
+End of reading of the boundary : Paroi_echange1
+Reading of the boundary Devant1
+End of reading of the boundary : Devant1
+Reading of the boundary Derriere1
+End of reading of the boundary : Derriere1
+Reading of the block Cavite2
+Step of 3D mesh in progress... 
+It was created 14% of coordxIt was created 28% of coordxIt was created 42% of coordxIt was created 57% of coordxIt was created 71% of coordxIt was created 85% of coordx
+It was created 33% of coordyIt was created 66% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary Paroi_echange1
+End of reading of the boundary : Paroi_echange1
+Reading of the boundary paroi_a_40
+End of reading of the boundary : paroi_a_40
+Reading of the boundary paroi_a_20
+End of reading of the boundary : paroi_a_20
+Reading of the boundary Devant2
+End of reading of the boundary : Devant2
+Reading of the boundary Derriere2
+End of reading of the boundary : Derriere2
+16 double nodes were found 
+Compressing objects of type Zone in progress... 
+agglomeration of Zones Cavite1 and Cavite2
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom_solide
+Execution of the interpreter Mailler
+Association of the domain on which the interpreter applies Mailler
+Reading of the block Cavite3
+Step of 3D mesh in progress... 
+It was created 14% of coordxIt was created 28% of coordxIt was created 42% of coordxIt was created 57% of coordxIt was created 71% of coordxIt was created 85% of coordx
+It was created 14% of coordyIt was created 28% of coordyIt was created 42% of coordyIt was created 57% of coordyIt was created 71% of coordyIt was created 85% of coordy
+It was created 33% of coordzIt was created 66% of coordz
+Step of mesh ended 
+Reading of the boundary Paroi_echange2
+End of reading of the boundary : Paroi_echange2
+Reading of the boundary Entree
+End of reading of the boundary : Entree
+Reading of the boundary Paroi
+End of reading of the boundary : Paroi
+Reading of the boundary Paroi_echange2
+End of reading of the boundary : Paroi_echange2
+Reading of the boundary Sortie
+End of reading of the boundary : Sortie
+Reading of the boundary Paroi
+End of reading of the boundary : Paroi
+Reading of the boundary Devant3
+End of reading of the boundary : Devant3
+Reading of the boundary Derriere3
+End of reading of the boundary : Derriere3
+Compressing objects of type Zone in progress... 
+Zones::comprimer() - End
+Elimination of 0 unnecessary nodes in the domain dom_fluide
+Execution of the interpreter Tetraedriser_homogene_compact
+Association of the domain on which the interpreter applies Tetraedriser_homogene_compact
+ NB ELEM : 153 NB NODE : 288
+Construction of the OctreeRoot OK 
+We have split the cubes...
+Splitting of the boundaries
+Splitting of the connectors
+Splitting of the internal faces
+END of Tetraedriser_homogene_compact...
+  1 NbElem=3672  NbNod=1011
+Execution of the interpreter Tetraedriser_homogene_compact
+Association of the domain on which the interpreter applies Tetraedriser_homogene_compact
+ NB ELEM : 147 NB NODE : 256
+Construction of the OctreeRoot OK 
+We have split the cubes...
+Splitting of the boundaries
+Splitting of the connectors
+Splitting of the internal faces
+END of Tetraedriser_homogene_compact...
+  1 NbElem=3528  NbNod=935
+Decouper : Splitting of a domain
+ Domain name to split : dom_solide
+==============================================
+The extreme coordinates of the domain dom_solide are:
+x is between 0 and 1
+y is between 0 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_solide are:
+sum(volume cells)= 0.51
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+domaine = dom_solide
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 672
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ No correction to be made
+The partitioner has generated 32 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 32 parts:
+ Construction of part number 0
+  Number of nodes    : 51
+  Number of elements : 112
+  Number of joints   : 7
+  Joint 0 PeVoisin 1 NbSommets 13 NbFaces 12 NbElemDist 54
+  Joint 1 PeVoisin 2 NbSommets 12 NbFaces 11 NbElemDist 59
+  Joint 2 PeVoisin 3 NbSommets 5 NbFaces 2 NbElemDist 16
+  Joint 3 PeVoisin 4 NbSommets 1 NbFaces 0 NbElemDist 2
+  Joint 4 PeVoisin 28 NbSommets 13 NbFaces 14 NbElemDist 79
+  Joint 5 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 6
+  Joint 6 PeVoisin 31 NbSommets 4 NbFaces 1 NbElemDist 12
+               Total:    NbSommets 49 NbFaces 40 NbElemDist 228
+Writing part 0 into the binary file DOM1_0000.Zones
+Writing of 51 nodes.
+Writing of 112 elements.
+ Construction of part number 1
+  Number of nodes    : 48
+  Number of elements : 116
+  Number of joints   : 10
+  Joint 0 PeVoisin 0 NbSommets 13 NbFaces 12 NbElemDist 84
+  Joint 1 PeVoisin 2 NbSommets 3 NbFaces 1 NbElemDist 13
+  Joint 2 PeVoisin 3 NbSommets 9 NbFaces 7 NbElemDist 64
+  Joint 3 PeVoisin 4 NbSommets 10 NbFaces 9 NbElemDist 64
+  Joint 4 PeVoisin 5 NbSommets 5 NbFaces 4 NbElemDist 28
+  Joint 5 PeVoisin 6 NbSommets 3 NbFaces 1 NbElemDist 17
+  Joint 6 PeVoisin 7 NbSommets 4 NbFaces 2 NbElemDist 28
+  Joint 7 PeVoisin 25 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 8 PeVoisin 28 NbSommets 4 NbFaces 2 NbElemDist 26
+  Joint 9 PeVoisin 31 NbSommets 6 NbFaces 4 NbElemDist 32
+               Total:    NbSommets 58 NbFaces 42 NbElemDist 360
+Writing part 1 into the binary file DOM1_0001.Zones
+Writing of 48 nodes.
+Writing of 116 elements.
+ Construction of part number 2
+  Number of nodes    : 49
+  Number of elements : 112
+  Number of joints   : 8
+  Joint 0 PeVoisin 0 NbSommets 12 NbFaces 11 NbElemDist 75
+  Joint 1 PeVoisin 1 NbSommets 3 NbFaces 1 NbElemDist 19
+  Joint 2 PeVoisin 3 NbSommets 10 NbFaces 10 NbElemDist 60
+  Joint 3 PeVoisin 7 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 4 PeVoisin 28 NbSommets 7 NbFaces 4 NbElemDist 56
+  Joint 5 PeVoisin 29 NbSommets 9 NbFaces 8 NbElemDist 48
+  Joint 6 PeVoisin 30 NbSommets 3 NbFaces 0 NbElemDist 9
+  Joint 7 PeVoisin 31 NbSommets 1 NbFaces 0 NbElemDist 4
+               Total:    NbSommets 46 NbFaces 34 NbElemDist 275
+Writing part 2 into the binary file DOM1_0002.Zones
+Writing of 49 nodes.
+Writing of 112 elements.
+ Construction of part number 3
+  Number of nodes    : 51
+  Number of elements : 116
+  Number of joints   : 11
+  Joint 0 PeVoisin 0 NbSommets 5 NbFaces 2 NbElemDist 40
+  Joint 1 PeVoisin 1 NbSommets 9 NbFaces 7 NbElemDist 47
+  Joint 2 PeVoisin 2 NbSommets 10 NbFaces 10 NbElemDist 64
+  Joint 3 PeVoisin 4 NbSommets 8 NbFaces 5 NbElemDist 58
+  Joint 4 PeVoisin 5 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 5 PeVoisin 6 NbSommets 9 NbFaces 7 NbElemDist 55
+  Joint 6 PeVoisin 7 NbSommets 9 NbFaces 8 NbElemDist 51
+  Joint 7 PeVoisin 28 NbSommets 3 NbFaces 1 NbElemDist 15
+  Joint 8 PeVoisin 29 NbSommets 2 NbFaces 0 NbElemDist 14
+  Joint 9 PeVoisin 30 NbSommets 6 NbFaces 4 NbElemDist 29
+  Joint 10 PeVoisin 31 NbSommets 6 NbFaces 4 NbElemDist 46
+               Total:    NbSommets 68 NbFaces 48 NbElemDist 423
+Writing part 3 into the binary file DOM1_0003.Zones
+Writing of 51 nodes.
+Writing of 116 elements.
+ Construction of part number 4
+  Number of nodes    : 50
+  Number of elements : 114
+  Number of joints   : 9
+  Joint 0 PeVoisin 0 NbSommets 1 NbFaces 0 NbElemDist 2
+  Joint 1 PeVoisin 1 NbSommets 10 NbFaces 9 NbElemDist 63
+  Joint 2 PeVoisin 3 NbSommets 8 NbFaces 5 NbElemDist 43
+  Joint 3 PeVoisin 5 NbSommets 11 NbFaces 10 NbElemDist 47
+  Joint 4 PeVoisin 6 NbSommets 10 NbFaces 8 NbElemDist 63
+  Joint 5 PeVoisin 7 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 6 PeVoisin 25 NbSommets 4 NbFaces 2 NbElemDist 22
+  Joint 7 PeVoisin 30 NbSommets 2 NbFaces 0 NbElemDist 17
+  Joint 8 PeVoisin 31 NbSommets 8 NbFaces 6 NbElemDist 46
+               Total:    NbSommets 55 NbFaces 40 NbElemDist 307
+Writing part 4 into the binary file DOM1_0004.Zones
+Writing of 50 nodes.
+Writing of 114 elements.
+ Construction of part number 5
+  Number of nodes    : 51
+  Number of elements : 114
+  Number of joints   : 9
+  Joint 0 PeVoisin 1 NbSommets 5 NbFaces 4 NbElemDist 17
+  Joint 1 PeVoisin 3 NbSommets 1 NbFaces 0 NbElemDist 6
+  Joint 2 PeVoisin 4 NbSommets 11 NbFaces 10 NbElemDist 72
+  Joint 3 PeVoisin 6 NbSommets 11 NbFaces 10 NbElemDist 71
+  Joint 4 PeVoisin 7 NbSommets 7 NbFaces 5 NbElemDist 41
+  Joint 5 PeVoisin 8 NbSommets 8 NbFaces 7 NbElemDist 51
+  Joint 6 PeVoisin 9 NbSommets 8 NbFaces 7 NbElemDist 44
+  Joint 7 PeVoisin 10 NbSommets 1 NbFaces 0 NbElemDist 10
+  Joint 8 PeVoisin 11 NbSommets 8 NbFaces 7 NbElemDist 40
+               Total:    NbSommets 60 NbFaces 50 NbElemDist 352
+Writing part 5 into the binary file DOM1_0005.Zones
+Writing of 51 nodes.
+Writing of 114 elements.
+ Construction of part number 6
+  Number of nodes    : 48
+  Number of elements : 116
+  Number of joints   : 8
+  Joint 0 PeVoisin 1 NbSommets 3 NbFaces 1 NbElemDist 17
+  Joint 1 PeVoisin 3 NbSommets 9 NbFaces 7 NbElemDist 54
+  Joint 2 PeVoisin 4 NbSommets 10 NbFaces 8 NbElemDist 60
+  Joint 3 PeVoisin 5 NbSommets 11 NbFaces 10 NbElemDist 79
+  Joint 4 PeVoisin 7 NbSommets 15 NbFaces 16 NbElemDist 82
+  Joint 5 PeVoisin 9 NbSommets 2 NbFaces 0 NbElemDist 13
+  Joint 6 PeVoisin 10 NbSommets 4 NbFaces 2 NbElemDist 17
+  Joint 7 PeVoisin 11 NbSommets 7 NbFaces 4 NbElemDist 33
+               Total:    NbSommets 61 NbFaces 48 NbElemDist 355
+Writing part 6 into the binary file DOM1_0006.Zones
+Writing of 48 nodes.
+Writing of 116 elements.
+ Construction of part number 7
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 10
+  Joint 0 PeVoisin 1 NbSommets 4 NbFaces 2 NbElemDist 31
+  Joint 1 PeVoisin 2 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 2 PeVoisin 3 NbSommets 9 NbFaces 8 NbElemDist 51
+  Joint 3 PeVoisin 4 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 4 PeVoisin 5 NbSommets 7 NbFaces 5 NbElemDist 36
+  Joint 5 PeVoisin 6 NbSommets 15 NbFaces 16 NbElemDist 84
+  Joint 6 PeVoisin 8 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 7 PeVoisin 9 NbSommets 7 NbFaces 6 NbElemDist 55
+  Joint 8 PeVoisin 10 NbSommets 7 NbFaces 6 NbElemDist 34
+  Joint 9 PeVoisin 11 NbSommets 4 NbFaces 1 NbElemDist 18
+               Total:    NbSommets 56 NbFaces 44 NbElemDist 329
+Writing part 7 into the binary file DOM1_0007.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 8
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 8
+  Joint 0 PeVoisin 5 NbSommets 8 NbFaces 7 NbElemDist 40
+  Joint 1 PeVoisin 7 NbSommets 1 NbFaces 0 NbElemDist 10
+  Joint 2 PeVoisin 9 NbSommets 10 NbFaces 10 NbElemDist 44
+  Joint 3 PeVoisin 10 NbSommets 5 NbFaces 3 NbElemDist 45
+  Joint 4 PeVoisin 11 NbSommets 11 NbFaces 10 NbElemDist 76
+  Joint 5 PeVoisin 12 NbSommets 6 NbFaces 5 NbElemDist 39
+  Joint 6 PeVoisin 13 NbSommets 1 NbFaces 0 NbElemDist 8
+  Joint 7 PeVoisin 14 NbSommets 6 NbFaces 5 NbElemDist 29
+               Total:    NbSommets 48 NbFaces 40 NbElemDist 291
+Writing part 8 into the binary file DOM1_0008.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+ Construction of part number 9
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 8
+  Joint 0 PeVoisin 5 NbSommets 8 NbFaces 7 NbElemDist 50
+  Joint 1 PeVoisin 6 NbSommets 2 NbFaces 0 NbElemDist 16
+  Joint 2 PeVoisin 7 NbSommets 7 NbFaces 6 NbElemDist 46
+  Joint 3 PeVoisin 8 NbSommets 10 NbFaces 10 NbElemDist 73
+  Joint 4 PeVoisin 10 NbSommets 10 NbFaces 10 NbElemDist 54
+  Joint 5 PeVoisin 11 NbSommets 3 NbFaces 1 NbElemDist 31
+  Joint 6 PeVoisin 12 NbSommets 5 NbFaces 4 NbElemDist 18
+  Joint 7 PeVoisin 13 NbSommets 4 NbFaces 2 NbElemDist 20
+               Total:    NbSommets 49 NbFaces 40 NbElemDist 308
+Writing part 9 into the binary file DOM1_0009.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 10
+  Number of nodes    : 48
+  Number of elements : 116
+  Number of joints   : 10
+  Joint 0 PeVoisin 5 NbSommets 1 NbFaces 0 NbElemDist 6
+  Joint 1 PeVoisin 6 NbSommets 4 NbFaces 2 NbElemDist 24
+  Joint 2 PeVoisin 7 NbSommets 7 NbFaces 6 NbElemDist 37
+  Joint 3 PeVoisin 8 NbSommets 5 NbFaces 3 NbElemDist 23
+  Joint 4 PeVoisin 9 NbSommets 10 NbFaces 10 NbElemDist 76
+  Joint 5 PeVoisin 11 NbSommets 12 NbFaces 12 NbElemDist 66
+  Joint 6 PeVoisin 12 NbSommets 4 NbFaces 2 NbElemDist 26
+  Joint 7 PeVoisin 13 NbSommets 7 NbFaces 6 NbElemDist 40
+  Joint 8 PeVoisin 14 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 9 PeVoisin 15 NbSommets 5 NbFaces 3 NbElemDist 32
+               Total:    NbSommets 56 NbFaces 44 NbElemDist 334
+Writing part 10 into the binary file DOM1_0010.Zones
+Writing of 48 nodes.
+Writing of 116 elements.
+ Construction of part number 11
+  Number of nodes    : 49
+  Number of elements : 116
+  Number of joints   : 9
+  Joint 0 PeVoisin 5 NbSommets 8 NbFaces 7 NbElemDist 46
+  Joint 1 PeVoisin 6 NbSommets 7 NbFaces 4 NbElemDist 42
+  Joint 2 PeVoisin 7 NbSommets 4 NbFaces 1 NbElemDist 17
+  Joint 3 PeVoisin 8 NbSommets 11 NbFaces 10 NbElemDist 51
+  Joint 4 PeVoisin 9 NbSommets 3 NbFaces 1 NbElemDist 11
+  Joint 5 PeVoisin 10 NbSommets 12 NbFaces 12 NbElemDist 81
+  Joint 6 PeVoisin 12 NbSommets 3 NbFaces 1 NbElemDist 15
+  Joint 7 PeVoisin 14 NbSommets 5 NbFaces 3 NbElemDist 28
+  Joint 8 PeVoisin 15 NbSommets 6 NbFaces 5 NbElemDist 33
+               Total:    NbSommets 59 NbFaces 44 NbElemDist 324
+Writing part 11 into the binary file DOM1_0011.Zones
+Writing of 49 nodes.
+Writing of 116 elements.
+ Construction of part number 12
+  Number of nodes    : 49
+  Number of elements : 116
+  Number of joints   : 7
+  Joint 0 PeVoisin 8 NbSommets 6 NbFaces 5 NbElemDist 38
+  Joint 1 PeVoisin 9 NbSommets 5 NbFaces 4 NbElemDist 32
+  Joint 2 PeVoisin 10 NbSommets 4 NbFaces 2 NbElemDist 22
+  Joint 3 PeVoisin 11 NbSommets 3 NbFaces 1 NbElemDist 17
+  Joint 4 PeVoisin 13 NbSommets 13 NbFaces 14 NbElemDist 87
+  Joint 5 PeVoisin 14 NbSommets 11 NbFaces 11 NbElemDist 50
+  Joint 6 PeVoisin 15 NbSommets 4 NbFaces 1 NbElemDist 15
+               Total:    NbSommets 46 NbFaces 38 NbElemDist 261
+Writing part 12 into the binary file DOM1_0012.Zones
+Writing of 49 nodes.
+Writing of 116 elements.
+ Construction of part number 13
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 6
+  Joint 0 PeVoisin 8 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 1 PeVoisin 9 NbSommets 4 NbFaces 2 NbElemDist 31
+  Joint 2 PeVoisin 10 NbSommets 7 NbFaces 6 NbElemDist 40
+  Joint 3 PeVoisin 12 NbSommets 13 NbFaces 14 NbElemDist 74
+  Joint 4 PeVoisin 14 NbSommets 6 NbFaces 3 NbElemDist 20
+  Joint 5 PeVoisin 15 NbSommets 12 NbFaces 13 NbElemDist 85
+               Total:    NbSommets 43 NbFaces 38 NbElemDist 262
+Writing part 13 into the binary file DOM1_0013.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 14
+  Number of nodes    : 47
+  Number of elements : 116
+  Number of joints   : 6
+  Joint 0 PeVoisin 8 NbSommets 6 NbFaces 5 NbElemDist 32
+  Joint 1 PeVoisin 10 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 2 PeVoisin 11 NbSommets 5 NbFaces 3 NbElemDist 36
+  Joint 3 PeVoisin 12 NbSommets 11 NbFaces 11 NbElemDist 69
+  Joint 4 PeVoisin 13 NbSommets 6 NbFaces 3 NbElemDist 55
+  Joint 5 PeVoisin 15 NbSommets 10 NbFaces 10 NbElemDist 51
+               Total:    NbSommets 39 NbFaces 32 NbElemDist 255
+Writing part 14 into the binary file DOM1_0014.Zones
+Writing of 47 nodes.
+Writing of 116 elements.
+ Construction of part number 15
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 5
+  Joint 0 PeVoisin 10 NbSommets 5 NbFaces 3 NbElemDist 37
+  Joint 1 PeVoisin 11 NbSommets 6 NbFaces 5 NbElemDist 33
+  Joint 2 PeVoisin 12 NbSommets 4 NbFaces 1 NbElemDist 29
+  Joint 3 PeVoisin 13 NbSommets 12 NbFaces 13 NbElemDist 72
+  Joint 4 PeVoisin 14 NbSommets 10 NbFaces 10 NbElemDist 73
+               Total:    NbSommets 37 NbFaces 32 NbElemDist 244
+Writing part 15 into the binary file DOM1_0015.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+ Construction of part number 16
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 6
+  Joint 0 PeVoisin 17 NbSommets 13 NbFaces 14 NbElemDist 66
+  Joint 1 PeVoisin 18 NbSommets 11 NbFaces 11 NbElemDist 76
+  Joint 2 PeVoisin 19 NbSommets 6 NbFaces 5 NbElemDist 26
+  Joint 3 PeVoisin 20 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 4 PeVoisin 22 NbSommets 5 NbFaces 3 NbElemDist 24
+  Joint 5 PeVoisin 23 NbSommets 5 NbFaces 3 NbElemDist 27
+               Total:    NbSommets 41 NbFaces 36 NbElemDist 223
+Writing part 16 into the binary file DOM1_0016.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 17
+  Number of nodes    : 48
+  Number of elements : 114
+  Number of joints   : 6
+  Joint 0 PeVoisin 16 NbSommets 13 NbFaces 14 NbElemDist 79
+  Joint 1 PeVoisin 18 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 2 PeVoisin 19 NbSommets 9 NbFaces 8 NbElemDist 43
+  Joint 3 PeVoisin 20 NbSommets 6 NbFaces 4 NbElemDist 35
+  Joint 4 PeVoisin 22 NbSommets 1 NbFaces 0 NbElemDist 1
+  Joint 5 PeVoisin 23 NbSommets 9 NbFaces 6 NbElemDist 38
+               Total:    NbSommets 39 NbFaces 32 NbElemDist 200
+Writing part 17 into the binary file DOM1_0017.Zones
+Writing of 48 nodes.
+Writing of 114 elements.
+ Construction of part number 18
+  Number of nodes    : 48
+  Number of elements : 114
+  Number of joints   : 7
+  Joint 0 PeVoisin 16 NbSommets 11 NbFaces 11 NbElemDist 56
+  Joint 1 PeVoisin 17 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 2 PeVoisin 19 NbSommets 11 NbFaces 11 NbElemDist 79
+  Joint 3 PeVoisin 20 NbSommets 6 NbFaces 5 NbElemDist 27
+  Joint 4 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 8
+  Joint 5 PeVoisin 22 NbSommets 7 NbFaces 5 NbElemDist 47
+  Joint 6 PeVoisin 23 NbSommets 6 NbFaces 4 NbElemDist 40
+               Total:    NbSommets 43 NbFaces 36 NbElemDist 261
+Writing part 18 into the binary file DOM1_0018.Zones
+Writing of 48 nodes.
+Writing of 114 elements.
+ Construction of part number 19
+  Number of nodes    : 49
+  Number of elements : 116
+  Number of joints   : 6
+  Joint 0 PeVoisin 16 NbSommets 6 NbFaces 5 NbElemDist 50
+  Joint 1 PeVoisin 17 NbSommets 9 NbFaces 8 NbElemDist 66
+  Joint 2 PeVoisin 18 NbSommets 11 NbFaces 11 NbElemDist 52
+  Joint 3 PeVoisin 20 NbSommets 9 NbFaces 8 NbElemDist 40
+  Joint 4 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 2
+  Joint 5 PeVoisin 23 NbSommets 4 NbFaces 2 NbElemDist 32
+               Total:    NbSommets 40 NbFaces 34 NbElemDist 242
+Writing part 19 into the binary file DOM1_0019.Zones
+Writing of 49 nodes.
+Writing of 116 elements.
+ Construction of part number 20
+  Number of nodes    : 51
+  Number of elements : 116
+  Number of joints   : 9
+  Joint 0 PeVoisin 16 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 1 PeVoisin 17 NbSommets 6 NbFaces 4 NbElemDist 39
+  Joint 2 PeVoisin 18 NbSommets 6 NbFaces 5 NbElemDist 39
+  Joint 3 PeVoisin 19 NbSommets 9 NbFaces 8 NbElemDist 60
+  Joint 4 PeVoisin 21 NbSommets 13 NbFaces 13 NbElemDist 80
+  Joint 5 PeVoisin 22 NbSommets 6 NbFaces 3 NbElemDist 42
+  Joint 6 PeVoisin 23 NbSommets 11 NbFaces 10 NbElemDist 71
+  Joint 7 PeVoisin 24 NbSommets 6 NbFaces 5 NbElemDist 25
+  Joint 8 PeVoisin 26 NbSommets 1 NbFaces 0 NbElemDist 10
+               Total:    NbSommets 59 NbFaces 48 NbElemDist 378
+Writing part 20 into the binary file DOM1_0020.Zones
+Writing of 51 nodes.
+Writing of 116 elements.
+ Construction of part number 21
+  Number of nodes    : 48
+  Number of elements : 114
+  Number of joints   : 10
+  Joint 0 PeVoisin 18 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 1 PeVoisin 19 NbSommets 1 NbFaces 0 NbElemDist 8
+  Joint 2 PeVoisin 20 NbSommets 13 NbFaces 13 NbElemDist 71
+  Joint 3 PeVoisin 22 NbSommets 6 NbFaces 4 NbElemDist 24
+  Joint 4 PeVoisin 23 NbSommets 8 NbFaces 5 NbElemDist 42
+  Joint 5 PeVoisin 24 NbSommets 6 NbFaces 4 NbElemDist 57
+  Joint 6 PeVoisin 25 NbSommets 5 NbFaces 3 NbElemDist 28
+  Joint 7 PeVoisin 26 NbSommets 9 NbFaces 8 NbElemDist 68
+  Joint 8 PeVoisin 27 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 9 PeVoisin 30 NbSommets 5 NbFaces 3 NbElemDist 30
+               Total:    NbSommets 55 NbFaces 40 NbElemDist 344
+Writing part 21 into the binary file DOM1_0021.Zones
+Writing of 48 nodes.
+Writing of 114 elements.
+ Construction of part number 22
+  Number of nodes    : 49
+  Number of elements : 114
+  Number of joints   : 9
+  Joint 0 PeVoisin 16 NbSommets 5 NbFaces 3 NbElemDist 28
+  Joint 1 PeVoisin 17 NbSommets 1 NbFaces 0 NbElemDist 10
+  Joint 2 PeVoisin 18 NbSommets 7 NbFaces 5 NbElemDist 37
+  Joint 3 PeVoisin 20 NbSommets 6 NbFaces 3 NbElemDist 29
+  Joint 4 PeVoisin 21 NbSommets 6 NbFaces 4 NbElemDist 24
+  Joint 5 PeVoisin 23 NbSommets 13 NbFaces 14 NbElemDist 82
+  Joint 6 PeVoisin 24 NbSommets 5 NbFaces 3 NbElemDist 41
+  Joint 7 PeVoisin 26 NbSommets 7 NbFaces 5 NbElemDist 40
+  Joint 8 PeVoisin 27 NbSommets 6 NbFaces 5 NbElemDist 43
+               Total:    NbSommets 56 NbFaces 42 NbElemDist 334
+Writing part 22 into the binary file DOM1_0022.Zones
+Writing of 49 nodes.
+Writing of 114 elements.
+ Construction of part number 23
+  Number of nodes    : 49
+  Number of elements : 116
+  Number of joints   : 8
+  Joint 0 PeVoisin 16 NbSommets 5 NbFaces 3 NbElemDist 31
+  Joint 1 PeVoisin 17 NbSommets 9 NbFaces 6 NbElemDist 45
+  Joint 2 PeVoisin 18 NbSommets 6 NbFaces 4 NbElemDist 34
+  Joint 3 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 18
+  Joint 4 PeVoisin 20 NbSommets 11 NbFaces 10 NbElemDist 79
+  Joint 5 PeVoisin 21 NbSommets 8 NbFaces 5 NbElemDist 61
+  Joint 6 PeVoisin 22 NbSommets 13 NbFaces 14 NbElemDist 89
+  Joint 7 PeVoisin 26 NbSommets 5 NbFaces 4 NbElemDist 26
+               Total:    NbSommets 61 NbFaces 48 NbElemDist 383
+Writing part 23 into the binary file DOM1_0023.Zones
+Writing of 49 nodes.
+Writing of 116 elements.
+ Construction of part number 24
+  Number of nodes    : 47
+  Number of elements : 112
+  Number of joints   : 8
+  Joint 0 PeVoisin 20 NbSommets 6 NbFaces 5 NbElemDist 39
+  Joint 1 PeVoisin 21 NbSommets 6 NbFaces 4 NbElemDist 40
+  Joint 2 PeVoisin 22 NbSommets 5 NbFaces 3 NbElemDist 36
+  Joint 3 PeVoisin 25 NbSommets 13 NbFaces 14 NbElemDist 72
+  Joint 4 PeVoisin 26 NbSommets 8 NbFaces 7 NbElemDist 61
+  Joint 5 PeVoisin 27 NbSommets 10 NbFaces 9 NbElemDist 54
+  Joint 6 PeVoisin 30 NbSommets 2 NbFaces 0 NbElemDist 6
+  Joint 7 PeVoisin 31 NbSommets 2 NbFaces 0 NbElemDist 17
+               Total:    NbSommets 52 NbFaces 42 NbElemDist 325
+Writing part 24 into the binary file DOM1_0024.Zones
+Writing of 47 nodes.
+Writing of 112 elements.
+ Construction of part number 25
+  Number of nodes    : 47
+  Number of elements : 116
+  Number of joints   : 10
+  Joint 0 PeVoisin 1 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 1 PeVoisin 4 NbSommets 4 NbFaces 2 NbElemDist 26
+  Joint 2 PeVoisin 21 NbSommets 5 NbFaces 3 NbElemDist 26
+  Joint 3 PeVoisin 24 NbSommets 13 NbFaces 14 NbElemDist 86
+  Joint 4 PeVoisin 26 NbSommets 4 NbFaces 1 NbElemDist 27
+  Joint 5 PeVoisin 27 NbSommets 9 NbFaces 7 NbElemDist 48
+  Joint 6 PeVoisin 28 NbSommets 2 NbFaces 0 NbElemDist 12
+  Joint 7 PeVoisin 29 NbSommets 2 NbFaces 0 NbElemDist 12
+  Joint 8 PeVoisin 30 NbSommets 10 NbFaces 7 NbElemDist 65
+  Joint 9 PeVoisin 31 NbSommets 13 NbFaces 14 NbElemDist 83
+               Total:    NbSommets 63 NbFaces 48 NbElemDist 389
+Writing part 25 into the binary file DOM1_0025.Zones
+Writing of 47 nodes.
+Writing of 116 elements.
+ Construction of part number 26
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 10
+  Joint 0 PeVoisin 20 NbSommets 1 NbFaces 0 NbElemDist 2
+  Joint 1 PeVoisin 21 NbSommets 9 NbFaces 8 NbElemDist 56
+  Joint 2 PeVoisin 22 NbSommets 7 NbFaces 5 NbElemDist 36
+  Joint 3 PeVoisin 23 NbSommets 5 NbFaces 4 NbElemDist 38
+  Joint 4 PeVoisin 24 NbSommets 8 NbFaces 7 NbElemDist 34
+  Joint 5 PeVoisin 25 NbSommets 4 NbFaces 1 NbElemDist 25
+  Joint 6 PeVoisin 27 NbSommets 13 NbFaces 13 NbElemDist 85
+  Joint 7 PeVoisin 29 NbSommets 5 NbFaces 4 NbElemDist 26
+  Joint 8 PeVoisin 30 NbSommets 6 NbFaces 4 NbElemDist 35
+  Joint 9 PeVoisin 31 NbSommets 1 NbFaces 0 NbElemDist 10
+               Total:    NbSommets 59 NbFaces 46 NbElemDist 347
+Writing part 26 into the binary file DOM1_0026.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 27
+  Number of nodes    : 50
+  Number of elements : 112
+  Number of joints   : 9
+  Joint 0 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 1 PeVoisin 22 NbSommets 6 NbFaces 5 NbElemDist 23
+  Joint 2 PeVoisin 24 NbSommets 10 NbFaces 9 NbElemDist 75
+  Joint 3 PeVoisin 25 NbSommets 9 NbFaces 7 NbElemDist 49
+  Joint 4 PeVoisin 26 NbSommets 13 NbFaces 13 NbElemDist 74
+  Joint 5 PeVoisin 28 NbSommets 5 NbFaces 4 NbElemDist 21
+  Joint 6 PeVoisin 29 NbSommets 6 NbFaces 4 NbElemDist 33
+  Joint 7 PeVoisin 30 NbSommets 4 NbFaces 2 NbElemDist 16
+  Joint 8 PeVoisin 31 NbSommets 6 NbFaces 2 NbElemDist 47
+               Total:    NbSommets 60 NbFaces 46 NbElemDist 342
+Writing part 27 into the binary file DOM1_0027.Zones
+Writing of 50 nodes.
+Writing of 112 elements.
+ Construction of part number 28
+  Number of nodes    : 49
+  Number of elements : 116
+  Number of joints   : 9
+  Joint 0 PeVoisin 0 NbSommets 13 NbFaces 14 NbElemDist 71
+  Joint 1 PeVoisin 1 NbSommets 4 NbFaces 2 NbElemDist 24
+  Joint 2 PeVoisin 2 NbSommets 7 NbFaces 4 NbElemDist 42
+  Joint 3 PeVoisin 3 NbSommets 3 NbFaces 1 NbElemDist 19
+  Joint 4 PeVoisin 25 NbSommets 2 NbFaces 0 NbElemDist 9
+  Joint 5 PeVoisin 27 NbSommets 5 NbFaces 4 NbElemDist 14
+  Joint 6 PeVoisin 29 NbSommets 14 NbFaces 15 NbElemDist 93
+  Joint 7 PeVoisin 30 NbSommets 4 NbFaces 2 NbElemDist 32
+  Joint 8 PeVoisin 31 NbSommets 11 NbFaces 10 NbElemDist 74
+               Total:    NbSommets 63 NbFaces 52 NbElemDist 378
+Writing part 28 into the binary file DOM1_0028.Zones
+Writing of 49 nodes.
+Writing of 116 elements.
+ Construction of part number 29
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 9
+  Joint 0 PeVoisin 0 NbSommets 1 NbFaces 0 NbElemDist 10
+  Joint 1 PeVoisin 2 NbSommets 9 NbFaces 8 NbElemDist 43
+  Joint 2 PeVoisin 3 NbSommets 2 NbFaces 0 NbElemDist 6
+  Joint 3 PeVoisin 25 NbSommets 2 NbFaces 0 NbElemDist 14
+  Joint 4 PeVoisin 26 NbSommets 5 NbFaces 4 NbElemDist 16
+  Joint 5 PeVoisin 27 NbSommets 6 NbFaces 4 NbElemDist 41
+  Joint 6 PeVoisin 28 NbSommets 14 NbFaces 15 NbElemDist 78
+  Joint 7 PeVoisin 30 NbSommets 10 NbFaces 10 NbElemDist 73
+  Joint 8 PeVoisin 31 NbSommets 7 NbFaces 3 NbElemDist 39
+               Total:    NbSommets 56 NbFaces 44 NbElemDist 320
+Writing part 29 into the binary file DOM1_0029.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 30
+  Number of nodes    : 50
+  Number of elements : 116
+  Number of joints   : 11
+  Joint 0 PeVoisin 2 NbSommets 3 NbFaces 0 NbElemDist 13
+  Joint 1 PeVoisin 3 NbSommets 6 NbFaces 4 NbElemDist 45
+  Joint 2 PeVoisin 4 NbSommets 2 NbFaces 0 NbElemDist 13
+  Joint 3 PeVoisin 21 NbSommets 5 NbFaces 3 NbElemDist 19
+  Joint 4 PeVoisin 24 NbSommets 2 NbFaces 0 NbElemDist 6
+  Joint 5 PeVoisin 25 NbSommets 10 NbFaces 7 NbElemDist 56
+  Joint 6 PeVoisin 26 NbSommets 6 NbFaces 4 NbElemDist 42
+  Joint 7 PeVoisin 27 NbSommets 4 NbFaces 2 NbElemDist 36
+  Joint 8 PeVoisin 28 NbSommets 4 NbFaces 2 NbElemDist 24
+  Joint 9 PeVoisin 29 NbSommets 10 NbFaces 10 NbElemDist 49
+  Joint 10 PeVoisin 31 NbSommets 11 NbFaces 10 NbElemDist 76
+               Total:    NbSommets 63 NbFaces 42 NbElemDist 379
+Writing part 30 into the binary file DOM1_0030.Zones
+Writing of 50 nodes.
+Writing of 116 elements.
+ Construction of part number 31
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 12
+  Joint 0 PeVoisin 0 NbSommets 4 NbFaces 1 NbElemDist 22
+  Joint 1 PeVoisin 1 NbSommets 6 NbFaces 4 NbElemDist 42
+  Joint 2 PeVoisin 2 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 3 PeVoisin 3 NbSommets 6 NbFaces 4 NbElemDist 36
+  Joint 4 PeVoisin 4 NbSommets 8 NbFaces 6 NbElemDist 49
+  Joint 5 PeVoisin 24 NbSommets 2 NbFaces 0 NbElemDist 8
+  Joint 6 PeVoisin 25 NbSommets 13 NbFaces 14 NbElemDist 71
+  Joint 7 PeVoisin 26 NbSommets 1 NbFaces 0 NbElemDist 4
+  Joint 8 PeVoisin 27 NbSommets 6 NbFaces 2 NbElemDist 31
+  Joint 9 PeVoisin 28 NbSommets 11 NbFaces 10 NbElemDist 69
+  Joint 10 PeVoisin 29 NbSommets 7 NbFaces 3 NbElemDist 45
+  Joint 11 PeVoisin 30 NbSommets 11 NbFaces 10 NbElemDist 64
+               Total:    NbSommets 76 NbFaces 54 NbElemDist 453
+Writing part 31 into the binary file DOM1_0031.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+End of the interpreter Decouper
+Decouper : Splitting of a domain
+ Domain name to split : dom_fluide
+==============================================
+The extreme coordinates of the domain dom_fluide are:
+x is between 0.3 and 1
+y is between 0.3 and 1
+z is between 0 and 1
+==============================================
+==============================================
+The volume cells of the domain dom_fluide are:
+sum(volume cells)= 0.49
+mean(volume cells)= 0.000138889
+min(volume cells)= 0.000138889
+max(volume cells)= 0.000138889
+==============================================
+domaine = dom_fluide
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 697
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 16
+The partitioner has generated 32 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 32 parts:
+ Construction of part number 0
+ Adding of a new joint : 28
+ Adding of a new joint : 29
+ Adding of a new joint : 30
+  Number of nodes    : 47
+  Number of elements : 112
+  Number of joints   : 10
+  Joint 0 PeVoisin 17 NbSommets 8 NbFaces 6 NbElemDist 93
+  Joint 1 PeVoisin 18 NbSommets 8 NbFaces 8 NbElemDist 97
+  Joint 2 PeVoisin 19 NbSommets 6 NbFaces 4 NbElemDist 86
+  Joint 3 PeVoisin 20 NbSommets 9 NbFaces 7 NbElemDist 112
+  Joint 4 PeVoisin 21 NbSommets 4 NbFaces 2 NbElemDist 77
+  Joint 5 PeVoisin 22 NbSommets 1 NbFaces 0 NbElemDist 38
+  Joint 6 PeVoisin 23 NbSommets 9 NbFaces 7 NbElemDist 110
+  Joint 7 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 6
+  Joint 8 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 9 PeVoisin 30 NbSommets 0 NbFaces 0 NbElemDist 4
+               Total:    NbSommets 45 NbFaces 34 NbElemDist 627
+Writing part 0 into the binary file DOM2_0000.Zones
+Writing of 47 nodes.
+Writing of 112 elements.
+ Construction of part number 1
+ Adding of a new joint : 11
+ Adding of a new joint : 12
+ Adding of a new joint : 15
+ Adding of a new joint : 17
+ Adding of a new joint : 23
+ Adding of a new joint : 27
+ Adding of a new joint : 28
+  Number of nodes    : 48
+  Number of elements : 112
+  Number of joints   : 23
+  Joint 0 PeVoisin 2 NbSommets 12 NbFaces 11 NbElemDist 111
+  Joint 1 PeVoisin 3 NbSommets 7 NbFaces 5 NbElemDist 106
+  Joint 2 PeVoisin 4 NbSommets 7 NbFaces 5 NbElemDist 98
+  Joint 3 PeVoisin 5 NbSommets 6 NbFaces 3 NbElemDist 85
+  Joint 4 PeVoisin 6 NbSommets 4 NbFaces 2 NbElemDist 59
+  Joint 5 PeVoisin 7 NbSommets 7 NbFaces 5 NbElemDist 95
+  Joint 6 PeVoisin 10 NbSommets 4 NbFaces 2 NbElemDist 68
+  Joint 7 PeVoisin 11 NbSommets 0 NbFaces 0 NbElemDist 24
+  Joint 8 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 9 PeVoisin 13 NbSommets 8 NbFaces 4 NbElemDist 92
+  Joint 10 PeVoisin 14 NbSommets 1 NbFaces 0 NbElemDist 64
+  Joint 11 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 12 PeVoisin 16 NbSommets 13 NbFaces 13 NbElemDist 111
+  Joint 13 PeVoisin 17 NbSommets 0 NbFaces 0 NbElemDist 32
+  Joint 14 PeVoisin 18 NbSommets 2 NbFaces 0 NbElemDist 60
+  Joint 15 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 80
+  Joint 16 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 41
+  Joint 17 PeVoisin 22 NbSommets 8 NbFaces 5 NbElemDist 74
+  Joint 18 PeVoisin 23 NbSommets 0 NbFaces 0 NbElemDist 10
+  Joint 19 PeVoisin 27 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 20 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 21 PeVoisin 29 NbSommets 6 NbFaces 3 NbElemDist 46
+  Joint 22 PeVoisin 31 NbSommets 1 NbFaces 0 NbElemDist 36
+               Total:    NbSommets 91 NbFaces 60 NbElemDist 1324
+Writing part 1 into the binary file DOM2_0001.Zones
+Writing of 48 nodes.
+Writing of 112 elements.
+ Construction of part number 2
+ Adding of a new joint : 7
+ Adding of a new joint : 9
+ Adding of a new joint : 12
+ Adding of a new joint : 15
+  Number of nodes    : 46
+  Number of elements : 108
+  Number of joints   : 18
+  Joint 0 PeVoisin 1 NbSommets 12 NbFaces 11 NbElemDist 108
+  Joint 1 PeVoisin 3 NbSommets 13 NbFaces 12 NbElemDist 105
+  Joint 2 PeVoisin 4 NbSommets 4 NbFaces 0 NbElemDist 87
+  Joint 3 PeVoisin 5 NbSommets 7 NbFaces 6 NbElemDist 79
+  Joint 4 PeVoisin 6 NbSommets 1 NbFaces 0 NbElemDist 36
+  Joint 5 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 26
+  Joint 6 PeVoisin 9 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 7 PeVoisin 10 NbSommets 3 NbFaces 1 NbElemDist 76
+  Joint 8 PeVoisin 11 NbSommets 2 NbFaces 0 NbElemDist 78
+  Joint 9 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 10 PeVoisin 13 NbSommets 4 NbFaces 2 NbElemDist 73
+  Joint 11 PeVoisin 14 NbSommets 8 NbFaces 5 NbElemDist 94
+  Joint 12 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 13 PeVoisin 16 NbSommets 3 NbFaces 1 NbElemDist 65
+  Joint 14 PeVoisin 18 NbSommets 2 NbFaces 0 NbElemDist 47
+  Joint 15 PeVoisin 19 NbSommets 1 NbFaces 0 NbElemDist 38
+  Joint 16 PeVoisin 22 NbSommets 7 NbFaces 6 NbElemDist 91
+  Joint 17 PeVoisin 29 NbSommets 4 NbFaces 2 NbElemDist 59
+               Total:    NbSommets 71 NbFaces 46 NbElemDist 1084
+Writing part 2 into the binary file DOM2_0002.Zones
+Writing of 46 nodes.
+Writing of 108 elements.
+ Construction of part number 3
+ Adding of a new joint : 4
+ Adding of a new joint : 9
+ Adding of a new joint : 12
+ Adding of a new joint : 22
+ Adding of a new joint : 29
+  Number of nodes    : 47
+  Number of elements : 112
+  Number of joints   : 15
+  Joint 0 PeVoisin 1 NbSommets 7 NbFaces 5 NbElemDist 89
+  Joint 1 PeVoisin 2 NbSommets 13 NbFaces 12 NbElemDist 111
+  Joint 2 PeVoisin 4 NbSommets 0 NbFaces 0 NbElemDist 35
+  Joint 3 PeVoisin 5 NbSommets 7 NbFaces 4 NbElemDist 100
+  Joint 4 PeVoisin 6 NbSommets 7 NbFaces 6 NbElemDist 92
+  Joint 5 PeVoisin 7 NbSommets 1 NbFaces 0 NbElemDist 53
+  Joint 6 PeVoisin 9 NbSommets 0 NbFaces 0 NbElemDist 28
+  Joint 7 PeVoisin 10 NbSommets 12 NbFaces 11 NbElemDist 112
+  Joint 8 PeVoisin 11 NbSommets 6 NbFaces 4 NbElemDist 87
+  Joint 9 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 10 PeVoisin 13 NbSommets 4 NbFaces 1 NbElemDist 60
+  Joint 11 PeVoisin 14 NbSommets 5 NbFaces 2 NbElemDist 79
+  Joint 12 PeVoisin 16 NbSommets 3 NbFaces 1 NbElemDist 49
+  Joint 13 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 14 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 4
+               Total:    NbSommets 65 NbFaces 46 NbElemDist 911
+Writing part 3 into the binary file DOM2_0003.Zones
+Writing of 47 nodes.
+Writing of 112 elements.
+ Construction of part number 4
+ Adding of a new joint : 3
+  Number of nodes    : 47
+  Number of elements : 112
+  Number of joints   : 11
+  Joint 0 PeVoisin 1 NbSommets 7 NbFaces 5 NbElemDist 87
+  Joint 1 PeVoisin 2 NbSommets 4 NbFaces 0 NbElemDist 78
+  Joint 2 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 25
+  Joint 3 PeVoisin 5 NbSommets 14 NbFaces 15 NbElemDist 111
+  Joint 4 PeVoisin 6 NbSommets 5 NbFaces 3 NbElemDist 75
+  Joint 5 PeVoisin 7 NbSommets 12 NbFaces 11 NbElemDist 98
+  Joint 6 PeVoisin 16 NbSommets 1 NbFaces 0 NbElemDist 44
+  Joint 7 PeVoisin 17 NbSommets 3 NbFaces 1 NbElemDist 66
+  Joint 8 PeVoisin 18 NbSommets 11 NbFaces 12 NbElemDist 108
+  Joint 9 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 101
+  Joint 10 PeVoisin 22 NbSommets 2 NbFaces 0 NbElemDist 48
+               Total:    NbSommets 63 NbFaces 49 NbElemDist 841
+Writing part 4 into the binary file DOM2_0004.Zones
+Writing of 47 nodes.
+Writing of 112 elements.
+ Construction of part number 5
+ Adding of a new joint : 10
+ Adding of a new joint : 18
+ Adding of a new joint : 19
+ Adding of a new joint : 22
+  Number of nodes    : 49
+  Number of elements : 110
+  Number of joints   : 11
+  Joint 0 PeVoisin 1 NbSommets 6 NbFaces 3 NbElemDist 64
+  Joint 1 PeVoisin 2 NbSommets 7 NbFaces 6 NbElemDist 92
+  Joint 2 PeVoisin 3 NbSommets 7 NbFaces 4 NbElemDist 94
+  Joint 3 PeVoisin 4 NbSommets 14 NbFaces 15 NbElemDist 109
+  Joint 4 PeVoisin 6 NbSommets 10 NbFaces 10 NbElemDist 108
+  Joint 5 PeVoisin 7 NbSommets 4 NbFaces 1 NbElemDist 84
+  Joint 6 PeVoisin 10 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 7 PeVoisin 16 NbSommets 1 NbFaces 0 NbElemDist 21
+  Joint 8 PeVoisin 18 NbSommets 0 NbFaces 0 NbElemDist 38
+  Joint 9 PeVoisin 19 NbSommets 0 NbFaces 0 NbElemDist 27
+  Joint 10 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 22
+               Total:    NbSommets 49 NbFaces 39 NbElemDist 677
+Writing part 5 into the binary file DOM2_0005.Zones
+Writing of 49 nodes.
+Writing of 110 elements.
+ Construction of part number 6
+ Adding of a new joint : 16
+  Number of nodes    : 49
+  Number of elements : 112
+  Number of joints   : 9
+  Joint 0 PeVoisin 1 NbSommets 4 NbFaces 2 NbElemDist 74
+  Joint 1 PeVoisin 2 NbSommets 1 NbFaces 0 NbElemDist 40
+  Joint 2 PeVoisin 3 NbSommets 7 NbFaces 6 NbElemDist 88
+  Joint 3 PeVoisin 4 NbSommets 5 NbFaces 3 NbElemDist 102
+  Joint 4 PeVoisin 5 NbSommets 10 NbFaces 10 NbElemDist 104
+  Joint 5 PeVoisin 7 NbSommets 11 NbFaces 11 NbElemDist 112
+  Joint 6 PeVoisin 10 NbSommets 4 NbFaces 2 NbElemDist 39
+  Joint 7 PeVoisin 13 NbSommets 1 NbFaces 0 NbElemDist 16
+  Joint 8 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 23
+               Total:    NbSommets 43 NbFaces 34 NbElemDist 598
+Writing part 6 into the binary file DOM2_0006.Zones
+Writing of 49 nodes.
+Writing of 112 elements.
+ Construction of part number 7
+ Adding of a new joint : 2
+ Adding of a new joint : 10
+ Adding of a new joint : 13
+ Adding of a new joint : 21
+ Adding of a new joint : 22
+  Number of nodes    : 47
+  Number of elements : 110
+  Number of joints   : 14
+  Joint 0 PeVoisin 1 NbSommets 7 NbFaces 5 NbElemDist 92
+  Joint 1 PeVoisin 2 NbSommets 0 NbFaces 0 NbElemDist 33
+  Joint 2 PeVoisin 3 NbSommets 1 NbFaces 0 NbElemDist 50
+  Joint 3 PeVoisin 4 NbSommets 12 NbFaces 11 NbElemDist 110
+  Joint 4 PeVoisin 5 NbSommets 4 NbFaces 1 NbElemDist 91
+  Joint 5 PeVoisin 6 NbSommets 11 NbFaces 11 NbElemDist 95
+  Joint 6 PeVoisin 10 NbSommets 0 NbFaces 0 NbElemDist 19
+  Joint 7 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 20
+  Joint 8 PeVoisin 16 NbSommets 6 NbFaces 5 NbElemDist 85
+  Joint 9 PeVoisin 17 NbSommets 7 NbFaces 5 NbElemDist 82
+  Joint 10 PeVoisin 18 NbSommets 2 NbFaces 0 NbElemDist 66
+  Joint 11 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 67
+  Joint 12 PeVoisin 21 NbSommets 0 NbFaces 0 NbElemDist 13
+  Joint 13 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 12
+               Total:    NbSommets 54 NbFaces 40 NbElemDist 835
+Writing part 7 into the binary file DOM2_0007.Zones
+Writing of 47 nodes.
+Writing of 110 elements.
+ Construction of part number 8
+ Adding of a new joint : 10
+ Adding of a new joint : 13
+  Number of nodes    : 49
+  Number of elements : 110
+  Number of joints   : 7
+  Joint 0 PeVoisin 9 NbSommets 13 NbFaces 13 NbElemDist 110
+  Joint 1 PeVoisin 10 NbSommets 0 NbFaces 0 NbElemDist 48
+  Joint 2 PeVoisin 11 NbSommets 9 NbFaces 8 NbElemDist 103
+  Joint 3 PeVoisin 12 NbSommets 5 NbFaces 3 NbElemDist 55
+  Joint 4 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 13
+  Joint 5 PeVoisin 14 NbSommets 7 NbFaces 4 NbElemDist 89
+  Joint 6 PeVoisin 15 NbSommets 7 NbFaces 6 NbElemDist 92
+               Total:    NbSommets 41 NbFaces 34 NbElemDist 510
+Writing part 8 into the binary file DOM2_0008.Zones
+Writing of 49 nodes.
+Writing of 110 elements.
+ Construction of part number 9
+ Adding of a new joint : 2
+ Adding of a new joint : 3
+ Adding of a new joint : 16
+  Number of nodes    : 46
+  Number of elements : 110
+  Number of joints   : 10
+  Joint 0 PeVoisin 2 NbSommets 0 NbFaces 0 NbElemDist 10
+  Joint 1 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 29
+  Joint 2 PeVoisin 8 NbSommets 13 NbFaces 13 NbElemDist 110
+  Joint 3 PeVoisin 10 NbSommets 8 NbFaces 6 NbElemDist 100
+  Joint 4 PeVoisin 11 NbSommets 9 NbFaces 9 NbElemDist 91
+  Joint 5 PeVoisin 12 NbSommets 6 NbFaces 5 NbElemDist 84
+  Joint 6 PeVoisin 13 NbSommets 4 NbFaces 2 NbElemDist 70
+  Joint 7 PeVoisin 14 NbSommets 3 NbFaces 1 NbElemDist 71
+  Joint 8 PeVoisin 15 NbSommets 1 NbFaces 0 NbElemDist 70
+  Joint 9 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 13
+               Total:    NbSommets 44 NbFaces 36 NbElemDist 648
+Writing part 9 into the binary file DOM2_0009.Zones
+Writing of 46 nodes.
+Writing of 110 elements.
+ Construction of part number 10
+ Adding of a new joint : 5
+ Adding of a new joint : 7
+ Adding of a new joint : 8
+ Adding of a new joint : 15
+ Adding of a new joint : 29
+  Number of nodes    : 46
+  Number of elements : 110
+  Number of joints   : 15
+  Joint 0 PeVoisin 1 NbSommets 4 NbFaces 2 NbElemDist 79
+  Joint 1 PeVoisin 2 NbSommets 3 NbFaces 1 NbElemDist 66
+  Joint 2 PeVoisin 3 NbSommets 12 NbFaces 11 NbElemDist 108
+  Joint 3 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 16
+  Joint 4 PeVoisin 6 NbSommets 4 NbFaces 2 NbElemDist 66
+  Joint 5 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 19
+  Joint 6 PeVoisin 8 NbSommets 0 NbFaces 0 NbElemDist 32
+  Joint 7 PeVoisin 9 NbSommets 8 NbFaces 6 NbElemDist 95
+  Joint 8 PeVoisin 11 NbSommets 10 NbFaces 10 NbElemDist 90
+  Joint 9 PeVoisin 12 NbSommets 1 NbFaces 0 NbElemDist 39
+  Joint 10 PeVoisin 13 NbSommets 9 NbFaces 6 NbElemDist 110
+  Joint 11 PeVoisin 14 NbSommets 5 NbFaces 2 NbElemDist 72
+  Joint 12 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 13 PeVoisin 16 NbSommets 2 NbFaces 0 NbElemDist 68
+  Joint 14 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 4
+               Total:    NbSommets 58 NbFaces 40 NbElemDist 868
+Writing part 10 into the binary file DOM2_0010.Zones
+Writing of 46 nodes.
+Writing of 110 elements.
+ Construction of part number 11
+ Adding of a new joint : 1
+ Adding of a new joint : 16
+ Adding of a new joint : 29
+  Number of nodes    : 46
+  Number of elements : 110
+  Number of joints   : 12
+  Joint 0 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 1 PeVoisin 2 NbSommets 2 NbFaces 0 NbElemDist 72
+  Joint 2 PeVoisin 3 NbSommets 6 NbFaces 4 NbElemDist 100
+  Joint 3 PeVoisin 8 NbSommets 9 NbFaces 8 NbElemDist 94
+  Joint 4 PeVoisin 9 NbSommets 9 NbFaces 9 NbElemDist 109
+  Joint 5 PeVoisin 10 NbSommets 10 NbFaces 10 NbElemDist 110
+  Joint 6 PeVoisin 12 NbSommets 1 NbFaces 0 NbElemDist 29
+  Joint 7 PeVoisin 13 NbSommets 2 NbFaces 0 NbElemDist 52
+  Joint 8 PeVoisin 14 NbSommets 13 NbFaces 13 NbElemDist 108
+  Joint 9 PeVoisin 15 NbSommets 1 NbFaces 0 NbElemDist 39
+  Joint 10 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 11 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 22
+               Total:    NbSommets 53 NbFaces 44 NbElemDist 751
+Writing part 11 into the binary file DOM2_0011.Zones
+Writing of 46 nodes.
+Writing of 110 elements.
+ Construction of part number 12
+ Adding of a new joint : 1
+ Adding of a new joint : 2
+ Adding of a new joint : 3
+ Adding of a new joint : 16
+ Adding of a new joint : 24
+ Adding of a new joint : 26
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 17
+  Joint 0 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 1 PeVoisin 2 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 2 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 3 PeVoisin 8 NbSommets 5 NbFaces 3 NbElemDist 83
+  Joint 4 PeVoisin 9 NbSommets 6 NbFaces 5 NbElemDist 83
+  Joint 5 PeVoisin 10 NbSommets 1 NbFaces 0 NbElemDist 42
+  Joint 6 PeVoisin 11 NbSommets 1 NbFaces 0 NbElemDist 42
+  Joint 7 PeVoisin 13 NbSommets 9 NbFaces 9 NbElemDist 95
+  Joint 8 PeVoisin 14 NbSommets 4 NbFaces 2 NbElemDist 92
+  Joint 9 PeVoisin 15 NbSommets 11 NbFaces 11 NbElemDist 112
+  Joint 10 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 40
+  Joint 11 PeVoisin 24 NbSommets 0 NbFaces 0 NbElemDist 25
+  Joint 12 PeVoisin 25 NbSommets 7 NbFaces 6 NbElemDist 87
+  Joint 13 PeVoisin 26 NbSommets 0 NbFaces 0 NbElemDist 26
+  Joint 14 PeVoisin 27 NbSommets 6 NbFaces 3 NbElemDist 78
+  Joint 15 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 48
+  Joint 16 PeVoisin 31 NbSommets 3 NbFaces 1 NbElemDist 53
+               Total:    NbSommets 54 NbFaces 40 NbElemDist 936
+Writing part 12 into the binary file DOM2_0012.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+ Construction of part number 13
+ Adding of a new joint : 7
+ Adding of a new joint : 8
+ Adding of a new joint : 21
+ Adding of a new joint : 24
+ Adding of a new joint : 26
+ Adding of a new joint : 28
+  Number of nodes    : 49
+  Number of elements : 108
+  Number of joints   : 22
+  Joint 0 PeVoisin 1 NbSommets 8 NbFaces 4 NbElemDist 104
+  Joint 1 PeVoisin 2 NbSommets 4 NbFaces 2 NbElemDist 92
+  Joint 2 PeVoisin 3 NbSommets 4 NbFaces 1 NbElemDist 81
+  Joint 3 PeVoisin 6 NbSommets 1 NbFaces 0 NbElemDist 12
+  Joint 4 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 3
+  Joint 5 PeVoisin 8 NbSommets 0 NbFaces 0 NbElemDist 21
+  Joint 6 PeVoisin 9 NbSommets 4 NbFaces 2 NbElemDist 82
+  Joint 7 PeVoisin 10 NbSommets 9 NbFaces 6 NbElemDist 93
+  Joint 8 PeVoisin 11 NbSommets 2 NbFaces 0 NbElemDist 83
+  Joint 9 PeVoisin 12 NbSommets 9 NbFaces 9 NbElemDist 103
+  Joint 10 PeVoisin 14 NbSommets 7 NbFaces 6 NbElemDist 108
+  Joint 11 PeVoisin 15 NbSommets 4 NbFaces 2 NbElemDist 87
+  Joint 12 PeVoisin 16 NbSommets 12 NbFaces 11 NbElemDist 107
+  Joint 13 PeVoisin 21 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 14 PeVoisin 22 NbSommets 1 NbFaces 0 NbElemDist 32
+  Joint 15 PeVoisin 24 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 16 PeVoisin 25 NbSommets 1 NbFaces 0 NbElemDist 32
+  Joint 17 PeVoisin 26 NbSommets 0 NbFaces 0 NbElemDist 6
+  Joint 18 PeVoisin 27 NbSommets 3 NbFaces 1 NbElemDist 52
+  Joint 19 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 20 PeVoisin 29 NbSommets 8 NbFaces 7 NbElemDist 70
+  Joint 21 PeVoisin 31 NbSommets 5 NbFaces 3 NbElemDist 72
+               Total:    NbSommets 82 NbFaces 54 NbElemDist 1278
+Writing part 13 into the binary file DOM2_0013.Zones
+Writing of 49 nodes.
+Writing of 108 elements.
+ Construction of part number 14
+ Adding of a new joint : 28
+ Adding of a new joint : 31
+  Number of nodes    : 51
+  Number of elements : 110
+  Number of joints   : 17
+  Joint 0 PeVoisin 1 NbSommets 1 NbFaces 0 NbElemDist 52
+  Joint 1 PeVoisin 2 NbSommets 8 NbFaces 5 NbElemDist 85
+  Joint 2 PeVoisin 3 NbSommets 5 NbFaces 2 NbElemDist 67
+  Joint 3 PeVoisin 8 NbSommets 7 NbFaces 4 NbElemDist 86
+  Joint 4 PeVoisin 9 NbSommets 3 NbFaces 1 NbElemDist 69
+  Joint 5 PeVoisin 10 NbSommets 5 NbFaces 2 NbElemDist 74
+  Joint 6 PeVoisin 11 NbSommets 13 NbFaces 13 NbElemDist 109
+  Joint 7 PeVoisin 12 NbSommets 4 NbFaces 2 NbElemDist 68
+  Joint 8 PeVoisin 13 NbSommets 7 NbFaces 6 NbElemDist 100
+  Joint 9 PeVoisin 15 NbSommets 13 NbFaces 13 NbElemDist 95
+  Joint 10 PeVoisin 16 NbSommets 1 NbFaces 0 NbElemDist 34
+  Joint 11 PeVoisin 22 NbSommets 1 NbFaces 0 NbElemDist 37
+  Joint 12 PeVoisin 26 NbSommets 1 NbFaces 0 NbElemDist 26
+  Joint 13 PeVoisin 27 NbSommets 3 NbFaces 1 NbElemDist 47
+  Joint 14 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 2
+  Joint 15 PeVoisin 29 NbSommets 7 NbFaces 5 NbElemDist 98
+  Joint 16 PeVoisin 31 NbSommets 0 NbFaces 0 NbElemDist 4
+               Total:    NbSommets 79 NbFaces 54 NbElemDist 1053
+Writing part 14 into the binary file DOM2_0014.Zones
+Writing of 51 nodes.
+Writing of 110 elements.
+ Construction of part number 15
+ Adding of a new joint : 1
+ Adding of a new joint : 2
+ Adding of a new joint : 10
+ Adding of a new joint : 16
+ Adding of a new joint : 22
+ Adding of a new joint : 24
+ Adding of a new joint : 28
+ Adding of a new joint : 31
+  Number of nodes    : 46
+  Number of elements : 110
+  Number of joints   : 18
+  Joint 0 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 1 PeVoisin 2 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 2 PeVoisin 8 NbSommets 7 NbFaces 6 NbElemDist 92
+  Joint 3 PeVoisin 9 NbSommets 1 NbFaces 0 NbElemDist 48
+  Joint 4 PeVoisin 10 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 5 PeVoisin 11 NbSommets 1 NbFaces 0 NbElemDist 79
+  Joint 6 PeVoisin 12 NbSommets 11 NbFaces 11 NbElemDist 99
+  Joint 7 PeVoisin 13 NbSommets 4 NbFaces 2 NbElemDist 69
+  Joint 8 PeVoisin 14 NbSommets 13 NbFaces 13 NbElemDist 110
+  Joint 9 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 10 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 11 PeVoisin 24 NbSommets 0 NbFaces 0 NbElemDist 22
+  Joint 12 PeVoisin 25 NbSommets 2 NbFaces 0 NbElemDist 59
+  Joint 13 PeVoisin 26 NbSommets 5 NbFaces 4 NbElemDist 84
+  Joint 14 PeVoisin 27 NbSommets 9 NbFaces 7 NbElemDist 95
+  Joint 15 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 16 PeVoisin 29 NbSommets 3 NbFaces 1 NbElemDist 64
+  Joint 17 PeVoisin 31 NbSommets 0 NbFaces 0 NbElemDist 18
+               Total:    NbSommets 56 NbFaces 44 NbElemDist 889
+Writing part 15 into the binary file DOM2_0015.Zones
+Writing of 46 nodes.
+Writing of 110 elements.
+ Construction of part number 16
+ Adding of a new joint : 6
+ Adding of a new joint : 9
+ Adding of a new joint : 11
+ Adding of a new joint : 12
+ Adding of a new joint : 15
+ Adding of a new joint : 18
+ Adding of a new joint : 20
+ Adding of a new joint : 23
+ Adding of a new joint : 25
+ Adding of a new joint : 27
+ Adding of a new joint : 28
+  Number of nodes    : 45
+  Number of elements : 108
+  Number of joints   : 26
+  Joint 0 PeVoisin 1 NbSommets 13 NbFaces 13 NbElemDist 108
+  Joint 1 PeVoisin 2 NbSommets 3 NbFaces 1 NbElemDist 79
+  Joint 2 PeVoisin 3 NbSommets 3 NbFaces 1 NbElemDist 69
+  Joint 3 PeVoisin 4 NbSommets 1 NbFaces 0 NbElemDist 44
+  Joint 4 PeVoisin 5 NbSommets 1 NbFaces 0 NbElemDist 40
+  Joint 5 PeVoisin 6 NbSommets 0 NbFaces 0 NbElemDist 21
+  Joint 6 PeVoisin 7 NbSommets 6 NbFaces 5 NbElemDist 82
+  Joint 7 PeVoisin 9 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 8 PeVoisin 10 NbSommets 2 NbFaces 0 NbElemDist 43
+  Joint 9 PeVoisin 11 NbSommets 0 NbFaces 0 NbElemDist 10
+  Joint 10 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 41
+  Joint 11 PeVoisin 13 NbSommets 12 NbFaces 11 NbElemDist 94
+  Joint 12 PeVoisin 14 NbSommets 1 NbFaces 0 NbElemDist 44
+  Joint 13 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 14 PeVoisin 17 NbSommets 4 NbFaces 2 NbElemDist 70
+  Joint 15 PeVoisin 18 NbSommets 0 NbFaces 0 NbElemDist 24
+  Joint 16 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 69
+  Joint 17 PeVoisin 20 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 18 PeVoisin 21 NbSommets 5 NbFaces 4 NbElemDist 87
+  Joint 19 PeVoisin 22 NbSommets 3 NbFaces 1 NbElemDist 77
+  Joint 20 PeVoisin 23 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 21 PeVoisin 25 NbSommets 0 NbFaces 0 NbElemDist 10
+  Joint 22 PeVoisin 27 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 23 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 21
+  Joint 24 PeVoisin 29 NbSommets 3 NbFaces 1 NbElemDist 74
+  Joint 25 PeVoisin 31 NbSommets 6 NbFaces 5 NbElemDist 83
+               Total:    NbSommets 67 NbFaces 46 NbElemDist 1254
+Writing part 16 into the binary file DOM2_0016.Zones
+Writing of 45 nodes.
+Writing of 108 elements.
+ Construction of part number 17
+ Adding of a new joint : 1
+ Adding of a new joint : 23
+ Adding of a new joint : 29
+ Adding of a new joint : 31
+  Number of nodes    : 51
+  Number of elements : 108
+  Number of joints   : 13
+  Joint 0 PeVoisin 0 NbSommets 8 NbFaces 6 NbElemDist 83
+  Joint 1 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 20
+  Joint 2 PeVoisin 4 NbSommets 3 NbFaces 1 NbElemDist 47
+  Joint 3 PeVoisin 7 NbSommets 7 NbFaces 5 NbElemDist 59
+  Joint 4 PeVoisin 16 NbSommets 4 NbFaces 2 NbElemDist 48
+  Joint 5 PeVoisin 18 NbSommets 8 NbFaces 8 NbElemDist 95
+  Joint 6 PeVoisin 19 NbSommets 6 NbFaces 4 NbElemDist 90
+  Joint 7 PeVoisin 20 NbSommets 6 NbFaces 5 NbElemDist 62
+  Joint 8 PeVoisin 21 NbSommets 9 NbFaces 7 NbElemDist 92
+  Joint 9 PeVoisin 22 NbSommets 1 NbFaces 0 NbElemDist 37
+  Joint 10 PeVoisin 23 NbSommets 0 NbFaces 0 NbElemDist 13
+  Joint 11 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 12 PeVoisin 31 NbSommets 0 NbFaces 0 NbElemDist 11
+               Total:    NbSommets 52 NbFaces 38 NbElemDist 661
+Writing part 17 into the binary file DOM2_0017.Zones
+Writing of 51 nodes.
+Writing of 108 elements.
+ Construction of part number 18
+ Adding of a new joint : 5
+ Adding of a new joint : 16
+ Adding of a new joint : 20
+  Number of nodes    : 49
+  Number of elements : 112
+  Number of joints   : 13
+  Joint 0 PeVoisin 0 NbSommets 8 NbFaces 8 NbElemDist 89
+  Joint 1 PeVoisin 1 NbSommets 2 NbFaces 0 NbElemDist 31
+  Joint 2 PeVoisin 2 NbSommets 2 NbFaces 0 NbElemDist 26
+  Joint 3 PeVoisin 4 NbSommets 11 NbFaces 12 NbElemDist 95
+  Joint 4 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 34
+  Joint 5 PeVoisin 7 NbSommets 2 NbFaces 0 NbElemDist 50
+  Joint 6 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 7 PeVoisin 17 NbSommets 8 NbFaces 8 NbElemDist 88
+  Joint 8 PeVoisin 19 NbSommets 14 NbFaces 16 NbElemDist 112
+  Joint 9 PeVoisin 20 NbSommets 0 NbFaces 0 NbElemDist 19
+  Joint 10 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 38
+  Joint 11 PeVoisin 22 NbSommets 5 NbFaces 2 NbElemDist 75
+  Joint 12 PeVoisin 23 NbSommets 1 NbFaces 0 NbElemDist 43
+               Total:    NbSommets 54 NbFaces 46 NbElemDist 718
+Writing part 18 into the binary file DOM2_0018.Zones
+Writing of 49 nodes.
+Writing of 112 elements.
+ Construction of part number 19
+ Adding of a new joint : 5
+ Adding of a new joint : 28
+ Adding of a new joint : 29
+ Adding of a new joint : 31
+  Number of nodes    : 43
+  Number of elements : 108
+  Number of joints   : 16
+  Joint 0 PeVoisin 0 NbSommets 6 NbFaces 4 NbElemDist 88
+  Joint 1 PeVoisin 1 NbSommets 4 NbFaces 2 NbElemDist 70
+  Joint 2 PeVoisin 2 NbSommets 1 NbFaces 0 NbElemDist 59
+  Joint 3 PeVoisin 4 NbSommets 4 NbFaces 2 NbElemDist 79
+  Joint 4 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 28
+  Joint 5 PeVoisin 7 NbSommets 4 NbFaces 2 NbElemDist 60
+  Joint 6 PeVoisin 16 NbSommets 4 NbFaces 2 NbElemDist 84
+  Joint 7 PeVoisin 17 NbSommets 6 NbFaces 4 NbElemDist 98
+  Joint 8 PeVoisin 18 NbSommets 14 NbFaces 16 NbElemDist 108
+  Joint 9 PeVoisin 20 NbSommets 3 NbFaces 1 NbElemDist 78
+  Joint 10 PeVoisin 21 NbSommets 6 NbFaces 4 NbElemDist 92
+  Joint 11 PeVoisin 22 NbSommets 11 NbFaces 11 NbElemDist 108
+  Joint 12 PeVoisin 23 NbSommets 4 NbFaces 2 NbElemDist 70
+  Joint 13 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 29
+  Joint 14 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 51
+  Joint 15 PeVoisin 31 NbSommets 0 NbFaces 0 NbElemDist 31
+               Total:    NbSommets 67 NbFaces 50 NbElemDist 1133
+Writing part 19 into the binary file DOM2_0019.Zones
+Writing of 43 nodes.
+Writing of 108 elements.
+ Construction of part number 20
+ Adding of a new joint : 16
+ Adding of a new joint : 18
+ Adding of a new joint : 29
+  Number of nodes    : 45
+  Number of elements : 108
+  Number of joints   : 12
+  Joint 0 PeVoisin 0 NbSommets 9 NbFaces 7 NbElemDist 94
+  Joint 1 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 2 PeVoisin 17 NbSommets 6 NbFaces 5 NbElemDist 92
+  Joint 3 PeVoisin 18 NbSommets 0 NbFaces 0 NbElemDist 32
+  Joint 4 PeVoisin 19 NbSommets 3 NbFaces 1 NbElemDist 61
+  Joint 5 PeVoisin 21 NbSommets 11 NbFaces 12 NbElemDist 107
+  Joint 6 PeVoisin 22 NbSommets 3 NbFaces 1 NbElemDist 52
+  Joint 7 PeVoisin 23 NbSommets 12 NbFaces 12 NbElemDist 107
+  Joint 8 PeVoisin 28 NbSommets 1 NbFaces 0 NbElemDist 49
+  Joint 9 PeVoisin 29 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 10 PeVoisin 30 NbSommets 6 NbFaces 4 NbElemDist 82
+  Joint 11 PeVoisin 31 NbSommets 2 NbFaces 0 NbElemDist 62
+               Total:    NbSommets 53 NbFaces 42 NbElemDist 754
+Writing part 20 into the binary file DOM2_0020.Zones
+Writing of 45 nodes.
+Writing of 108 elements.
+ Construction of part number 21
+ Adding of a new joint : 7
+ Adding of a new joint : 13
+  Number of nodes    : 44
+  Number of elements : 112
+  Number of joints   : 15
+  Joint 0 PeVoisin 0 NbSommets 4 NbFaces 2 NbElemDist 68
+  Joint 1 PeVoisin 1 NbSommets 1 NbFaces 0 NbElemDist 48
+  Joint 2 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 19
+  Joint 3 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 19
+  Joint 4 PeVoisin 16 NbSommets 5 NbFaces 4 NbElemDist 78
+  Joint 5 PeVoisin 17 NbSommets 9 NbFaces 7 NbElemDist 109
+  Joint 6 PeVoisin 18 NbSommets 1 NbFaces 0 NbElemDist 65
+  Joint 7 PeVoisin 19 NbSommets 6 NbFaces 4 NbElemDist 108
+  Joint 8 PeVoisin 20 NbSommets 11 NbFaces 12 NbElemDist 109
+  Joint 9 PeVoisin 22 NbSommets 6 NbFaces 4 NbElemDist 108
+  Joint 10 PeVoisin 23 NbSommets 3 NbFaces 1 NbElemDist 94
+  Joint 11 PeVoisin 28 NbSommets 1 NbFaces 0 NbElemDist 78
+  Joint 12 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 52
+  Joint 13 PeVoisin 30 NbSommets 3 NbFaces 1 NbElemDist 62
+  Joint 14 PeVoisin 31 NbSommets 8 NbFaces 7 NbElemDist 97
+               Total:    NbSommets 59 NbFaces 42 NbElemDist 1114
+Writing part 21 into the binary file DOM2_0021.Zones
+Writing of 44 nodes.
+Writing of 112 elements.
+ Construction of part number 22
+ Adding of a new joint : 3
+ Adding of a new joint : 5
+ Adding of a new joint : 7
+ Adding of a new joint : 15
+ Adding of a new joint : 26
+ Adding of a new joint : 27
+ Adding of a new joint : 30
+  Number of nodes    : 47
+  Number of elements : 112
+  Number of joints   : 23
+  Joint 0 PeVoisin 0 NbSommets 1 NbFaces 0 NbElemDist 68
+  Joint 1 PeVoisin 1 NbSommets 8 NbFaces 5 NbElemDist 108
+  Joint 2 PeVoisin 2 NbSommets 7 NbFaces 6 NbElemDist 83
+  Joint 3 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 4 PeVoisin 4 NbSommets 2 NbFaces 0 NbElemDist 54
+  Joint 5 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 6 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 16
+  Joint 7 PeVoisin 13 NbSommets 1 NbFaces 0 NbElemDist 56
+  Joint 8 PeVoisin 14 NbSommets 1 NbFaces 0 NbElemDist 26
+  Joint 9 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 10 PeVoisin 16 NbSommets 3 NbFaces 1 NbElemDist 70
+  Joint 11 PeVoisin 17 NbSommets 1 NbFaces 0 NbElemDist 44
+  Joint 12 PeVoisin 18 NbSommets 5 NbFaces 2 NbElemDist 90
+  Joint 13 PeVoisin 19 NbSommets 11 NbFaces 11 NbElemDist 107
+  Joint 14 PeVoisin 20 NbSommets 3 NbFaces 1 NbElemDist 70
+  Joint 15 PeVoisin 21 NbSommets 6 NbFaces 4 NbElemDist 75
+  Joint 16 PeVoisin 23 NbSommets 7 NbFaces 6 NbElemDist 102
+  Joint 17 PeVoisin 26 NbSommets 0 NbFaces 0 NbElemDist 2
+  Joint 18 PeVoisin 27 NbSommets 0 NbFaces 0 NbElemDist 11
+  Joint 19 PeVoisin 28 NbSommets 6 NbFaces 3 NbElemDist 92
+  Joint 20 PeVoisin 29 NbSommets 10 NbFaces 8 NbElemDist 109
+  Joint 21 PeVoisin 30 NbSommets 0 NbFaces 0 NbElemDist 27
+  Joint 22 PeVoisin 31 NbSommets 3 NbFaces 1 NbElemDist 61
+               Total:    NbSommets 75 NbFaces 48 NbElemDist 1295
+Writing part 22 into the binary file DOM2_0022.Zones
+Writing of 47 nodes.
+Writing of 112 elements.
+ Construction of part number 23
+ Adding of a new joint : 1
+ Adding of a new joint : 16
+ Adding of a new joint : 17
+  Number of nodes    : 48
+  Number of elements : 108
+  Number of joints   : 13
+  Joint 0 PeVoisin 0 NbSommets 9 NbFaces 7 NbElemDist 102
+  Joint 1 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 2 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 3 PeVoisin 17 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 4 PeVoisin 18 NbSommets 1 NbFaces 0 NbElemDist 26
+  Joint 5 PeVoisin 19 NbSommets 4 NbFaces 2 NbElemDist 68
+  Joint 6 PeVoisin 20 NbSommets 12 NbFaces 12 NbElemDist 108
+  Joint 7 PeVoisin 21 NbSommets 3 NbFaces 1 NbElemDist 67
+  Joint 8 PeVoisin 22 NbSommets 7 NbFaces 6 NbElemDist 84
+  Joint 9 PeVoisin 28 NbSommets 10 NbFaces 9 NbElemDist 103
+  Joint 10 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 52
+  Joint 11 PeVoisin 30 NbSommets 7 NbFaces 6 NbElemDist 91
+  Joint 12 PeVoisin 31 NbSommets 3 NbFaces 1 NbElemDist 47
+               Total:    NbSommets 57 NbFaces 44 NbElemDist 774
+Writing part 23 into the binary file DOM2_0023.Zones
+Writing of 48 nodes.
+Writing of 108 elements.
+ Construction of part number 24
+ Adding of a new joint : 12
+ Adding of a new joint : 13
+ Adding of a new joint : 15
+  Number of nodes    : 47
+  Number of elements : 110
+  Number of joints   : 10
+  Joint 0 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 21
+  Joint 1 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 21
+  Joint 2 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 28
+  Joint 3 PeVoisin 25 NbSommets 14 NbFaces 16 NbElemDist 110
+  Joint 4 PeVoisin 26 NbSommets 12 NbFaces 12 NbElemDist 106
+  Joint 5 PeVoisin 27 NbSommets 7 NbFaces 6 NbElemDist 85
+  Joint 6 PeVoisin 28 NbSommets 5 NbFaces 2 NbElemDist 81
+  Joint 7 PeVoisin 29 NbSommets 3 NbFaces 1 NbElemDist 52
+  Joint 8 PeVoisin 30 NbSommets 9 NbFaces 8 NbElemDist 97
+  Joint 9 PeVoisin 31 NbSommets 4 NbFaces 1 NbElemDist 82
+               Total:    NbSommets 54 NbFaces 46 NbElemDist 683
+Writing part 24 into the binary file DOM2_0024.Zones
+Writing of 47 nodes.
+Writing of 110 elements.
+ Construction of part number 25
+ Adding of a new joint : 16
+ Adding of a new joint : 28
+  Number of nodes    : 48
+  Number of elements : 110
+  Number of joints   : 11
+  Joint 0 PeVoisin 12 NbSommets 7 NbFaces 6 NbElemDist 64
+  Joint 1 PeVoisin 13 NbSommets 1 NbFaces 0 NbElemDist 28
+  Joint 2 PeVoisin 15 NbSommets 2 NbFaces 0 NbElemDist 49
+  Joint 3 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 2
+  Joint 4 PeVoisin 24 NbSommets 14 NbFaces 16 NbElemDist 110
+  Joint 5 PeVoisin 26 NbSommets 3 NbFaces 1 NbElemDist 89
+  Joint 6 PeVoisin 27 NbSommets 8 NbFaces 7 NbElemDist 92
+  Joint 7 PeVoisin 28 NbSommets 0 NbFaces 0 NbElemDist 11
+  Joint 8 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 49
+  Joint 9 PeVoisin 30 NbSommets 2 NbFaces 0 NbElemDist 60
+  Joint 10 PeVoisin 31 NbSommets 7 NbFaces 6 NbElemDist 82
+               Total:    NbSommets 45 NbFaces 36 NbElemDist 636
+Writing part 25 into the binary file DOM2_0025.Zones
+Writing of 48 nodes.
+Writing of 110 elements.
+ Construction of part number 26
+ Adding of a new joint : 12
+ Adding of a new joint : 13
+ Adding of a new joint : 22
+ Adding of a new joint : 31
+  Number of nodes    : 51
+  Number of elements : 112
+  Number of joints   : 12
+  Joint 0 PeVoisin 12 NbSommets 0 NbFaces 0 NbElemDist 7
+  Joint 1 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 2
+  Joint 2 PeVoisin 14 NbSommets 1 NbFaces 0 NbElemDist 27
+  Joint 3 PeVoisin 15 NbSommets 5 NbFaces 4 NbElemDist 43
+  Joint 4 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 2
+  Joint 5 PeVoisin 24 NbSommets 12 NbFaces 12 NbElemDist 112
+  Joint 6 PeVoisin 25 NbSommets 3 NbFaces 1 NbElemDist 71
+  Joint 7 PeVoisin 27 NbSommets 11 NbFaces 10 NbElemDist 93
+  Joint 8 PeVoisin 28 NbSommets 7 NbFaces 5 NbElemDist 81
+  Joint 9 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 48
+  Joint 10 PeVoisin 30 NbSommets 4 NbFaces 2 NbElemDist 59
+  Joint 11 PeVoisin 31 NbSommets 0 NbFaces 0 NbElemDist 14
+               Total:    NbSommets 44 NbFaces 34 NbElemDist 559
+Writing part 26 into the binary file DOM2_0026.Zones
+Writing of 51 nodes.
+Writing of 112 elements.
+ Construction of part number 27
+ Adding of a new joint : 1
+ Adding of a new joint : 16
+ Adding of a new joint : 22
+ Adding of a new joint : 30
+  Number of nodes    : 43
+  Number of elements : 108
+  Number of joints   : 14
+  Joint 0 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 20
+  Joint 1 PeVoisin 12 NbSommets 6 NbFaces 3 NbElemDist 85
+  Joint 2 PeVoisin 13 NbSommets 3 NbFaces 1 NbElemDist 81
+  Joint 3 PeVoisin 14 NbSommets 3 NbFaces 1 NbElemDist 72
+  Joint 4 PeVoisin 15 NbSommets 9 NbFaces 7 NbElemDist 108
+  Joint 5 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 6 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 31
+  Joint 7 PeVoisin 24 NbSommets 7 NbFaces 6 NbElemDist 106
+  Joint 8 PeVoisin 25 NbSommets 8 NbFaces 7 NbElemDist 94
+  Joint 9 PeVoisin 26 NbSommets 11 NbFaces 10 NbElemDist 106
+  Joint 10 PeVoisin 28 NbSommets 3 NbFaces 1 NbElemDist 72
+  Joint 11 PeVoisin 29 NbSommets 9 NbFaces 8 NbElemDist 96
+  Joint 12 PeVoisin 30 NbSommets 0 NbFaces 0 NbElemDist 22
+  Joint 13 PeVoisin 31 NbSommets 4 NbFaces 2 NbElemDist 63
+               Total:    NbSommets 63 NbFaces 46 NbElemDist 970
+Writing part 27 into the binary file DOM2_0027.Zones
+Writing of 43 nodes.
+Writing of 108 elements.
+ Construction of part number 28
+ Adding of a new joint : 0
+ Adding of a new joint : 1
+ Adding of a new joint : 13
+ Adding of a new joint : 14
+ Adding of a new joint : 15
+ Adding of a new joint : 16
+ Adding of a new joint : 19
+ Adding of a new joint : 25
+  Number of nodes    : 48
+  Number of elements : 112
+  Number of joints   : 18
+  Joint 0 PeVoisin 0 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 1 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 39
+  Joint 2 PeVoisin 13 NbSommets 0 NbFaces 0 NbElemDist 44
+  Joint 3 PeVoisin 14 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 4 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 5 PeVoisin 16 NbSommets 0 NbFaces 0 NbElemDist 11
+  Joint 6 PeVoisin 19 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 7 PeVoisin 20 NbSommets 1 NbFaces 0 NbElemDist 68
+  Joint 8 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 30
+  Joint 9 PeVoisin 22 NbSommets 6 NbFaces 3 NbElemDist 90
+  Joint 10 PeVoisin 23 NbSommets 10 NbFaces 9 NbElemDist 95
+  Joint 11 PeVoisin 24 NbSommets 5 NbFaces 2 NbElemDist 88
+  Joint 12 PeVoisin 25 NbSommets 0 NbFaces 0 NbElemDist 32
+  Joint 13 PeVoisin 26 NbSommets 7 NbFaces 5 NbElemDist 89
+  Joint 14 PeVoisin 27 NbSommets 3 NbFaces 1 NbElemDist 69
+  Joint 15 PeVoisin 29 NbSommets 10 NbFaces 10 NbElemDist 99
+  Joint 16 PeVoisin 30 NbSommets 11 NbFaces 10 NbElemDist 110
+  Joint 17 PeVoisin 31 NbSommets 6 NbFaces 4 NbElemDist 72
+               Total:    NbSommets 60 NbFaces 44 NbElemDist 998
+Writing part 28 into the binary file DOM2_0028.Zones
+Writing of 48 nodes.
+Writing of 112 elements.
+ Construction of part number 29
+ Adding of a new joint : 0
+ Adding of a new joint : 3
+ Adding of a new joint : 10
+ Adding of a new joint : 11
+ Adding of a new joint : 17
+ Adding of a new joint : 19
+ Adding of a new joint : 20
+  Number of nodes    : 45
+  Number of elements : 108
+  Number of joints   : 24
+  Joint 0 PeVoisin 0 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 1 PeVoisin 1 NbSommets 6 NbFaces 3 NbElemDist 105
+  Joint 2 PeVoisin 2 NbSommets 4 NbFaces 2 NbElemDist 77
+  Joint 3 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 4 PeVoisin 10 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 5 PeVoisin 11 NbSommets 0 NbFaces 0 NbElemDist 26
+  Joint 6 PeVoisin 12 NbSommets 1 NbFaces 0 NbElemDist 53
+  Joint 7 PeVoisin 13 NbSommets 8 NbFaces 7 NbElemDist 108
+  Joint 8 PeVoisin 14 NbSommets 7 NbFaces 5 NbElemDist 88
+  Joint 9 PeVoisin 15 NbSommets 3 NbFaces 1 NbElemDist 93
+  Joint 10 PeVoisin 16 NbSommets 3 NbFaces 1 NbElemDist 68
+  Joint 11 PeVoisin 17 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 12 PeVoisin 19 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 13 PeVoisin 20 NbSommets 0 NbFaces 0 NbElemDist 4
+  Joint 14 PeVoisin 21 NbSommets 1 NbFaces 0 NbElemDist 30
+  Joint 15 PeVoisin 22 NbSommets 10 NbFaces 8 NbElemDist 107
+  Joint 16 PeVoisin 23 NbSommets 1 NbFaces 0 NbElemDist 41
+  Joint 17 PeVoisin 24 NbSommets 3 NbFaces 1 NbElemDist 62
+  Joint 18 PeVoisin 25 NbSommets 1 NbFaces 0 NbElemDist 28
+  Joint 19 PeVoisin 26 NbSommets 1 NbFaces 0 NbElemDist 51
+  Joint 20 PeVoisin 27 NbSommets 9 NbFaces 8 NbElemDist 102
+  Joint 21 PeVoisin 28 NbSommets 10 NbFaces 10 NbElemDist 93
+  Joint 22 PeVoisin 30 NbSommets 1 NbFaces 0 NbElemDist 32
+  Joint 23 PeVoisin 31 NbSommets 8 NbFaces 6 NbElemDist 78
+               Total:    NbSommets 77 NbFaces 52 NbElemDist 1294
+Writing part 29 into the binary file DOM2_0029.Zones
+Writing of 45 nodes.
+Writing of 108 elements.
+ Construction of part number 30
+ Adding of a new joint : 0
+ Adding of a new joint : 22
+ Adding of a new joint : 27
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 12
+  Joint 0 PeVoisin 0 NbSommets 0 NbFaces 0 NbElemDist 8
+  Joint 1 PeVoisin 20 NbSommets 6 NbFaces 4 NbElemDist 88
+  Joint 2 PeVoisin 21 NbSommets 3 NbFaces 1 NbElemDist 69
+  Joint 3 PeVoisin 22 NbSommets 0 NbFaces 0 NbElemDist 23
+  Joint 4 PeVoisin 23 NbSommets 7 NbFaces 6 NbElemDist 86
+  Joint 5 PeVoisin 24 NbSommets 9 NbFaces 8 NbElemDist 97
+  Joint 6 PeVoisin 25 NbSommets 2 NbFaces 0 NbElemDist 75
+  Joint 7 PeVoisin 26 NbSommets 4 NbFaces 2 NbElemDist 59
+  Joint 8 PeVoisin 27 NbSommets 0 NbFaces 0 NbElemDist 23
+  Joint 9 PeVoisin 28 NbSommets 11 NbFaces 10 NbElemDist 112
+  Joint 10 PeVoisin 29 NbSommets 1 NbFaces 0 NbElemDist 62
+  Joint 11 PeVoisin 31 NbSommets 10 NbFaces 9 NbElemDist 110
+               Total:    NbSommets 53 NbFaces 40 NbElemDist 812
+Writing part 30 into the binary file DOM2_0030.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+ Construction of part number 31
+ Adding of a new joint : 14
+ Adding of a new joint : 15
+ Adding of a new joint : 17
+ Adding of a new joint : 19
+ Adding of a new joint : 26
+  Number of nodes    : 46
+  Number of elements : 112
+  Number of joints   : 19
+  Joint 0 PeVoisin 1 NbSommets 1 NbFaces 0 NbElemDist 44
+  Joint 1 PeVoisin 12 NbSommets 3 NbFaces 1 NbElemDist 60
+  Joint 2 PeVoisin 13 NbSommets 5 NbFaces 3 NbElemDist 91
+  Joint 3 PeVoisin 14 NbSommets 0 NbFaces 0 NbElemDist 14
+  Joint 4 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 18
+  Joint 5 PeVoisin 16 NbSommets 6 NbFaces 5 NbElemDist 87
+  Joint 6 PeVoisin 17 NbSommets 0 NbFaces 0 NbElemDist 16
+  Joint 7 PeVoisin 19 NbSommets 0 NbFaces 0 NbElemDist 16
+  Joint 8 PeVoisin 20 NbSommets 2 NbFaces 0 NbElemDist 44
+  Joint 9 PeVoisin 21 NbSommets 8 NbFaces 7 NbElemDist 88
+  Joint 10 PeVoisin 22 NbSommets 3 NbFaces 1 NbElemDist 68
+  Joint 11 PeVoisin 23 NbSommets 3 NbFaces 1 NbElemDist 67
+  Joint 12 PeVoisin 24 NbSommets 4 NbFaces 1 NbElemDist 88
+  Joint 13 PeVoisin 25 NbSommets 7 NbFaces 6 NbElemDist 100
+  Joint 14 PeVoisin 26 NbSommets 0 NbFaces 0 NbElemDist 12
+  Joint 15 PeVoisin 27 NbSommets 4 NbFaces 2 NbElemDist 87
+  Joint 16 PeVoisin 28 NbSommets 6 NbFaces 4 NbElemDist 108
+  Joint 17 PeVoisin 29 NbSommets 8 NbFaces 6 NbElemDist 111
+  Joint 18 PeVoisin 30 NbSommets 10 NbFaces 9 NbElemDist 90
+               Total:    NbSommets 70 NbFaces 46 NbElemDist 1209
+Writing part 31 into the binary file DOM2_0031.Zones
+Writing of 46 nodes.
+Writing of 112 elements.
+End of the interpreter Decouper
+MAIN: End of data file
+Arret des processes.

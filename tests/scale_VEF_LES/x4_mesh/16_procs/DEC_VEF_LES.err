@@ -1,0 +1,416 @@
+Petsc initialization succeeded.
+Parallel engine initialized : Comm_Group_Noparallel with 1 processors
+Executable: /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+Data file name = DEC_VEF_LES
+feenableexcept enabled.
+Data file : DEC_VEF_LES
+Localisation etude: /home/idanmos/projects/Scaling-Tester/tests/scale_VEF_LES/x4_mesh/16_procs
+Nom du cas DEC_VEF_LES
+ code : /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt
+ version : 1.7.6 
+Debut de l'execution 
+MAIN: Reading and executing data file
+Dimension::interpreter : dimension = 3
+It treats a calculation with a precision 1e-05
+It deals with a calculation using precision format 5
+Execution of the interpreter Lire_Tgrid
+Reading a mesh which comes from Tgrid
+Association of the domain on which the interpreter applies Lire_Tgrid
+Reading of the file Tube_coude_463259.msh ...
+The total number of elements to read is 463259
+3D elements of type Tetrahedron
+Reading a comment:
+(0
+
+Reading of the dimension of the case:
+Dimension 3.
+
+Reading a comment:
+(0
+
+The total number of nodes to read is 89710
+
+89710 nodes are read in the area 8
+
+
+The type of area 9 is 1 (1:fluid, 17:solid)
+
+The total number of faces to read is 950399
+
+Reading a comment:
+(0
+
+902637 internal faces are read in the area 10
+
+Reading a comment:
+(0
+
+19438 faces are read from the boundary number 11
+
+Reading a comment:
+(0
+
+27656 faces are read from the boundary number 12
+
+Reading a comment:
+(0
+
+334 faces are read from the boundary number 13
+
+Reading a comment:
+(0
+
+334 faces are read from the boundary number 14
+
+Reading a comment:
+(0
+
+Reading of a name:
+The area 9 is called fluid
+
+Reading of a name:
+The area 10 is called interieur
+
+Reading of a name:
+The area 11 is called symmetry
+
+Reading of a name:
+The area 12 is called wall
+
+Reading of a name:
+The area 13 is called outlet
+
+Reading of a name:
+The area 14 is called inlet
+
+Elimination of 0 unnecessary nodes in the domain dom
+Execution of the interpreter Dilate
+Association of the domain on which the interpreter applies Dilate
+Expands the domain dom of a factor 0.001
+Execution of the interpreter Transformer
+Association of the domain on which the interpreter applies Transformer
+Reading and interpretation of the function x
+Interpretation of the function x Ok
+Reading and interpretation of the function y
+Interpretation of the function y Ok
+Reading and interpretation of the function -z
+Interpretation of the function -z Ok
+Execution of the interpreter ExtrudeBord
+Association of the domain on which the interpreter applies ExtrudeBord
+number of 3D nodes :89710
+number of 3D faces of inlet :334
+number of nodes per faces in 3D :3
+boundary maintained symmetry
+boundary maintained wall
+boundary to eliminate outlet
+Execution of the interpreter Raffiner_anisotrope
+Refinement of each element into 4 new tetrahedra... 
+Association of the domain on which the interpreter applies Raffiner_anisotrope
+We have split the tetrahedra ...
+END of Raffiner_anisotrope...
+  1 NbElem=74816  NbNod=23073
+Refinement... OK
+Execution of the interpreter Raffiner_anisotrope
+Refinement of each element into 4 new tetrahedra... 
+Association of the domain on which the interpreter applies Raffiner_anisotrope
+We have split the tetrahedra ...
+END of Raffiner_anisotrope...
+  1 NbElem=1853036  NbNod=552969
+Refinement... OK
+Decouper : Splitting of a domain
+ Domain name to split : box
+==============================================
+The extreme coordinates of the domain box are:
+x is between -0.5334 and -0.4572
+y is between -0.1624 and -0.1524
+z is between 0 and 0.0381
+==============================================
+==============================================
+The volume cells of the domain box are:
+sum(volume cells)= 2.27368e-05
+mean(volume cells)= 3.03903e-10
+min(volume cells)= 1.36766e-10
+max(volume cells)= 1.20348e-09
+==============================================
+domaine = box
+ Creation of a partitioner of type: Partitionneur_metis
+Reading parameters of Partitionneur_Metis
+Partitionneur_Metis::construire_partition
+ Construction of graph connectivity...
+ Construction of the som_elem connectivity
+ Construction of the elem_elem connectivity
+===============
+Call for PMETIS
+===============
+===============
+Partitioning quality : edgecut = 1498
+-> It is roughly the total number of edges (faces) which will be shared by the processors.
+-> The lesser this number is, the lesser the total volume of communication between processors.
+-> You can increase nb_essais option (default 1) to try to reduce (but at a higher CPU cost) this number.
+===============
+Correction elem0 on processor 0
+Correction of the splitting to put the element 0 on processor 0.
+ Exchange of parts 0 and 4
+The partitioner has generated 16 parts.
+Search of neighboring elements of boundary faces
+Construction of lists of elements per subdomain
+Generation of 16 parts:
+ Construction of part number 0
+  Number of nodes    : 1503
+  Number of elements : 4676
+  Number of joints   : 5
+  Joint 0 PeVoisin 2 NbSommets 31 NbFaces 41 NbElemDist 2278
+  Joint 1 PeVoisin 3 NbSommets 21 NbFaces 25 NbElemDist 1568
+  Joint 2 PeVoisin 5 NbSommets 59 NbFaces 87 NbElemDist 4099
+  Joint 3 PeVoisin 6 NbSommets 4 NbFaces 2 NbElemDist 825
+  Joint 4 PeVoisin 7 NbSommets 31 NbFaces 41 NbElemDist 2141
+               Total:    NbSommets 146 NbFaces 196 NbElemDist 10911
+Writing part 0 into the binary file box_0000.Zones
+Writing of 1503 nodes.
+Writing of 4676 elements.
+ Construction of part number 1
+ Adding of a new joint : 8
+  Number of nodes    : 1500
+  Number of elements : 4676
+  Number of joints   : 6
+  Joint 0 PeVoisin 2 NbSommets 25 NbFaces 31 NbElemDist 2046
+  Joint 1 PeVoisin 3 NbSommets 17 NbFaces 19 NbElemDist 1745
+  Joint 2 PeVoisin 4 NbSommets 48 NbFaces 70 NbElemDist 3046
+  Joint 3 PeVoisin 8 NbSommets 0 NbFaces 0 NbElemDist 53
+  Joint 4 PeVoisin 9 NbSommets 8 NbFaces 8 NbElemDist 743
+  Joint 5 PeVoisin 10 NbSommets 33 NbFaces 49 NbElemDist 2369
+               Total:    NbSommets 131 NbFaces 177 NbElemDist 10002
+Writing part 1 into the binary file box_0001.Zones
+Writing of 1500 nodes.
+Writing of 4676 elements.
+ Construction of part number 2
+  Number of nodes    : 1507
+  Number of elements : 4676
+  Number of joints   : 6
+  Joint 0 PeVoisin 0 NbSommets 31 NbFaces 41 NbElemDist 2015
+  Joint 1 PeVoisin 1 NbSommets 25 NbFaces 31 NbElemDist 1450
+  Joint 2 PeVoisin 3 NbSommets 49 NbFaces 74 NbElemDist 3581
+  Joint 3 PeVoisin 4 NbSommets 6 NbFaces 5 NbElemDist 667
+  Joint 4 PeVoisin 5 NbSommets 14 NbFaces 15 NbElemDist 1242
+  Joint 5 PeVoisin 7 NbSommets 2 NbFaces 0 NbElemDist 285
+               Total:    NbSommets 127 NbFaces 166 NbElemDist 9240
+Writing part 2 into the binary file box_0002.Zones
+Writing of 1507 nodes.
+Writing of 4676 elements.
+ Construction of part number 3
+ Adding of a new joint : 5
+ Adding of a new joint : 6
+ Adding of a new joint : 8
+  Number of nodes    : 1497
+  Number of elements : 4677
+  Number of joints   : 8
+  Joint 0 PeVoisin 0 NbSommets 21 NbFaces 25 NbElemDist 1964
+  Joint 1 PeVoisin 1 NbSommets 17 NbFaces 19 NbElemDist 1458
+  Joint 2 PeVoisin 2 NbSommets 49 NbFaces 74 NbElemDist 3183
+  Joint 3 PeVoisin 4 NbSommets 36 NbFaces 52 NbElemDist 2855
+  Joint 4 PeVoisin 5 NbSommets 0 NbFaces 0 NbElemDist 178
+  Joint 5 PeVoisin 6 NbSommets 0 NbFaces 0 NbElemDist 76
+  Joint 6 PeVoisin 7 NbSommets 32 NbFaces 47 NbElemDist 2423
+  Joint 7 PeVoisin 8 NbSommets 0 NbFaces 0 NbElemDist 166
+               Total:    NbSommets 155 NbFaces 217 NbElemDist 12303
+Writing part 3 into the binary file box_0003.Zones
+Writing of 1497 nodes.
+Writing of 4677 elements.
+ Construction of part number 4
+ Adding of a new joint : 11
+  Number of nodes    : 1495
+  Number of elements : 4676
+  Number of joints   : 8
+  Joint 0 PeVoisin 1 NbSommets 48 NbFaces 70 NbElemDist 3182
+  Joint 1 PeVoisin 2 NbSommets 6 NbFaces 5 NbElemDist 429
+  Joint 2 PeVoisin 3 NbSommets 36 NbFaces 52 NbElemDist 2477
+  Joint 3 PeVoisin 7 NbSommets 14 NbFaces 16 NbElemDist 1622
+  Joint 4 PeVoisin 8 NbSommets 23 NbFaces 29 NbElemDist 2366
+  Joint 5 PeVoisin 9 NbSommets 20 NbFaces 21 NbElemDist 2245
+  Joint 6 PeVoisin 10 NbSommets 15 NbFaces 15 NbElemDist 1366
+  Joint 7 PeVoisin 11 NbSommets 0 NbFaces 0 NbElemDist 15
+               Total:    NbSommets 162 NbFaces 208 NbElemDist 13702
+Writing part 4 into the binary file box_0004.Zones
+Writing of 1495 nodes.
+Writing of 4676 elements.
+ Construction of part number 5
+ Adding of a new joint : 3
+  Number of nodes    : 1500
+  Number of elements : 4676
+  Number of joints   : 5
+  Joint 0 PeVoisin 0 NbSommets 59 NbFaces 87 NbElemDist 3797
+  Joint 1 PeVoisin 2 NbSommets 14 NbFaces 15 NbElemDist 809
+  Joint 2 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 128
+  Joint 3 PeVoisin 6 NbSommets 26 NbFaces 37 NbElemDist 2019
+  Joint 4 PeVoisin 7 NbSommets 12 NbFaces 11 NbElemDist 1216
+               Total:    NbSommets 111 NbFaces 150 NbElemDist 7969
+Writing part 5 into the binary file box_0005.Zones
+Writing of 1500 nodes.
+Writing of 4676 elements.
+ Construction of part number 6
+ Adding of a new joint : 3
+ Adding of a new joint : 15
+  Number of nodes    : 1503
+  Number of elements : 4676
+  Number of joints   : 7
+  Joint 0 PeVoisin 0 NbSommets 4 NbFaces 2 NbElemDist 562
+  Joint 1 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 114
+  Joint 2 PeVoisin 5 NbSommets 26 NbFaces 37 NbElemDist 1648
+  Joint 3 PeVoisin 7 NbSommets 49 NbFaces 78 NbElemDist 3677
+  Joint 4 PeVoisin 8 NbSommets 14 NbFaces 12 NbElemDist 1343
+  Joint 5 PeVoisin 14 NbSommets 22 NbFaces 28 NbElemDist 1705
+  Joint 6 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 78
+               Total:    NbSommets 115 NbFaces 157 NbElemDist 9127
+Writing part 6 into the binary file box_0006.Zones
+Writing of 1503 nodes.
+Writing of 4676 elements.
+ Construction of part number 7
+ Adding of a new joint : 9
+  Number of nodes    : 1501
+  Number of elements : 4675
+  Number of joints   : 9
+  Joint 0 PeVoisin 0 NbSommets 31 NbFaces 41 NbElemDist 2217
+  Joint 1 PeVoisin 2 NbSommets 2 NbFaces 0 NbElemDist 556
+  Joint 2 PeVoisin 3 NbSommets 32 NbFaces 47 NbElemDist 2949
+  Joint 3 PeVoisin 4 NbSommets 14 NbFaces 16 NbElemDist 1618
+  Joint 4 PeVoisin 5 NbSommets 12 NbFaces 11 NbElemDist 1288
+  Joint 5 PeVoisin 6 NbSommets 49 NbFaces 78 NbElemDist 3616
+  Joint 6 PeVoisin 8 NbSommets 31 NbFaces 45 NbElemDist 1978
+  Joint 7 PeVoisin 9 NbSommets 0 NbFaces 0 NbElemDist 200
+  Joint 8 PeVoisin 14 NbSommets 3 NbFaces 1 NbElemDist 715
+               Total:    NbSommets 174 NbFaces 239 NbElemDist 15137
+Writing part 7 into the binary file box_0007.Zones
+Writing of 1501 nodes.
+Writing of 4675 elements.
+ Construction of part number 8
+ Adding of a new joint : 1
+ Adding of a new joint : 3
+  Number of nodes    : 1510
+  Number of elements : 4676
+  Number of joints   : 11
+  Joint 0 PeVoisin 1 NbSommets 0 NbFaces 0 NbElemDist 32
+  Joint 1 PeVoisin 3 NbSommets 0 NbFaces 0 NbElemDist 230
+  Joint 2 PeVoisin 4 NbSommets 23 NbFaces 29 NbElemDist 1652
+  Joint 3 PeVoisin 6 NbSommets 14 NbFaces 12 NbElemDist 1018
+  Joint 4 PeVoisin 7 NbSommets 31 NbFaces 45 NbElemDist 2536
+  Joint 5 PeVoisin 9 NbSommets 50 NbFaces 72 NbElemDist 3226
+  Joint 6 PeVoisin 10 NbSommets 8 NbFaces 8 NbElemDist 486
+  Joint 7 PeVoisin 11 NbSommets 5 NbFaces 0 NbElemDist 504
+  Joint 8 PeVoisin 12 NbSommets 11 NbFaces 12 NbElemDist 787
+  Joint 9 PeVoisin 14 NbSommets 45 NbFaces 60 NbElemDist 3039
+  Joint 10 PeVoisin 15 NbSommets 14 NbFaces 15 NbElemDist 1903
+               Total:    NbSommets 201 NbFaces 253 NbElemDist 15413
+Writing part 8 into the binary file box_0008.Zones
+Writing of 1510 nodes.
+Writing of 4676 elements.
+ Construction of part number 9
+ Adding of a new joint : 7
+ Adding of a new joint : 15
+  Number of nodes    : 1497
+  Number of elements : 4676
+  Number of joints   : 9
+  Joint 0 PeVoisin 1 NbSommets 8 NbFaces 8 NbElemDist 818
+  Joint 1 PeVoisin 4 NbSommets 20 NbFaces 21 NbElemDist 1526
+  Joint 2 PeVoisin 7 NbSommets 0 NbFaces 0 NbElemDist 190
+  Joint 3 PeVoisin 8 NbSommets 50 NbFaces 72 NbElemDist 3538
+  Joint 4 PeVoisin 10 NbSommets 32 NbFaces 43 NbElemDist 2675
+  Joint 5 PeVoisin 11 NbSommets 39 NbFaces 57 NbElemDist 2956
+  Joint 6 PeVoisin 12 NbSommets 11 NbFaces 6 NbElemDist 1046
+  Joint 7 PeVoisin 14 NbSommets 14 NbFaces 15 NbElemDist 1212
+  Joint 8 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 245
+               Total:    NbSommets 174 NbFaces 222 NbElemDist 14206
+Writing part 9 into the binary file box_0009.Zones
+Writing of 1497 nodes.
+Writing of 4676 elements.
+ Construction of part number 10
+  Number of nodes    : 1498
+  Number of elements : 4676
+  Number of joints   : 5
+  Joint 0 PeVoisin 1 NbSommets 33 NbFaces 49 NbElemDist 2758
+  Joint 1 PeVoisin 4 NbSommets 15 NbFaces 15 NbElemDist 1579
+  Joint 2 PeVoisin 8 NbSommets 8 NbFaces 8 NbElemDist 712
+  Joint 3 PeVoisin 9 NbSommets 32 NbFaces 43 NbElemDist 2463
+  Joint 4 PeVoisin 11 NbSommets 37 NbFaces 55 NbElemDist 2627
+               Total:    NbSommets 125 NbFaces 170 NbElemDist 10139
+Writing part 10 into the binary file box_0010.Zones
+Writing of 1498 nodes.
+Writing of 4676 elements.
+ Construction of part number 11
+ Adding of a new joint : 4
+ Adding of a new joint : 15
+  Number of nodes    : 1501
+  Number of elements : 4676
+  Number of joints   : 7
+  Joint 0 PeVoisin 4 NbSommets 0 NbFaces 0 NbElemDist 15
+  Joint 1 PeVoisin 8 NbSommets 5 NbFaces 0 NbElemDist 688
+  Joint 2 PeVoisin 9 NbSommets 39 NbFaces 57 NbElemDist 2746
+  Joint 3 PeVoisin 10 NbSommets 37 NbFaces 55 NbElemDist 2759
+  Joint 4 PeVoisin 12 NbSommets 41 NbFaces 63 NbElemDist 2898
+  Joint 5 PeVoisin 14 NbSommets 3 NbFaces 0 NbElemDist 755
+  Joint 6 PeVoisin 15 NbSommets 0 NbFaces 0 NbElemDist 30
+               Total:    NbSommets 125 NbFaces 175 NbElemDist 9891
+Writing part 11 into the binary file box_0011.Zones
+Writing of 1501 nodes.
+Writing of 4676 elements.
+ Construction of part number 12
+  Number of nodes    : 1504
+  Number of elements : 4676
+  Number of joints   : 6
+  Joint 0 PeVoisin 8 NbSommets 11 NbFaces 12 NbElemDist 861
+  Joint 1 PeVoisin 9 NbSommets 11 NbFaces 6 NbElemDist 1220
+  Joint 2 PeVoisin 11 NbSommets 41 NbFaces 63 NbElemDist 3116
+  Joint 3 PeVoisin 13 NbSommets 41 NbFaces 62 NbElemDist 2696
+  Joint 4 PeVoisin 14 NbSommets 25 NbFaces 34 NbElemDist 2506
+  Joint 5 PeVoisin 15 NbSommets 18 NbFaces 22 NbElemDist 1623
+               Total:    NbSommets 147 NbFaces 199 NbElemDist 12022
+Writing part 12 into the binary file box_0012.Zones
+Writing of 1504 nodes.
+Writing of 4676 elements.
+ Construction of part number 13
+  Number of nodes    : 1495
+  Number of elements : 4676
+  Number of joints   : 3
+  Joint 0 PeVoisin 12 NbSommets 41 NbFaces 62 NbElemDist 2329
+  Joint 1 PeVoisin 14 NbSommets 8 NbFaces 7 NbElemDist 934
+  Joint 2 PeVoisin 15 NbSommets 27 NbFaces 36 NbElemDist 2365
+               Total:    NbSommets 76 NbFaces 105 NbElemDist 5628
+Writing part 13 into the binary file box_0013.Zones
+Writing of 1495 nodes.
+Writing of 4676 elements.
+ Construction of part number 14
+  Number of nodes    : 1510
+  Number of elements : 4676
+  Number of joints   : 8
+  Joint 0 PeVoisin 6 NbSommets 22 NbFaces 28 NbElemDist 1488
+  Joint 1 PeVoisin 7 NbSommets 3 NbFaces 1 NbElemDist 644
+  Joint 2 PeVoisin 8 NbSommets 45 NbFaces 60 NbElemDist 3431
+  Joint 3 PeVoisin 9 NbSommets 14 NbFaces 15 NbElemDist 1581
+  Joint 4 PeVoisin 11 NbSommets 3 NbFaces 0 NbElemDist 481
+  Joint 5 PeVoisin 12 NbSommets 25 NbFaces 34 NbElemDist 1847
+  Joint 6 PeVoisin 13 NbSommets 8 NbFaces 7 NbElemDist 652
+  Joint 7 PeVoisin 15 NbSommets 48 NbFaces 72 NbElemDist 3455
+               Total:    NbSommets 168 NbFaces 217 NbElemDist 13579
+Writing part 14 into the binary file box_0014.Zones
+Writing of 1510 nodes.
+Writing of 4676 elements.
+ Construction of part number 15
+ Adding of a new joint : 6
+ Adding of a new joint : 9
+ Adding of a new joint : 11
+  Number of nodes    : 1497
+  Number of elements : 4676
+  Number of joints   : 7
+  Joint 0 PeVoisin 6 NbSommets 0 NbFaces 0 NbElemDist 68
+  Joint 1 PeVoisin 8 NbSommets 14 NbFaces 15 NbElemDist 876
+  Joint 2 PeVoisin 9 NbSommets 0 NbFaces 0 NbElemDist 172
+  Joint 3 PeVoisin 11 NbSommets 0 NbFaces 0 NbElemDist 3
+  Joint 4 PeVoisin 12 NbSommets 18 NbFaces 22 NbElemDist 1984
+  Joint 5 PeVoisin 13 NbSommets 27 NbFaces 36 NbElemDist 1992
+  Joint 6 PeVoisin 14 NbSommets 48 NbFaces 72 NbElemDist 3192
+               Total:    NbSommets 107 NbFaces 145 NbElemDist 8287
+Writing part 15 into the binary file box_0015.Zones
+Writing of 1497 nodes.
+Writing of 4676 elements.
+End of the interpreter Decouper
+MAIN: End of data file
+Arret des processes.
