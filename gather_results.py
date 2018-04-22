@@ -94,6 +94,7 @@ if __name__ == '__main__':
             'Time steps sum (sec)',
             'Number of time steps',            
             'Average time step (sec)',
+            'Elements per process'
         ]
 
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

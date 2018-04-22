@@ -58,7 +58,7 @@ def parse_output(filename):
     f = open(filename,"r")
 
     elements_count = get_number_elements(f)
-    cpu_timestep_sum,cpu_timestep_count = get_cpu_timesteps(f)
+    total_cpu_time,cpu_timestep_count = get_cpu_timesteps(f)
     total_exec_time,total_memory = get_total_time_memory(f)
     mpi_proc_count = get_mpi_process(f)
 
@@ -77,15 +77,26 @@ def parse_output(filename):
     print "Total memory used (MB): " + str(total_memory)
     d["Total memory usage (MB)"] = total_memory
 
-    print "Time steps sum (sec): " + str(cpu_timestep_sum)    
-    d["Time steps sum (sec)"] = cpu_timestep_sum
+    print "Total cpu time (sec): " + str(total_cpu_time)    
+    d["Total cpu time (sec)"] = total_cpu_time
    
     print "Number of time steps: " + str(cpu_timestep_count)
     d["Number of time steps"] = cpu_timestep_count
     
-    print "Average time step (time steps sum/time steps cout): " + str(cpu_timestep_sum/cpu_timestep_count)
-    d["Average time step (sec)"] = cpu_timestep_sum/cpu_timestep_count
-    
+    if cpu_timestep_count != 0:
+        print "Average time step (total cpu time/time steps cout): " + str(total_cpu_time/cpu_timestep_count)
+        d["Average time step (sec)"] = total_cpu_time/cpu_timestep_count
+    else:
+        print "Average time step (total cpu time/time steps cout): " + str(0)
+        d["Average time step (sec)"] = 0   
+
+    if mpi_proc_count != 0:
+        print "Elements per process: " + str(elements_count/mpi_proc_count)
+        d["Elements per process"] = elements_count/mpi_proc_count
+    else:
+        print "Elements per process: " + str(0)
+        d["Elements per process"] = 0
+
     f.close()
     
    
