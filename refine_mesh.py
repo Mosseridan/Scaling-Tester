@@ -5,7 +5,11 @@ import os
 # refinement_type is istrope or anistrope
 # assuming we can refine this by the automatic line
 # works only for 3D ofcourse...
-def refine_mesh(data_file, refinement_type):
+def refine_mesh(data_file, refinement_type):    
+    if not os.path.isfile(data_file):
+        print 'Data file '+data_file+' is not a valid file.\nPlease try again with a valid file.'
+        return 
+        
     domains = []
     j = 0
     #mesh refinement supports only x4 and x8 refinement
@@ -23,10 +27,9 @@ def refine_mesh(data_file, refinement_type):
         if ("domaine " in line or "Domaine " in line):
             if "#" in line:
                 continue
-            i = 0
-            while(not line[i].isspace()):
-                i = i + 1
-            domains.append(line[i+1:])
+          
+            
+            domains.append(line.split().pop())
             print domains
             print "line is: " + line
         # end sxtract domain name
