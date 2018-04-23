@@ -72,7 +72,7 @@ def create_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_p
 
 
 def create_refined_sub_dirs_and_run_tests(data_file_dir, dest_dir, data_file_name, max_procs, times):
-    mesh_sizes = [1,8] if data_file_name == 'VDF' else [1, 4, 8]
+    mesh_sizes = [1,8] if 'VDF' in data_file_name else [1, 4, 8]
     for mesh_size in mesh_sizes:
 
         print '\n@@ Creating a dirctory for tests with x'+str(mesh_size)+' mesh size'                      
