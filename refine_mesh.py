@@ -24,11 +24,14 @@ def refine_mesh(data_file, refinement_type):
     content = f.readlines()
     for line in content:
         # to extract the domain name that we will add the refiner line.
+        if ("raffiner_" in line and not "#" in line):
+            print "This file already has a refiner.\nPutting in a comment..."
+            content[j] =  "# " + content[j] + " #\n"
         if ("domaine " in line or "Domaine " in line):
             if "#" in line:
                 continue
-          
-            
+
+                
             domains.append(line.split().pop())
             print domains
             print "line is: " + line
@@ -62,7 +65,7 @@ if __name__ == '__main__':
     parser.add_argument('-rt',
         type=int,
         dest='refinement_type',
-        help='refinement type x4 or x8.')
+        help='refinement type 4 or 8.')
     args = parser.parse_args()
 
     refine_mesh(args.data_file, args.refinement_type)

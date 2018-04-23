@@ -3,7 +3,6 @@ import os
 import csv
 
 
-# assuming f is an open file.
 def get_number_elements(filename):
     with open(filename, 'r') as f:
         number_elements = 0
