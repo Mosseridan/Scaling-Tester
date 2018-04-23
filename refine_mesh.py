@@ -9,7 +9,7 @@ def refine_mesh(data_file, refinement_type):
     if not os.path.isfile(data_file):
         print 'Data file '+data_file+' is not a valid file.\nPlease try again with a valid file.'
         return 
-        
+
     domains = []
     j = 0
     #mesh refinement supports only x4 and x8 refinement
@@ -29,7 +29,7 @@ def refine_mesh(data_file, refinement_type):
                 continue
           
             
-            domains.append(line.split().pop())
+            domains.append(line.split().pop()+'\n')
             print domains
             print "line is: " + line
         # end sxtract domain name
