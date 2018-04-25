@@ -15,6 +15,7 @@ This Project contains the following modules (scripts):
 scaling_tester:
   Runs full scaling tests on the given datafile.
   usage:
+  
 -h, --help     show this help message and exit.
 -df DATA_FILE  Path to the data file to be executed.
 -mp MAX_PROCS  Maximal number of processes. (the tests will be run for each power of 2 which is lower or equal to MAX_PROCS)
