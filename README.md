@@ -4,13 +4,14 @@
 This Project currently uses "sbach" command (slurm) to run each test.
 It is posible to change this scripts functionality by replacing/changeing some its modules.
 
-## This Project contains the following modules (scripts):
-* scaling_tester.py
-* run_test.py
-* gather_results.py
-* parse_output.py
-* refine_mesh.py
-  
+### This Project contains the following modules (scripts):
+
+###### * scaling_tester.py
+###### * run_test.py
+###### * gather_results.py
+###### * parse_output.py
+###### * refine_mesh.py
+
   
 ## scaling_tester:
 #### Runs full scaling tests on the given datafile.
