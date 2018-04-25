@@ -5,6 +5,7 @@ import distutils
 import time
 from distutils import dir_util
 from refine_mesh import refine_mesh
+from run_test import run_test
 
 def mkdir_if_none_exits(path):
     try:
@@ -19,43 +20,6 @@ def doubling_range(start, stop):
     while start < stop:
         yield start
         start <<= 1
-
-
-
-def make_batch_file(test_name, test_dir, n_procs):
-    print '\n@@ Making batch script for '+str(n_procs)+' processes'
-    batch_file_path = os.path.join(test_dir, str(n_procs)+'_'+test_name+'_batch')
-    batch_file = open(batch_file_path,'w')
-    batch_file.write(
-        '#!/bin/bash\n'
-        + '#SBATCH -n '+str(n_procs)+'\n'
-        + '#SBATCH --exclusive\n'
-        + '#SBATCH --threads-per-core=1\n'
-        + 'mpirun -np '+str(n_procs)+' '+os.environ['exec']+' PAR_'+test_name+' '+str(n_procs)+'\n'
-    ) 
-    batch_file.close()
-    return batch_file_path
-
-
-
-def run_test(test_name, test_dir, n_procs, times):
-    batch_file = make_batch_file(test_name, test_dir, n_procs)
-
-    print '\n@@ Runing '+test_name+' with '+str(n_procs)+' processes '+str(times)+' times'
-
-    if os.path.isfile(os.path.join(test_dir,'prepare')):
-        sub_proc = subprocess.Popen(['chmod','+x','prepare'], cwd=test_dir)
-        sub_proc.wait()
-        sub_proc = subprocess.Popen(['./prepare'], cwd=test_dir)
-        sub_proc.wait()
-    
-    sub_proc = subprocess.Popen(['make_PAR.data', test_name, str(n_procs)], cwd=test_dir)
-    sub_proc.wait()
-
-    for i in range(0,times):
-        print '@ ' + str(i)
-        sub_proc = subprocess.Popen(['sbatch',batch_file], cwd=test_dir)
-        sub_proc.wait()
 
 
 
