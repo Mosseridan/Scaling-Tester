@@ -55,6 +55,3 @@ It is posible to change this scripts functionality by replacing/changeing some i
 * -h, --help           Show this help message and exit.
 * -df DATA_FILE        Path to the data file to be refined.
 * -rt REFINEMENT_TYPE  Refinement type 4 or 8.
-
-  
-
