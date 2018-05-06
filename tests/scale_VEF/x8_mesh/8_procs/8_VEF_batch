@@ -1,5 +1,0 @@
-#!/bin/bash
-#SBATCH -n 8
-#SBATCH --exclusive
-#SBATCH --threads-per-core=1
-mpirun -np 8 /home/idanmos/CEA/no_omp/TrioCFD/TrioCFD_opt PAR_VEF 8
